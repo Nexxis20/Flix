@@ -122,7 +122,8 @@ namespace Aniflix
                 .Select(person => $"#{person.Name.Replace(" ", "")}")
                 .ToList();
 
-            FilmesDiretorText.Text = string.Join(" ", directors);
+            var cleanedDirectors = StringExtensions.CleanAndFormatNames(directors);
+            FilmesDiretorText.Text = string.Join(" ", StringExtensions.CleanAndFormatNames(directors));
 
             var stars = credits
                 .Cast.Take(5)
@@ -146,6 +147,7 @@ namespace Aniflix
                 .ToList();
 
             FilmesEstudioText.Text = string.Join(" ", cleanedList);
+
         }
         private void FilmesCodigoText_TextChanged(object sender, EventArgs e)
         {

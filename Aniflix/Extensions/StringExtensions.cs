@@ -75,16 +75,23 @@ namespace Aniflix.Extensions
         }
         public static string CleanAndFormatNames(IEnumerable<string> names)
         {
-            HashSet<string> uniqueNames = [];
+            var result = new HashSet<string>();
 
             foreach (var name in names)
             {
-                string cleanName = new(name.RemoveDiacritics().Where(char.IsAscii).ToArray());
-                uniqueNames.Add($"#{FirstCharToUpper(name.Replace(" ", ""))}");
-                uniqueNames.Add($"#{FirstCharToUpper(cleanName.Replace(" ", ""))}");
+                if (string.IsNullOrWhiteSpace(name))
+                {
+                    continue;
+                }
+
+                string cleanName = RemoveDiacritics(name);
+                cleanName = new string(cleanName.Where(c => char.IsLetterOrDigit(c) || c == ' ').ToArray());
+
+                result.Add($"#{name.Replace(" ", "")}");
+                result.Add($"#{cleanName.Replace(" ", "")}");
             }
 
-            return string.Join(" ", uniqueNames);
+            return string.Join(" ", result);
         }
     }
 }
