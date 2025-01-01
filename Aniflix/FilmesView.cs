@@ -1,8 +1,9 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Syncfusion.WinForms.Controls;
 
 namespace Aniflix
 {
-    public partial class FilmesView : Form
+    public partial class FilmesView : SfForm
     {
         DateTime dataLancamento;
         private IConfiguration? configuration;
