@@ -176,7 +176,6 @@
             FilmesAudioBox.Name = "FilmesAudioBox";
             FilmesAudioBox.Size = new Size(153, 23);
             FilmesAudioBox.TabIndex = 19;
-            FilmesAudioBox.Text = "Tipo de Áudio";
             FilmesAudioBox.SelectedIndexChanged += FilmesAudioBox_SelectedIndexChanged;
             // 
             // autoLabel12
@@ -342,6 +341,7 @@
             Style.MdiChild.IconHorizontalAlignment = HorizontalAlignment.Center;
             Style.MdiChild.IconVerticalAlignment = System.Windows.Forms.VisualStyles.VerticalAlignment.Center;
             Text = "FilmesView";
+            Load += FilmesView_Load;
             ((System.ComponentModel.ISupportInitialize)FilmesCodigoText).EndInit();
             ((System.ComponentModel.ISupportInitialize)FilmesTituloText).EndInit();
             ((System.ComponentModel.ISupportInitialize)FilmesSinopseText).EndInit();
