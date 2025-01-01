@@ -62,7 +62,7 @@
             // 
             textBoxExt1.BeforeTouchSize = new Size(123, 23);
             textBoxExt1.Location = new Point(12, 27);
-            textBoxExt1.Name = "textBoxExt1";
+            textBoxExt1.Name = "Codigo";
             textBoxExt1.PlaceholderText = "Código do Filme";
             textBoxExt1.Size = new Size(123, 23);
             textBoxExt1.TabIndex = 0;
