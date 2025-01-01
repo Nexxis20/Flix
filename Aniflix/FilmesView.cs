@@ -59,10 +59,11 @@ namespace Aniflix
                 MessageBox.Show("Nenhum filme encontrado.");
                 FilmesCodigoText.Focus();
             }
-
-
         }
-
+        private void FilmesCodigoText_TextChanged(object sender, EventArgs e)
+        {
+            GetFilmes();
+        }
     }
 
     public class Settings

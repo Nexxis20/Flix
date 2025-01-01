@@ -46,7 +46,7 @@
             FilmesTituloOriginalText = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             autoLabel4 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             FilmesDataLancamentoText = new MaskedTextBox();
-            FilmesFranquia = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            FilmesFranquiaText = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             FilmesGeneroText = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             FilmesTagsText = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             FilmesEstrelasText = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
@@ -58,7 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)FilmesTituloText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilmesSinopseText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilmesTituloOriginalText).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)FilmesFranquia).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)FilmesFranquiaText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilmesGeneroText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilmesTagsText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilmesEstrelasText).BeginInit();
@@ -75,6 +75,7 @@
             FilmesCodigoText.PlaceholderText = "Código do Filme";
             FilmesCodigoText.Size = new Size(123, 23);
             FilmesCodigoText.TabIndex = 0;
+            FilmesCodigoText.TextChanged += FilmesCodigoText_TextChanged;
             FilmesCodigoText.KeyPress += FilmesCodigoText_KeyPress;
             // 
             // autoLabel1
@@ -220,14 +221,14 @@
             FilmesDataLancamentoText.TabIndex = 25;
             FilmesDataLancamentoText.ValidatingType = typeof(DateTime);
             // 
-            // FilmesFranquia
+            // FilmesFranquiaText
             // 
-            FilmesFranquia.BeforeTouchSize = new Size(612, 414);
-            FilmesFranquia.Location = new Point(12, 242);
-            FilmesFranquia.Name = "FilmesFranquia";
-            FilmesFranquia.PlaceholderText = "Franquia";
-            FilmesFranquia.Size = new Size(612, 23);
-            FilmesFranquia.TabIndex = 26;
+            FilmesFranquiaText.BeforeTouchSize = new Size(612, 414);
+            FilmesFranquiaText.Location = new Point(12, 242);
+            FilmesFranquiaText.Name = "FilmesFranquiaText";
+            FilmesFranquiaText.PlaceholderText = "Franquia";
+            FilmesFranquiaText.Size = new Size(612, 23);
+            FilmesFranquiaText.TabIndex = 26;
             // 
             // FilmesGeneroText
             // 
@@ -304,7 +305,7 @@
             Controls.Add(FilmesEstrelasText);
             Controls.Add(FilmesTagsText);
             Controls.Add(FilmesGeneroText);
-            Controls.Add(FilmesFranquia);
+            Controls.Add(FilmesFranquiaText);
             Controls.Add(FilmesDataLancamentoText);
             Controls.Add(FilmesTituloOriginalText);
             Controls.Add(autoLabel4);
@@ -331,7 +332,7 @@
             ((System.ComponentModel.ISupportInitialize)FilmesTituloText).EndInit();
             ((System.ComponentModel.ISupportInitialize)FilmesSinopseText).EndInit();
             ((System.ComponentModel.ISupportInitialize)FilmesTituloOriginalText).EndInit();
-            ((System.ComponentModel.ISupportInitialize)FilmesFranquia).EndInit();
+            ((System.ComponentModel.ISupportInitialize)FilmesFranquiaText).EndInit();
             ((System.ComponentModel.ISupportInitialize)FilmesGeneroText).EndInit();
             ((System.ComponentModel.ISupportInitialize)FilmesTagsText).EndInit();
             ((System.ComponentModel.ISupportInitialize)FilmesEstrelasText).EndInit();
@@ -362,7 +363,7 @@
         private Syncfusion.Windows.Forms.Tools.TextBoxExt FilmesTituloOriginalText;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel4;
         private MaskedTextBox FilmesDataLancamentoText;
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt FilmesFranquia;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt FilmesFranquiaText;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt FilmesGeneroText;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt FilmesTagsText;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt FilmesEstrelasText;
