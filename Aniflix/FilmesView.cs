@@ -142,7 +142,7 @@ namespace Aniflix
         {
             var model = new FilmesModel(
                 titulo: FilmesTituloText.Text,
-                audio: FilmesAudioBox.SelectedValue!.ToString(),
+                audio: FilmesAudioBox.SelectedItem?.ToString() ?? string.Empty,
                 sinopse: FilmesSinopseText.Text,
                 tituloOriginal: FilmesTituloOriginalText.Text,
                 dataLancamento: FilmesDataLancamentoText.Text,
@@ -226,7 +226,7 @@ namespace Aniflix
 
         private void FilmesView_Load(object sender, EventArgs e)
         {
-            FilmesAudioBox.SelectedText = "Dublado";
+            FilmesAudioBox.SelectedIndex = 0;
         }
     }
 
