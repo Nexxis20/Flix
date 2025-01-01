@@ -31,11 +31,11 @@
             Filmes = new Syncfusion.WinForms.Controls.SfButton();
             Sair = new Syncfusion.WinForms.Controls.SfButton();
             Series = new Syncfusion.WinForms.Controls.SfButton();
-            GoreButton = new Syncfusion.WinForms.Controls.SfButton();
-            BreakOut = new Syncfusion.WinForms.Controls.SfButton();
-            Animes = new Syncfusion.WinForms.Controls.SfButton();
             GoreFilmes = new Syncfusion.WinForms.Controls.SfButton();
-            sfButton2 = new Syncfusion.WinForms.Controls.SfButton();
+            BreakOutFilmes = new Syncfusion.WinForms.Controls.SfButton();
+            Animes = new Syncfusion.WinForms.Controls.SfButton();
+            GoreSeries = new Syncfusion.WinForms.Controls.SfButton();
+            BreakOutSeries = new Syncfusion.WinForms.Controls.SfButton();
             SuspendLayout();
             // 
             // Filmes
@@ -59,14 +59,14 @@
             // 
             // Sair
             // 
-            Sair.BackColor = Color.FromArgb(211, 72, 38);
+            Sair.BackColor = Color.OrangeRed;
             Sair.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
             Sair.ForeColor = Color.White;
             Sair.ImageSize = new Size(48, 48);
             Sair.Location = new Point(595, 372);
             Sair.Name = "Sair";
             Sair.Size = new Size(159, 92);
-            Sair.Style.BackColor = Color.FromArgb(211, 72, 38);
+            Sair.Style.BackColor = Color.OrangeRed;
             Sair.Style.ForeColor = Color.White;
             Sair.Style.Image = Properties.Resources.exit_to_app;
             Sair.Style.ImageForeColor = Color.White;
@@ -95,43 +95,43 @@
             Series.TextImageRelation = TextImageRelation.Overlay;
             Series.UseVisualStyleBackColor = false;
             // 
-            // GoreButton
+            // GoreFilmes
             // 
-            GoreButton.BackColor = Color.FromArgb(220, 97, 65);
-            GoreButton.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
-            GoreButton.ForeColor = Color.White;
-            GoreButton.ImageSize = new Size(48, 48);
-            GoreButton.Location = new Point(300, 372);
-            GoreButton.Name = "GoreButton";
-            GoreButton.Size = new Size(124, 92);
-            GoreButton.Style.BackColor = Color.FromArgb(220, 97, 65);
-            GoreButton.Style.ForeColor = Color.White;
-            GoreButton.Style.Image = Properties.Resources.balloon;
-            GoreButton.Style.ImageForeColor = Color.White;
-            GoreButton.TabIndex = 3;
-            GoreButton.Text = "Gore";
-            GoreButton.TextAlign = ContentAlignment.BottomLeft;
-            GoreButton.TextImageRelation = TextImageRelation.Overlay;
-            GoreButton.UseVisualStyleBackColor = false;
+            GoreFilmes.BackColor = Color.FromArgb(220, 97, 65);
+            GoreFilmes.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
+            GoreFilmes.ForeColor = Color.White;
+            GoreFilmes.ImageSize = new Size(48, 48);
+            GoreFilmes.Location = new Point(300, 372);
+            GoreFilmes.Name = "GoreFilmes";
+            GoreFilmes.Size = new Size(124, 92);
+            GoreFilmes.Style.BackColor = Color.FromArgb(220, 97, 65);
+            GoreFilmes.Style.ForeColor = Color.White;
+            GoreFilmes.Style.Image = Properties.Resources.balloon;
+            GoreFilmes.Style.ImageForeColor = Color.White;
+            GoreFilmes.TabIndex = 3;
+            GoreFilmes.Text = "Gore - Filmes";
+            GoreFilmes.TextAlign = ContentAlignment.BottomLeft;
+            GoreFilmes.TextImageRelation = TextImageRelation.Overlay;
+            GoreFilmes.UseVisualStyleBackColor = false;
             // 
-            // BreakOut
+            // BreakOutFilmes
             // 
-            BreakOut.BackColor = Color.FromArgb(82, 0, 101);
-            BreakOut.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
-            BreakOut.ForeColor = Color.White;
-            BreakOut.ImageSize = new Size(48, 48);
-            BreakOut.Location = new Point(430, 274);
-            BreakOut.Name = "BreakOut";
-            BreakOut.Size = new Size(159, 92);
-            BreakOut.Style.BackColor = Color.FromArgb(82, 0, 101);
-            BreakOut.Style.ForeColor = Color.White;
-            BreakOut.Style.Image = Properties.Resources.babel;
-            BreakOut.Style.ImageForeColor = Color.White;
-            BreakOut.TabIndex = 4;
-            BreakOut.Text = "BreakOut - Filmes";
-            BreakOut.TextAlign = ContentAlignment.BottomLeft;
-            BreakOut.TextImageRelation = TextImageRelation.Overlay;
-            BreakOut.UseVisualStyleBackColor = false;
+            BreakOutFilmes.BackColor = Color.FromArgb(82, 0, 101);
+            BreakOutFilmes.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
+            BreakOutFilmes.ForeColor = Color.White;
+            BreakOutFilmes.ImageSize = new Size(48, 48);
+            BreakOutFilmes.Location = new Point(430, 274);
+            BreakOutFilmes.Name = "BreakOutFilmes";
+            BreakOutFilmes.Size = new Size(159, 92);
+            BreakOutFilmes.Style.BackColor = Color.FromArgb(82, 0, 101);
+            BreakOutFilmes.Style.ForeColor = Color.White;
+            BreakOutFilmes.Style.Image = Properties.Resources.babel;
+            BreakOutFilmes.Style.ImageForeColor = Color.White;
+            BreakOutFilmes.TabIndex = 4;
+            BreakOutFilmes.Text = "BreakOut - Filmes";
+            BreakOutFilmes.TextAlign = ContentAlignment.BottomLeft;
+            BreakOutFilmes.TextImageRelation = TextImageRelation.Overlay;
+            BreakOutFilmes.UseVisualStyleBackColor = false;
             // 
             // Animes
             // 
@@ -152,54 +152,54 @@
             Animes.TextImageRelation = TextImageRelation.Overlay;
             Animes.UseVisualStyleBackColor = false;
             // 
-            // GoreFilmes
+            // GoreSeries
             // 
-            GoreFilmes.BackColor = Color.FromArgb(220, 97, 65);
-            GoreFilmes.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
-            GoreFilmes.ForeColor = Color.White;
-            GoreFilmes.ImageSize = new Size(48, 48);
-            GoreFilmes.Location = new Point(430, 372);
-            GoreFilmes.Name = "GoreFilmes";
-            GoreFilmes.Size = new Size(159, 92);
-            GoreFilmes.Style.BackColor = Color.FromArgb(220, 97, 65);
-            GoreFilmes.Style.ForeColor = Color.White;
-            GoreFilmes.Style.Image = Properties.Resources.balloon;
-            GoreFilmes.Style.ImageForeColor = Color.White;
-            GoreFilmes.TabIndex = 6;
-            GoreFilmes.Text = "Gore - Séries";
-            GoreFilmes.TextAlign = ContentAlignment.BottomLeft;
-            GoreFilmes.TextImageRelation = TextImageRelation.Overlay;
-            GoreFilmes.UseVisualStyleBackColor = false;
+            GoreSeries.BackColor = Color.FromArgb(220, 97, 65);
+            GoreSeries.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
+            GoreSeries.ForeColor = Color.White;
+            GoreSeries.ImageSize = new Size(48, 48);
+            GoreSeries.Location = new Point(430, 372);
+            GoreSeries.Name = "GoreSeries";
+            GoreSeries.Size = new Size(159, 92);
+            GoreSeries.Style.BackColor = Color.FromArgb(220, 97, 65);
+            GoreSeries.Style.ForeColor = Color.White;
+            GoreSeries.Style.Image = Properties.Resources.balloon;
+            GoreSeries.Style.ImageForeColor = Color.White;
+            GoreSeries.TabIndex = 6;
+            GoreSeries.Text = "Gore - Séries";
+            GoreSeries.TextAlign = ContentAlignment.BottomLeft;
+            GoreSeries.TextImageRelation = TextImageRelation.Overlay;
+            GoreSeries.UseVisualStyleBackColor = false;
             // 
-            // sfButton2
+            // BreakOutSeries
             // 
-            sfButton2.BackColor = Color.FromArgb(82, 0, 101);
-            sfButton2.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
-            sfButton2.ForeColor = Color.White;
-            sfButton2.ImageSize = new Size(48, 48);
-            sfButton2.Location = new Point(595, 274);
-            sfButton2.Name = "sfButton2";
-            sfButton2.Size = new Size(159, 92);
-            sfButton2.Style.BackColor = Color.FromArgb(82, 0, 101);
-            sfButton2.Style.ForeColor = Color.White;
-            sfButton2.Style.Image = Properties.Resources.babel;
-            sfButton2.Style.ImageForeColor = Color.White;
-            sfButton2.TabIndex = 7;
-            sfButton2.Text = "BreakOut - Séries";
-            sfButton2.TextAlign = ContentAlignment.BottomLeft;
-            sfButton2.TextImageRelation = TextImageRelation.Overlay;
-            sfButton2.UseVisualStyleBackColor = false;
+            BreakOutSeries.BackColor = Color.FromArgb(82, 0, 101);
+            BreakOutSeries.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
+            BreakOutSeries.ForeColor = Color.White;
+            BreakOutSeries.ImageSize = new Size(48, 48);
+            BreakOutSeries.Location = new Point(595, 274);
+            BreakOutSeries.Name = "BreakOutSeries";
+            BreakOutSeries.Size = new Size(159, 92);
+            BreakOutSeries.Style.BackColor = Color.FromArgb(82, 0, 101);
+            BreakOutSeries.Style.ForeColor = Color.White;
+            BreakOutSeries.Style.Image = Properties.Resources.babel;
+            BreakOutSeries.Style.ImageForeColor = Color.White;
+            BreakOutSeries.TabIndex = 7;
+            BreakOutSeries.Text = "BreakOut - Séries";
+            BreakOutSeries.TextAlign = ContentAlignment.BottomLeft;
+            BreakOutSeries.TextImageRelation = TextImageRelation.Overlay;
+            BreakOutSeries.UseVisualStyleBackColor = false;
             // 
             // AniflixView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1054, 624);
-            Controls.Add(sfButton2);
-            Controls.Add(GoreFilmes);
+            Controls.Add(BreakOutSeries);
+            Controls.Add(GoreSeries);
             Controls.Add(Animes);
-            Controls.Add(BreakOut);
-            Controls.Add(GoreButton);
+            Controls.Add(BreakOutFilmes);
+            Controls.Add(GoreFilmes);
             Controls.Add(Series);
             Controls.Add(Sair);
             Controls.Add(Filmes);
@@ -217,10 +217,10 @@
         private Syncfusion.WinForms.Controls.SfButton Filmes;
         private Syncfusion.WinForms.Controls.SfButton Sair;
         private Syncfusion.WinForms.Controls.SfButton Series;
-        private Syncfusion.WinForms.Controls.SfButton GoreButton;
-        private Syncfusion.WinForms.Controls.SfButton BreakOut;
-        private Syncfusion.WinForms.Controls.SfButton Animes;
         private Syncfusion.WinForms.Controls.SfButton GoreFilmes;
-        private Syncfusion.WinForms.Controls.SfButton sfButton2;
+        private Syncfusion.WinForms.Controls.SfButton BreakOutFilmes;
+        private Syncfusion.WinForms.Controls.SfButton Animes;
+        private Syncfusion.WinForms.Controls.SfButton GoreSeries;
+        private Syncfusion.WinForms.Controls.SfButton BreakOutSeries;
     }
 }
