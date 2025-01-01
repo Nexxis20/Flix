@@ -5,7 +5,7 @@ namespace Aniflix
         [STAThread]
         static void Main()
         {
-            //Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzY1MTA5NUAzMjM4MmUzMDJlMzBnZFVTUVlZUHR0YzFlU2gwU3Y0UUtqenpleVFjZlMyQy9Mc2Vpb21uSzAwPQ==");
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NMaF5cXmRCf1FpRmJGdld5fUVHYVZUTXxaS00DNHVRdkdmWX5ecXVVQmNeUUxwVkY=");
             ApplicationConfiguration.Initialize();
             Application.Run(new AniflixView());
         }
