@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBoxExt1 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            FilmesCodigoText = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             autoLabel1 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             autoLabel2 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             autoLabel3 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
@@ -55,17 +55,18 @@
             autoLabel24 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             autoLabel25 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             autoLabel26 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            ((System.ComponentModel.ISupportInitialize)textBoxExt1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)FilmesCodigoText).BeginInit();
             SuspendLayout();
             // 
-            // textBoxExt1
+            // FilmesCodigoText
             // 
-            textBoxExt1.BeforeTouchSize = new Size(123, 23);
-            textBoxExt1.Location = new Point(12, 27);
-            textBoxExt1.Name = "Codigo";
-            textBoxExt1.PlaceholderText = "Código do Filme";
-            textBoxExt1.Size = new Size(123, 23);
-            textBoxExt1.TabIndex = 0;
+            FilmesCodigoText.BeforeTouchSize = new Size(123, 23);
+            FilmesCodigoText.Location = new Point(12, 27);
+            FilmesCodigoText.Name = "FilmesCodigoText";
+            FilmesCodigoText.PlaceholderText = "Código do Filme";
+            FilmesCodigoText.Size = new Size(123, 23);
+            FilmesCodigoText.TabIndex = 0;
+            FilmesCodigoText.KeyPress += FilmesCodigoText_KeyPress;
             // 
             // autoLabel1
             // 
@@ -306,18 +307,17 @@
             Controls.Add(autoLabel3);
             Controls.Add(autoLabel2);
             Controls.Add(autoLabel1);
-            Controls.Add(textBoxExt1);
+            Controls.Add(FilmesCodigoText);
             Name = "FilmesView";
             Text = "FilmesView";
-            KeyPress += FilmesView_KeyPress;
-            ((System.ComponentModel.ISupportInitialize)textBoxExt1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)FilmesCodigoText).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt textBoxExt1;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt FilmesCodigoText;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel1;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel2;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel3;
