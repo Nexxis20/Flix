@@ -7,7 +7,7 @@ namespace Aniflix
         {
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NMaF5cXmRCf1FpRmJGdld5fUVHYVZUTXxaS00DNHVRdkdmWX5ecXVVQmNeUUxwVkY=");
             ApplicationConfiguration.Initialize();
-            Application.Run(new AniflixView());
+            Application.Run(new FilmesView());
         }
     }
 }
