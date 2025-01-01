@@ -115,6 +115,7 @@ namespace Aniflix
             }
 
             var credits = client.GetMovieCreditsAsync(Convert.ToInt32(FilmesCodigoText.Text)).Result;
+
             var directors = credits
                 .Crew.Where(person => person.Job == "Director")
                 .Take(4)
