@@ -60,16 +60,16 @@
             // 
             // textBoxExt1
             // 
-            textBoxExt1.BeforeTouchSize = new Size(100, 23);
-            textBoxExt1.Location = new Point(12, 44);
+            textBoxExt1.BeforeTouchSize = new Size(123, 23);
+            textBoxExt1.Location = new Point(12, 27);
             textBoxExt1.Name = "textBoxExt1";
-            textBoxExt1.Size = new Size(100, 23);
+            textBoxExt1.PlaceholderText = "Código do Filme";
+            textBoxExt1.Size = new Size(123, 23);
             textBoxExt1.TabIndex = 0;
-            textBoxExt1.Text = "textBoxExt1";
             // 
             // autoLabel1
             // 
-            autoLabel1.Location = new Point(99, 125);
+            autoLabel1.Location = new Point(12, 9);
             autoLabel1.Name = "autoLabel1";
             autoLabel1.Size = new Size(95, 15);
             autoLabel1.TabIndex = 1;
@@ -77,7 +77,7 @@
             // 
             // autoLabel2
             // 
-            autoLabel2.Location = new Point(799, 480);
+            autoLabel2.Location = new Point(721, 276);
             autoLabel2.Name = "autoLabel2";
             autoLabel2.Size = new Size(95, 15);
             autoLabel2.TabIndex = 2;
@@ -85,7 +85,7 @@
             // 
             // autoLabel3
             // 
-            autoLabel3.Location = new Point(807, 488);
+            autoLabel3.Location = new Point(576, 384);
             autoLabel3.Name = "autoLabel3";
             autoLabel3.Size = new Size(95, 15);
             autoLabel3.TabIndex = 3;
@@ -93,7 +93,7 @@
             // 
             // autoLabel4
             // 
-            autoLabel4.Location = new Point(815, 496);
+            autoLabel4.Location = new Point(576, 504);
             autoLabel4.Name = "autoLabel4";
             autoLabel4.Size = new Size(95, 15);
             autoLabel4.TabIndex = 4;
@@ -101,7 +101,7 @@
             // 
             // autoLabel5
             // 
-            autoLabel5.Location = new Point(823, 504);
+            autoLabel5.Location = new Point(576, 443);
             autoLabel5.Name = "autoLabel5";
             autoLabel5.Size = new Size(95, 15);
             autoLabel5.TabIndex = 5;
@@ -109,7 +109,7 @@
             // 
             // autoLabel6
             // 
-            autoLabel6.Location = new Point(831, 512);
+            autoLabel6.Location = new Point(785, 443);
             autoLabel6.Name = "autoLabel6";
             autoLabel6.Size = new Size(95, 15);
             autoLabel6.TabIndex = 6;
@@ -117,7 +117,7 @@
             // 
             // autoLabel7
             // 
-            autoLabel7.Location = new Point(839, 520);
+            autoLabel7.Location = new Point(363, 443);
             autoLabel7.Name = "autoLabel7";
             autoLabel7.Size = new Size(95, 15);
             autoLabel7.TabIndex = 7;
@@ -125,7 +125,7 @@
             // 
             // autoLabel8
             // 
-            autoLabel8.Location = new Point(847, 528);
+            autoLabel8.Location = new Point(965, 469);
             autoLabel8.Name = "autoLabel8";
             autoLabel8.Size = new Size(95, 15);
             autoLabel8.TabIndex = 8;
@@ -133,7 +133,7 @@
             // 
             // autoLabel9
             // 
-            autoLabel9.Location = new Point(855, 536);
+            autoLabel9.Location = new Point(1002, 520);
             autoLabel9.Name = "autoLabel9";
             autoLabel9.Size = new Size(95, 15);
             autoLabel9.TabIndex = 9;
@@ -141,7 +141,7 @@
             // 
             // autoLabel10
             // 
-            autoLabel10.Location = new Point(863, 544);
+            autoLabel10.Location = new Point(695, 560);
             autoLabel10.Name = "autoLabel10";
             autoLabel10.Size = new Size(95, 15);
             autoLabel10.TabIndex = 10;
@@ -149,7 +149,7 @@
             // 
             // autoLabel11
             // 
-            autoLabel11.Location = new Point(871, 552);
+            autoLabel11.Location = new Point(600, 601);
             autoLabel11.Name = "autoLabel11";
             autoLabel11.Size = new Size(95, 15);
             autoLabel11.TabIndex = 11;
@@ -157,7 +157,7 @@
             // 
             // autoLabel12
             // 
-            autoLabel12.Location = new Point(879, 560);
+            autoLabel12.Location = new Point(661, 716);
             autoLabel12.Name = "autoLabel12";
             autoLabel12.Size = new Size(95, 15);
             autoLabel12.TabIndex = 12;
@@ -165,7 +165,7 @@
             // 
             // autoLabel13
             // 
-            autoLabel13.Location = new Point(887, 568);
+            autoLabel13.Location = new Point(735, 616);
             autoLabel13.Name = "autoLabel13";
             autoLabel13.Size = new Size(95, 15);
             autoLabel13.TabIndex = 13;
@@ -173,7 +173,7 @@
             // 
             // autoLabel14
             // 
-            autoLabel14.Location = new Point(895, 576);
+            autoLabel14.Location = new Point(1108, 536);
             autoLabel14.Name = "autoLabel14";
             autoLabel14.Size = new Size(95, 15);
             autoLabel14.TabIndex = 14;
@@ -181,7 +181,7 @@
             // 
             // autoLabel15
             // 
-            autoLabel15.Location = new Point(903, 584);
+            autoLabel15.Location = new Point(922, 616);
             autoLabel15.Name = "autoLabel15";
             autoLabel15.Size = new Size(95, 15);
             autoLabel15.TabIndex = 15;
@@ -189,7 +189,7 @@
             // 
             // autoLabel16
             // 
-            autoLabel16.Location = new Point(911, 592);
+            autoLabel16.Location = new Point(839, 680);
             autoLabel16.Name = "autoLabel16";
             autoLabel16.Size = new Size(95, 15);
             autoLabel16.TabIndex = 16;
@@ -197,7 +197,7 @@
             // 
             // autoLabel17
             // 
-            autoLabel17.Location = new Point(919, 600);
+            autoLabel17.Location = new Point(911, 403);
             autoLabel17.Name = "autoLabel17";
             autoLabel17.Size = new Size(95, 15);
             autoLabel17.TabIndex = 17;
@@ -205,7 +205,7 @@
             // 
             // autoLabel18
             // 
-            autoLabel18.Location = new Point(927, 608);
+            autoLabel18.Location = new Point(1077, 592);
             autoLabel18.Name = "autoLabel18";
             autoLabel18.Size = new Size(95, 15);
             autoLabel18.TabIndex = 18;
@@ -213,7 +213,7 @@
             // 
             // autoLabel19
             // 
-            autoLabel19.Location = new Point(935, 616);
+            autoLabel19.Location = new Point(1108, 403);
             autoLabel19.Name = "autoLabel19";
             autoLabel19.Size = new Size(95, 15);
             autoLabel19.TabIndex = 19;
@@ -221,7 +221,7 @@
             // 
             // autoLabel20
             // 
-            autoLabel20.Location = new Point(943, 624);
+            autoLabel20.Location = new Point(1266, 428);
             autoLabel20.Name = "autoLabel20";
             autoLabel20.Size = new Size(95, 15);
             autoLabel20.TabIndex = 20;
@@ -229,7 +229,7 @@
             // 
             // autoLabel21
             // 
-            autoLabel21.Location = new Point(951, 632);
+            autoLabel21.Location = new Point(1295, 560);
             autoLabel21.Name = "autoLabel21";
             autoLabel21.Size = new Size(95, 15);
             autoLabel21.TabIndex = 21;
@@ -309,6 +309,7 @@
             Controls.Add(textBoxExt1);
             Name = "FilmesView";
             Text = "FilmesView";
+            KeyPress += FilmesView_KeyPress;
             ((System.ComponentModel.ISupportInitialize)textBoxExt1).EndInit();
             ResumeLayout(false);
             PerformLayout();
