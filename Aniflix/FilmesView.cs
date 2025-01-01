@@ -132,9 +132,9 @@ namespace Aniflix
                 .Select(company => $"#{company.Name.Replace(" ", "")}")
                 .ToList();
 
-            FilmesDiretorText.Text = string.Join(" ", StringExtensions.CleanAndFormatNames(directors));
-            FilmesEstrelasText.Text = string.Join(" ", StringExtensions.CleanAndFormatNames(stars));
-            FilmesEstudioText.Text = string.Join(" ", StringExtensions.CleanAndFormatNames(studios));
+            FilmesDiretorText.Text = string.Join(" ", StringExtensions.ClearLists(directors));
+            FilmesEstrelasText.Text = string.Join(" ", StringExtensions.ClearLists(stars));
+            FilmesEstudioText.Text = string.Join(" ", StringExtensions.ClearLists(studios));
         }
         private void FilmesCodigoText_TextChanged(object sender, EventArgs e)
         {
