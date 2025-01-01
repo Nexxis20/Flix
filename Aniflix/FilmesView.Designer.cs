@@ -166,6 +166,7 @@
             FilmesTituloText.PlaceholderText = "Título ";
             FilmesTituloText.Size = new Size(324, 23);
             FilmesTituloText.TabIndex = 18;
+            FilmesTituloText.TextChanged += FilmesTituloText_TextChanged;
             // 
             // FilmesAudioBox
             // 
@@ -176,6 +177,7 @@
             FilmesAudioBox.Size = new Size(153, 23);
             FilmesAudioBox.TabIndex = 19;
             FilmesAudioBox.Text = "Tipo de Áudio";
+            FilmesAudioBox.SelectedIndexChanged += FilmesAudioBox_SelectedIndexChanged;
             // 
             // autoLabel12
             // 
@@ -194,6 +196,7 @@
             FilmesSinopseText.PlaceholderText = "Sinopse";
             FilmesSinopseText.Size = new Size(612, 170);
             FilmesSinopseText.TabIndex = 22;
+            FilmesSinopseText.TextChanged += FilmesSinopseText_TextChanged;
             // 
             // FilmesTituloOriginalText
             // 
@@ -203,6 +206,7 @@
             FilmesTituloOriginalText.PlaceholderText = "Título Original";
             FilmesTituloOriginalText.Size = new Size(471, 23);
             FilmesTituloOriginalText.TabIndex = 24;
+            FilmesTituloOriginalText.TextChanged += FilmesTituloOriginalText_TextChanged;
             // 
             // autoLabel4
             // 
@@ -220,6 +224,7 @@
             FilmesDataLancamentoText.Size = new Size(135, 23);
             FilmesDataLancamentoText.TabIndex = 25;
             FilmesDataLancamentoText.ValidatingType = typeof(DateTime);
+            FilmesDataLancamentoText.TextChanged += FilmesDataLancamentoText_TextChanged;
             // 
             // FilmesFranquiaText
             // 
@@ -229,6 +234,7 @@
             FilmesFranquiaText.PlaceholderText = "Franquia";
             FilmesFranquiaText.Size = new Size(612, 23);
             FilmesFranquiaText.TabIndex = 26;
+            FilmesFranquiaText.TextChanged += FilmesFranquiaText_TextChanged;
             // 
             // FilmesGeneroText
             // 
@@ -238,6 +244,7 @@
             FilmesGeneroText.PlaceholderText = "Gênero do Filme";
             FilmesGeneroText.Size = new Size(453, 23);
             FilmesGeneroText.TabIndex = 27;
+            FilmesGeneroText.TextChanged += FilmesGeneroText_TextChanged;
             // 
             // FilmesTagsText
             // 
@@ -247,6 +254,7 @@
             FilmesTagsText.PlaceholderText = "Tags";
             FilmesTagsText.Size = new Size(153, 23);
             FilmesTagsText.TabIndex = 28;
+            FilmesTagsText.TextChanged += FilmesTagsText_TextChanged;
             // 
             // FilmesEstrelasText
             // 
@@ -256,6 +264,7 @@
             FilmesEstrelasText.PlaceholderText = "Estrelas";
             FilmesEstrelasText.Size = new Size(612, 23);
             FilmesEstrelasText.TabIndex = 29;
+            FilmesEstrelasText.TextChanged += FilmesEstrelasText_TextChanged;
             // 
             // FilmesDiretorText
             // 
@@ -265,6 +274,7 @@
             FilmesDiretorText.PlaceholderText = "Diretor";
             FilmesDiretorText.Size = new Size(612, 23);
             FilmesDiretorText.TabIndex = 30;
+            FilmesDiretorText.TextChanged += FilmesDiretorText_TextChanged;
             // 
             // FilmesEstudioText
             // 
@@ -274,6 +284,7 @@
             FilmesEstudioText.PlaceholderText = "Estúdio";
             FilmesEstudioText.Size = new Size(612, 23);
             FilmesEstudioText.TabIndex = 31;
+            FilmesEstudioText.TextChanged += FilmesEstudioText_TextChanged;
             // 
             // FilmesResumoText
             // 

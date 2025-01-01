@@ -15,7 +15,6 @@ namespace Aniflix
         {
             InitializeComponent();
             ConfigureAppSettings();
-            UpdateData();
         }
         private void ConfigureAppSettings()
         {
@@ -157,7 +156,6 @@ namespace Aniflix
             FilmesResumoText.Text = model.GetFormattedText();
         }
 
-
         private void FilmesCodigoText_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(FilmesCodigoText.Text))
@@ -169,6 +167,60 @@ namespace Aniflix
             {
                 GetFilmes();
             }
+        }
+        private void FilmesSinopseText_TextChanged(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
+
+        private void FilmesAudioBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
+
+        private void FilmesTituloText_TextChanged(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
+
+        private void FilmesTituloOriginalText_TextChanged(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
+
+        private void FilmesDataLancamentoText_TextChanged(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
+
+        private void FilmesFranquiaText_TextChanged(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
+
+        private void FilmesGeneroText_TextChanged(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
+
+        private void FilmesTagsText_TextChanged(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
+
+        private void FilmesDiretorText_TextChanged(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
+
+        private void FilmesEstrelasText_TextChanged(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
+
+        private void FilmesEstudioText_TextChanged(object sender, EventArgs e)
+        {
+            UpdateData();
         }
     }
 
