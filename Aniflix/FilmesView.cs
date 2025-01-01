@@ -168,7 +168,8 @@ namespace Aniflix
                 GetFilmes();
             }
         }
-        private void FilmesSinopseText_TextChanged(object sender, EventArgs e)
+
+        private void FilmesTituloText_TextChanged(object sender, EventArgs e)
         {
             UpdateData();
         }
@@ -178,7 +179,7 @@ namespace Aniflix
             UpdateData();
         }
 
-        private void FilmesTituloText_TextChanged(object sender, EventArgs e)
+        private void FilmesSinopseText_TextChanged(object sender, EventArgs e)
         {
             UpdateData();
         }
