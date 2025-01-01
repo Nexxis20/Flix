@@ -74,8 +74,7 @@
             FilmesCodigoText.Name = "FilmesCodigoText";
             FilmesCodigoText.PlaceholderText = "Código do Filme";
             FilmesCodigoText.Size = new Size(123, 23);
-            FilmesCodigoText.TabIndex = 0;
-            FilmesCodigoText.TextChanged += FilmesCodigoText_TextChanged;
+            FilmesCodigoText.TabIndex = 0;            
             FilmesCodigoText.KeyPress += FilmesCodigoText_KeyPress;
             // 
             // autoLabel1
