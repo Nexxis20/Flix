@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Aniflix.Extensions;
+using Microsoft.Extensions.Configuration;
 using Syncfusion.WinForms.Controls;
 using System.Globalization;
 
@@ -37,7 +38,7 @@ namespace Aniflix
 
         public void GetFilmes()
         {
-            var tmdbSettings = configuration.GetSection("TMDB");
+            var tmdbSettings = configuration!.GetSection("TMDB");
 
             var client = new TMDbLib.Client.TMDbClient(tmdbSettings["key"])
             {
@@ -63,7 +64,7 @@ namespace Aniflix
 
             if (
            DateTime.TryParseExact(
-               txDataLancamento.Text,
+               FilmesDataLancamentoText.Text,
                "dd/MM/yyyy",
                CultureInfo.InvariantCulture,
                DateTimeStyles.None,
@@ -72,10 +73,10 @@ namespace Aniflix
        )
             {
                 string ano = dataLancamento.Year.ToString();
-                txTags.Text = "#Filme #Filme" + ano;
+                FilmesTagsText.Text = "#Filme #Filme" + ano;
             }
 
-            if (movie.Genres.Count > 2)
+            if (movie!.Genres.Count > 2)
             {
                 HashSet<string> hashtags = [];
 
@@ -110,24 +111,24 @@ namespace Aniflix
                 FormatGenre(movie.Genres[0].Name, hashtags);
                 FormatGenre(movie.Genres[1].Name, hashtags);
                 FormatGenre(movie.Genres[2].Name, hashtags);
-                txGenero.Text = string.Join(" ", hashtags);
+                FilmesGeneroText.Text = string.Join(" ", hashtags);
             }
 
-            var credits = client.GetMovieCreditsAsync(Convert.ToInt32(txCodigo.Text)).Result;
+            var credits = client.GetMovieCreditsAsync(Convert.ToInt32(FilmesCodigoText.Text)).Result;
             var directors = credits
                 .Crew.Where(person => person.Job == "Director")
                 .Take(4)
                 .Select(person => $"#{person.Name.Replace(" ", "")}")
                 .ToList();
 
-            txDiretor.Text = string.Join(" ", directors);
+            FilmesDiretorText.Text = string.Join(" ", directors);
 
             var stars = credits
                 .Cast.Take(5)
                 .Select(person => $"#{person.Name.Replace(" ", "")}")
                 .ToList();
 
-            txEstrelas.Text = string.Join(" ", stars);
+            FilmesEstrelasText.Text = string.Join(" ", stars);
 
             var studios = movie
                 .ProductionCompanies.Take(5)
@@ -143,7 +144,7 @@ namespace Aniflix
                 )
                 .ToList();
 
-            txEstudio.Text = string.Join(" ", cleanedList);
+            FilmesEstudioText.Text = string.Join(" ", cleanedList);
         }
         private void FilmesCodigoText_TextChanged(object sender, EventArgs e)
         {
