@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Syncfusion.WinForms.Controls;
+using System.Globalization;
 
 namespace Aniflix
 {
@@ -59,6 +60,90 @@ namespace Aniflix
                 MessageBox.Show("Nenhum filme encontrado.");
                 FilmesCodigoText.Focus();
             }
+
+            if (
+           DateTime.TryParseExact(
+               txDataLancamento.Text,
+               "dd/MM/yyyy",
+               CultureInfo.InvariantCulture,
+               DateTimeStyles.None,
+               out dataLancamento
+           )
+       )
+            {
+                string ano = dataLancamento.Year.ToString();
+                txTags.Text = "#Filme #Filme" + ano;
+            }
+
+            if (movie.Genres.Count > 2)
+            {
+                HashSet<string> hashtags = [];
+
+                static void FormatGenre(string genre, HashSet<string> hashtags)
+                {
+                    Dictionary<string, string> specialWords = new()
+                {
+                    { "ficção científica", "ficçãocientífica ficcaocientifica" },
+                    { "romântico", "romântico romantico" },
+                    { "romântica", "romântica romantica" },
+                    { "comédia", "comédia comedia" },
+                    { "mistério", "mistério misterio" },
+                };
+
+                    string lowerGenre = genre.ToLower();
+
+                    if (specialWords.TryGetValue(lowerGenre, out string? value))
+                    {
+                        foreach (var tag in value.Split(' '))
+                        {
+                            hashtags.Add($"#{tag}");
+                        }
+                    }
+                    else
+                    {
+                        string clean = new(genre.RemoveDiacritics().Where(char.IsAscii).ToArray());
+                        hashtags.Add($"#{genre.ToLower().Replace(" ", "")}");
+                        hashtags.Add($"#{clean.ToLower().Replace(" ", "")}");
+                    }
+                }
+
+                FormatGenre(movie.Genres[0].Name, hashtags);
+                FormatGenre(movie.Genres[1].Name, hashtags);
+                FormatGenre(movie.Genres[2].Name, hashtags);
+                txGenero.Text = string.Join(" ", hashtags);
+            }
+
+            var credits = client.GetMovieCreditsAsync(Convert.ToInt32(txCodigo.Text)).Result;
+            var directors = credits
+                .Crew.Where(person => person.Job == "Director")
+                .Take(4)
+                .Select(person => $"#{person.Name.Replace(" ", "")}")
+                .ToList();
+
+            txDiretor.Text = string.Join(" ", directors);
+
+            var stars = credits
+                .Cast.Take(5)
+                .Select(person => $"#{person.Name.Replace(" ", "")}")
+                .ToList();
+
+            txEstrelas.Text = string.Join(" ", stars);
+
+            var studios = movie
+                .ProductionCompanies.Take(5)
+                .Select(company => $"#{company.Name.Replace(" ", "")}")
+                .ToList();
+
+            var cleanedList = studios
+                .Select(str =>
+                    str.Aggregate(
+                        "",
+                        (result, c) => (char.IsLetterOrDigit(c) || c == '#') ? result + c : result
+                    )
+                )
+                .ToList();
+
+            txEstudio.Text = string.Join(" ", cleanedList);
         }
         private void FilmesCodigoText_TextChanged(object sender, EventArgs e)
         {
