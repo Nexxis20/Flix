@@ -36,7 +36,7 @@ namespace Aniflix
             return "#" + input.Replace(" ", string.Empty);
         }
 
-        public void GetFilmes()
+        private void GetFilmes()
         {
             var tmdbSettings = configuration!.GetSection("TMDB");
 
@@ -135,6 +135,19 @@ namespace Aniflix
             FilmesDiretorText.Text = string.Join(" ", StringExtensions.ClearLists(directors));
             FilmesEstrelasText.Text = string.Join(" ", StringExtensions.ClearLists(stars));
             FilmesEstudioText.Text = string.Join(" ", StringExtensions.ClearLists(studios));
+        }
+
+        private void FilmesCodigoText_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(FilmesCodigoText.Text))
+            {
+                MessageBox.Show("Por favor, insira o código do filme.");
+                FilmesCodigoText.Focus();
+            }
+            else
+            {
+                GetFilmes();
+            }
         }
     }
 
