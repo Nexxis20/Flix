@@ -9,6 +9,60 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<None Remove="Resources\animation-play.png" />
+		<None Remove="Resources\arrow-left.png" />
+		<None Remove="Resources\babel.png" />
+		<None Remove="Resources\balloon.png" />
+		<None Remove="Resources\camcorder.png" />
+		<None Remove="Resources\content-copy.png" />
+		<None Remove="Resources\content-save.png" />
+		<None Remove="Resources\exit-to-app.png" />
+		<None Remove="Resources\filmstrip.png" />
+		<None Remove="Resources\movie-edit.png" />
+		<None Remove="Resources\skip-next.png" />
+		<None Remove="Resources\skip-previous.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Resources\animation-play.png">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\arrow-left.png">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\babel.png">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\balloon.png">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\camcorder.png">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\content-copy.png">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\content-save.png">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\exit-to-app.png">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\filmstrip.png">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\movie-edit.png">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\skip-next.png">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\skip-previous.png">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.0" />
