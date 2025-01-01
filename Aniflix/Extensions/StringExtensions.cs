@@ -84,11 +84,11 @@ namespace Aniflix.Extensions
                     continue;
                 }
 
-                string cleanName = RemoveDiacritics(name);
+                string cleanName = new(name.RemoveDiacritics().Where(char.IsAscii).ToArray());
                 cleanName = new string(cleanName.Where(c => char.IsLetterOrDigit(c) || c == ' ').ToArray());
 
-                result.Add($"#{name.Replace(" ", "")}");
-                result.Add($"#{cleanName.Replace(" ", "")}");
+                result.Add($"{name.Replace(" ", "")}");
+                result.Add($"{cleanName.Replace(" ", "")}");
             }
 
             return string.Join(" ", result);
