@@ -44,7 +44,7 @@
             Filmes.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
             Filmes.ForeColor = Color.White;
             Filmes.ImageSize = new Size(48, 48);
-            Filmes.Location = new Point(277, 163);
+            Filmes.Location = new Point(300, 160);
             Filmes.Name = "Filmes";
             Filmes.Size = new Size(124, 108);
             Filmes.Style.BackColor = Color.FromArgb(52, 152, 219);
@@ -63,7 +63,7 @@
             Sair.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
             Sair.ForeColor = Color.White;
             Sair.ImageSize = new Size(48, 48);
-            Sair.Location = new Point(572, 375);
+            Sair.Location = new Point(595, 372);
             Sair.Name = "Sair";
             Sair.Size = new Size(159, 92);
             Sair.Style.BackColor = Color.FromArgb(211, 72, 38);
@@ -82,7 +82,7 @@
             Series.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
             Series.ForeColor = Color.White;
             Series.ImageSize = new Size(48, 48);
-            Series.Location = new Point(277, 277);
+            Series.Location = new Point(300, 274);
             Series.Name = "Series";
             Series.Size = new Size(124, 92);
             Series.Style.BackColor = Color.FromArgb(34, 132, 121);
@@ -101,7 +101,7 @@
             GoreButton.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
             GoreButton.ForeColor = Color.White;
             GoreButton.ImageSize = new Size(48, 48);
-            GoreButton.Location = new Point(277, 375);
+            GoreButton.Location = new Point(300, 372);
             GoreButton.Name = "GoreButton";
             GoreButton.Size = new Size(124, 92);
             GoreButton.Style.BackColor = Color.FromArgb(220, 97, 65);
@@ -120,7 +120,7 @@
             BreakOut.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
             BreakOut.ForeColor = Color.White;
             BreakOut.ImageSize = new Size(48, 48);
-            BreakOut.Location = new Point(407, 277);
+            BreakOut.Location = new Point(430, 274);
             BreakOut.Name = "BreakOut";
             BreakOut.Size = new Size(159, 92);
             BreakOut.Style.BackColor = Color.FromArgb(82, 0, 101);
@@ -139,7 +139,7 @@
             Animes.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
             Animes.ForeColor = Color.White;
             Animes.ImageSize = new Size(48, 48);
-            Animes.Location = new Point(407, 163);
+            Animes.Location = new Point(430, 160);
             Animes.Name = "Animes";
             Animes.Size = new Size(324, 108);
             Animes.Style.BackColor = Color.FromArgb(96, 61, 188);
@@ -158,7 +158,7 @@
             GoreFilmes.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
             GoreFilmes.ForeColor = Color.White;
             GoreFilmes.ImageSize = new Size(48, 48);
-            GoreFilmes.Location = new Point(407, 375);
+            GoreFilmes.Location = new Point(430, 372);
             GoreFilmes.Name = "GoreFilmes";
             GoreFilmes.Size = new Size(159, 92);
             GoreFilmes.Style.BackColor = Color.FromArgb(220, 97, 65);
@@ -177,7 +177,7 @@
             sfButton2.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
             sfButton2.ForeColor = Color.White;
             sfButton2.ImageSize = new Size(48, 48);
-            sfButton2.Location = new Point(572, 277);
+            sfButton2.Location = new Point(595, 274);
             sfButton2.Name = "sfButton2";
             sfButton2.Size = new Size(159, 92);
             sfButton2.Style.BackColor = Color.FromArgb(82, 0, 101);
