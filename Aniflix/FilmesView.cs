@@ -5,7 +5,8 @@ namespace Aniflix
     public partial class FilmesView : Form
     {
         DateTime dataLancamento;
-        private IConfiguration? _configuration;
+        private IConfiguration? configuration;
+
         public FilmesView()
         {
             InitializeComponent();
@@ -17,7 +18,7 @@ namespace Aniflix
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
-            _configuration = builder.Build();
+            configuration = builder.Build();
         }
 
         private void FilmesCodigoText_KeyPress(object sender, KeyPressEventArgs e)
@@ -32,8 +33,32 @@ namespace Aniflix
             return "#" + input.Replace(" ", string.Empty);
         }
 
-        public static void GetFilmes()
+        public void GetFilmes()
         {
+            var tmdbSettings = configuration.GetSection("TMDB");
+
+            var client = new TMDbLib.Client.TMDbClient(tmdbSettings["key"])
+            {
+                DefaultLanguage = "pt-BR",
+                DefaultCountry = "BR",
+            };
+
+            var movie = client.GetMovieAsync(FilmesCodigoText.Text).Result;
+
+            if (movie != null)
+            {
+                FilmesTituloText.Text = movie.Title;
+                FilmesSinopseText.Text = movie.Overview;
+                FilmesTituloOriginalText.Text = movie.OriginalTitle;
+                FilmesDataLancamentoText.Text = movie.ReleaseDate?.ToString("dd/MM/yyyy");
+                FilmesFranquiaText.Text = FormatString(FilmesTituloText.Text);
+            }
+            else
+            {
+                MessageBox.Show("Nenhum filme encontrado.");
+                FilmesCodigoText.Focus();
+            }
+
 
         }
 
