@@ -1,4 +1,5 @@
 ﻿using Aniflix.Extensions;
+using Aniflix.Model;
 using Microsoft.Extensions.Configuration;
 using Syncfusion.WinForms.Controls;
 using System.Globalization;
@@ -14,6 +15,7 @@ namespace Aniflix
         {
             InitializeComponent();
             ConfigureAppSettings();
+            UpdateData();
         }
         private void ConfigureAppSettings()
         {
@@ -136,6 +138,25 @@ namespace Aniflix
             FilmesEstrelasText.Text = string.Join(" ", StringExtensions.ClearLists(stars));
             FilmesEstudioText.Text = string.Join(" ", StringExtensions.ClearLists(studios));
         }
+
+        private void UpdateData()
+        {
+            var model = new FilmesModel(
+                titulo: FilmesTituloText.Text,
+                audio: FilmesAudioBox.SelectedIndex.ToString(),
+                sinopse: FilmesSinopseText.Text,
+                tituloOriginal: FilmesTituloOriginalText.Text,
+                dataLancamento: FilmesDataLancamentoText.Text,
+                franquia: FilmesFranquiaText.Text,
+                genero: FilmesGeneroText.Text,
+                tags: FilmesTagsText.Text,
+                diretor: FilmesDiretorText.Text,
+                estrelas: FilmesEstrelasText.Text,
+                estudio: FilmesEstudioText.Text
+                );
+            FilmesResumoText.Text = model.GetFormattedText();
+        }
+
 
         private void FilmesCodigoText_Leave(object sender, EventArgs e)
         {
