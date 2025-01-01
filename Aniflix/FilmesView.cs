@@ -20,8 +20,6 @@ namespace Aniflix
             _configuration = builder.Build();
         }
 
-
-
         private void FilmesCodigoText_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
@@ -29,5 +27,20 @@ namespace Aniflix
                 e.Handled = true;
             }
         }
+        private static string FormatString(string input)
+        {
+            return "#" + input.Replace(" ", string.Empty);
+        }
+
+        public static void GetFilmes()
+        {
+
+        }
+
+    }
+
+    public class Settings
+    {
+        public string? TMDBKey { get; set; }
     }
 }
