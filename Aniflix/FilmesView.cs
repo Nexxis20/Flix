@@ -136,10 +136,6 @@ namespace Aniflix
             FilmesEstrelasText.Text = string.Join(" ", StringExtensions.ClearLists(stars));
             FilmesEstudioText.Text = string.Join(" ", StringExtensions.ClearLists(studios));
         }
-        private void FilmesCodigoText_TextChanged(object sender, EventArgs e)
-        {
-            GetFilmes();
-        }
     }
 
     public class Settings
