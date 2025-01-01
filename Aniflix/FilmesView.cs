@@ -11,12 +11,12 @@
 
             if (!(char.IsControl(e.KeyChar) || char.IsDigit(e.KeyChar) || e.KeyChar == '.'))
             {
-                e.Handled = true;
+                e.Handled = false;
             }
 
             if ((e.KeyChar == '.') && (((TextBox)sender).Text.IndexOf('.') > -1))
             {
-                e.Handled = true;
+                e.Handled = false;
             }
         }
     }
