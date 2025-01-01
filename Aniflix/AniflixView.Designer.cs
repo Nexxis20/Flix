@@ -173,14 +173,14 @@
             // 
             // BreakOutSeries
             // 
-            BreakOutSeries.BackColor = Color.FromArgb(2, 48, 71);
+            BreakOutSeries.BackColor = Color.FromArgb(45, 1, 64);
             BreakOutSeries.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
             BreakOutSeries.ForeColor = Color.White;
             BreakOutSeries.ImageSize = new Size(48, 48);
             BreakOutSeries.Location = new Point(595, 274);
             BreakOutSeries.Name = "BreakOutSeries";
             BreakOutSeries.Size = new Size(159, 92);
-            BreakOutSeries.Style.BackColor = Color.FromArgb(2, 48, 71);
+            BreakOutSeries.Style.BackColor = Color.FromArgb(45, 1, 64);
             BreakOutSeries.Style.ForeColor = Color.White;
             BreakOutSeries.Style.Image = Properties.Resources.babel;
             BreakOutSeries.Style.ImageForeColor = Color.White;
