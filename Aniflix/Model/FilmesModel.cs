@@ -15,7 +15,7 @@
         private string Estudio;
         private string Audio;
 
-        // getters and setters
+
 
 
 
