@@ -10,6 +10,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<None Remove="appsetings.json" />
 		<None Remove="Resources\animation-play.png" />
 		<None Remove="Resources\arrow-left.png" />
 		<None Remove="Resources\babel.png" />
@@ -22,6 +23,12 @@
 		<None Remove="Resources\movie-edit.png" />
 		<None Remove="Resources\skip-next.png" />
 		<None Remove="Resources\skip-previous.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="appsetings.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
 	</ItemGroup>
 
 	<ItemGroup>
