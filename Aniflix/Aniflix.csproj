@@ -24,42 +24,42 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Content Include="Resources\animation-play.png">
+		<EmbeddedResource Include="Resources\animation-play.png">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
-		</Content>
-		<Content Include="Resources\arrow-left.png">
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\arrow-left.png">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
-		</Content>
-		<Content Include="Resources\babel.png">
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\babel.png">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
-		</Content>
-		<Content Include="Resources\balloon.png">
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\balloon.png">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
-		</Content>
-		<Content Include="Resources\camcorder.png">
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\camcorder.png">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
-		</Content>
-		<Content Include="Resources\content-copy.png">
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\content-copy.png">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
-		</Content>
-		<Content Include="Resources\content-save.png">
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\content-save.png">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
-		</Content>
-		<Content Include="Resources\exit-to-app.png">
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\exit-to-app.png">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
-		</Content>
-		<Content Include="Resources\filmstrip.png">
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\filmstrip.png">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
-		</Content>
-		<Content Include="Resources\movie-edit.png">
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\movie-edit.png">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
-		</Content>
-		<Content Include="Resources\skip-next.png">
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\skip-next.png">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
-		</Content>
-		<Content Include="Resources\skip-previous.png">
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resources\skip-previous.png">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
-		</Content>
+		</EmbeddedResource>
 	</ItemGroup>
 
 	<ItemGroup>
