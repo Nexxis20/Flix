@@ -59,14 +59,14 @@
             // 
             // Sair
             // 
-            Sair.BackColor = Color.OrangeRed;
+            Sair.BackColor = Color.FromArgb(214, 66, 24);
             Sair.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
             Sair.ForeColor = Color.White;
             Sair.ImageSize = new Size(48, 48);
             Sair.Location = new Point(595, 372);
             Sair.Name = "Sair";
             Sair.Size = new Size(159, 92);
-            Sair.Style.BackColor = Color.OrangeRed;
+            Sair.Style.BackColor = Color.FromArgb(214, 66, 24);
             Sair.Style.ForeColor = Color.White;
             Sair.Style.Image = Properties.Resources.exit_to_app;
             Sair.Style.ImageForeColor = Color.White;
@@ -97,14 +97,14 @@
             // 
             // GoreFilmes
             // 
-            GoreFilmes.BackColor = Color.FromArgb(220, 97, 65);
+            GoreFilmes.BackColor = Color.FromArgb(58, 83, 99);
             GoreFilmes.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
             GoreFilmes.ForeColor = Color.White;
             GoreFilmes.ImageSize = new Size(48, 48);
             GoreFilmes.Location = new Point(300, 372);
             GoreFilmes.Name = "GoreFilmes";
             GoreFilmes.Size = new Size(124, 92);
-            GoreFilmes.Style.BackColor = Color.FromArgb(220, 97, 65);
+            GoreFilmes.Style.BackColor = Color.FromArgb(58, 83, 99);
             GoreFilmes.Style.ForeColor = Color.White;
             GoreFilmes.Style.Image = Properties.Resources.balloon;
             GoreFilmes.Style.ImageForeColor = Color.White;
@@ -154,14 +154,14 @@
             // 
             // GoreSeries
             // 
-            GoreSeries.BackColor = Color.FromArgb(220, 97, 65);
+            GoreSeries.BackColor = Color.FromArgb(82, 114, 127);
             GoreSeries.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
             GoreSeries.ForeColor = Color.White;
             GoreSeries.ImageSize = new Size(48, 48);
             GoreSeries.Location = new Point(430, 372);
             GoreSeries.Name = "GoreSeries";
             GoreSeries.Size = new Size(159, 92);
-            GoreSeries.Style.BackColor = Color.FromArgb(220, 97, 65);
+            GoreSeries.Style.BackColor = Color.FromArgb(82, 114, 127);
             GoreSeries.Style.ForeColor = Color.White;
             GoreSeries.Style.Image = Properties.Resources.balloon;
             GoreSeries.Style.ImageForeColor = Color.White;
@@ -173,14 +173,14 @@
             // 
             // BreakOutSeries
             // 
-            BreakOutSeries.BackColor = Color.FromArgb(82, 0, 101);
+            BreakOutSeries.BackColor = Color.FromArgb(2, 48, 71);
             BreakOutSeries.Font = new Font("Inconsolata", 11.25F, FontStyle.Bold);
             BreakOutSeries.ForeColor = Color.White;
             BreakOutSeries.ImageSize = new Size(48, 48);
             BreakOutSeries.Location = new Point(595, 274);
             BreakOutSeries.Name = "BreakOutSeries";
             BreakOutSeries.Size = new Size(159, 92);
-            BreakOutSeries.Style.BackColor = Color.FromArgb(82, 0, 101);
+            BreakOutSeries.Style.BackColor = Color.FromArgb(2, 48, 71);
             BreakOutSeries.Style.ForeColor = Color.White;
             BreakOutSeries.Style.Image = Properties.Resources.babel;
             BreakOutSeries.Style.ImageForeColor = Color.White;
