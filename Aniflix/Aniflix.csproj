@@ -88,7 +88,7 @@
 
 	<ItemGroup>
 	  <Content Include="Resources\bw.exe">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </Content>
 	</ItemGroup>
 
