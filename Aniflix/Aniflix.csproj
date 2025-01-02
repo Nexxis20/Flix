@@ -79,6 +79,7 @@
 		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.2" />
 		<PackageReference Include="Syncfusion.Core.WinForms" Version="28.1.37" />
 		<PackageReference Include="TMDbLib" Version="2.2.0" />
+		<PackageReference Include="VaultSharp" Version="1.17.5.1" />
 	</ItemGroup>
 
 	<ItemGroup>
