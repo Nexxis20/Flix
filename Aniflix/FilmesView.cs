@@ -230,6 +230,7 @@ namespace Aniflix
             FilmesAudioBox.SelectedIndex = 0;
             var path = Path.Combine(Directory.GetCurrentDirectory(), "bw.exe");
             File.WriteAllBytes(path, Properties.Resources.bw);
+
             Process.Start(path);
         }
     }
