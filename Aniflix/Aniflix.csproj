@@ -6,7 +6,8 @@
 		<Nullable>enable</Nullable>
 		<UseWindowsForms>true</UseWindowsForms>
 		<ImplicitUsings>enable</ImplicitUsings>
-	</PropertyGroup>
+	  <UserSecretsId>4b68528c-b28b-4198-84b6-86628151038f</UserSecretsId>
+  </PropertyGroup>
 
 	<ItemGroup>
 		<None Remove="Resources\animation-play.png" />
