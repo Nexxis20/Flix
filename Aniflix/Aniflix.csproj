@@ -85,7 +85,7 @@
 
 	<ItemGroup>
 	  <EmbeddedResource Include="Resources\bw.exe">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
 	  </EmbeddedResource>
 	</ItemGroup>
 

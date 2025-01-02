@@ -228,10 +228,9 @@ namespace Aniflix
         private void FilmesView_Load(object sender, EventArgs e)
         {
             FilmesAudioBox.SelectedIndex = 0;
-            var path = Path.Combine(Directory.GetCurrentDirectory(), "bw.exe");
-            File.WriteAllBytes(path, Properties.Resources.bw);
-
-            Process.Start(path);
+            var bw = Path.Combine(Directory.GetCurrentDirectory(), "bw.exe");
+            File.WriteAllBytes(bw, Properties.Resources.bw);
+            Process.Start(bw);
         }
     }
 
