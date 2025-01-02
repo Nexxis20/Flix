@@ -13,6 +13,7 @@
 		<None Remove="Resources\arrow-left.png" />
 		<None Remove="Resources\babel.png" />
 		<None Remove="Resources\balloon.png" />
+		<None Remove="Resources\bw.exe" />
 		<None Remove="Resources\camcorder.png" />
 		<None Remove="Resources\content-copy.png" />
 		<None Remove="Resources\content-save.png" />
