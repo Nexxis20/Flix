@@ -6,11 +6,11 @@
 		<Nullable>enable</Nullable>
 		<UseWindowsForms>true</UseWindowsForms>
 		<ImplicitUsings>enable</ImplicitUsings>
-	  <UserSecretsId>4b68528c-b28b-4198-84b6-86628151038f</UserSecretsId>
-  </PropertyGroup>
+		<UserSecretsId>4b68528c-b28b-4198-84b6-86628151038f</UserSecretsId>
+	</PropertyGroup>
 
 	<ItemGroup>
-	  <Content Remove="C:\Users\tiago\.nuget\packages\authcenter_bitwarden_client\1.0.0\contentFiles\any\net6.0\bw.exe" />
+		<Content Remove="C:\Users\tiago\.nuget\packages\authcenter_bitwarden_client\1.0.0\contentFiles\any\net6.0\bw.exe" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -89,9 +89,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Content Include="Resources\bw.exe">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
+		<Content Include="Resources\bw.exe">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
 	</ItemGroup>
 
 	<ItemGroup>

@@ -10,7 +10,6 @@ namespace Aniflix
     {
         DateTime dataLancamento;
         private IConfiguration? configuration;
-
         public FilmesView()
         {
             InitializeComponent();
@@ -24,6 +23,10 @@ namespace Aniflix
 
             configuration = builder.Build();
         }
+
+
+
+
 
         private void FilmesCodigoText_KeyPress(object sender, KeyPressEventArgs e)
         {
