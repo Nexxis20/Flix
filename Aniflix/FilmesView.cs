@@ -1,5 +1,4 @@
 ﻿using Aniflix.Extensions;
-using Aniflix.Model;
 using Microsoft.Extensions.Configuration;
 using Syncfusion.WinForms.Controls;
 using System.Globalization;
@@ -23,10 +22,6 @@ namespace Aniflix
 
             configuration = builder.Build();
         }
-
-
-
-
 
         private void FilmesCodigoText_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -143,7 +138,7 @@ namespace Aniflix
 
         private void UpdateData()
         {
-            var model = new FilmesModel(
+            var model = new FilmesFactory(
                 titulo: FilmesTituloText.Text,
                 audio: FilmesAudioBox.SelectedItem?.ToString() ?? string.Empty,
                 sinopse: FilmesSinopseText.Text,
