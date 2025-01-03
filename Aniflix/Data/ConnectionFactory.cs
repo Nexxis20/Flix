@@ -14,7 +14,7 @@ namespace Aniflix.Data
 
         public ConnectionFactory()
         {
-            connString = String.Format("Server={0};Port={1};Database={2};User Id={3};Password={4};", serverName, port, databaseName, userName, password);
+            connString = String.Format("Server={0};Port={1};Database={2};Username={3};Password={4};SSL Mode=Require;Trust Server Certificate=true", serverName, port, databaseName, userName, password);
         }
         public DataTable GetFilmes()
         {
