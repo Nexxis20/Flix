@@ -227,6 +227,12 @@ namespace Aniflix
         {
             FilmesAudioBox.SelectedIndex = 0;
         }
+
+        private void Copiar_Click(object sender, EventArgs e)
+        {
+            FilmesResumoText.SelectAll();
+            FilmesResumoText.Copy();
+        }
     }
 
     public class Settings

@@ -54,12 +54,12 @@
             FilmesEstudioText = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             FilmesResumoText = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             autoLabel13 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            sfButton1 = new Syncfusion.WinForms.Controls.SfButton();
-            sfButton2 = new Syncfusion.WinForms.Controls.SfButton();
-            sfButton3 = new Syncfusion.WinForms.Controls.SfButton();
-            sfButton4 = new Syncfusion.WinForms.Controls.SfButton();
-            sfButton5 = new Syncfusion.WinForms.Controls.SfButton();
-            sfButton6 = new Syncfusion.WinForms.Controls.SfButton();
+            Copiar = new Syncfusion.WinForms.Controls.SfButton();
+            Salvar = new Syncfusion.WinForms.Controls.SfButton();
+            Editar = new Syncfusion.WinForms.Controls.SfButton();
+            Anterior = new Syncfusion.WinForms.Controls.SfButton();
+            Proximo = new Syncfusion.WinForms.Controls.SfButton();
+            Voltar = new Syncfusion.WinForms.Controls.SfButton();
             ((System.ComponentModel.ISupportInitialize)FilmesCodigoText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilmesTituloText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilmesSinopseText).BeginInit();
@@ -75,7 +75,7 @@
             // 
             // FilmesCodigoText
             // 
-            FilmesCodigoText.BeforeTouchSize = new Size(100, 23);
+            FilmesCodigoText.BeforeTouchSize = new Size(612, 478);
             FilmesCodigoText.Location = new Point(12, 27);
             FilmesCodigoText.Name = "FilmesCodigoText";
             FilmesCodigoText.PlaceholderText = "Código do Filme";
@@ -166,7 +166,7 @@
             // 
             // FilmesTituloText
             // 
-            FilmesTituloText.BeforeTouchSize = new Size(100, 23);
+            FilmesTituloText.BeforeTouchSize = new Size(612, 478);
             FilmesTituloText.Location = new Point(141, 27);
             FilmesTituloText.Name = "FilmesTituloText";
             FilmesTituloText.PlaceholderText = "Título ";
@@ -194,7 +194,7 @@
             // 
             // FilmesSinopseText
             // 
-            FilmesSinopseText.BeforeTouchSize = new Size(100, 23);
+            FilmesSinopseText.BeforeTouchSize = new Size(612, 478);
             FilmesSinopseText.Location = new Point(12, 71);
             FilmesSinopseText.Multiline = true;
             FilmesSinopseText.Name = "FilmesSinopseText";
@@ -205,7 +205,7 @@
             // 
             // FilmesTituloOriginalText
             // 
-            FilmesTituloOriginalText.BeforeTouchSize = new Size(100, 23);
+            FilmesTituloOriginalText.BeforeTouchSize = new Size(612, 478);
             FilmesTituloOriginalText.Location = new Point(12, 262);
             FilmesTituloOriginalText.Name = "FilmesTituloOriginalText";
             FilmesTituloOriginalText.PlaceholderText = "Título Original";
@@ -233,7 +233,7 @@
             // 
             // FilmesFranquiaText
             // 
-            FilmesFranquiaText.BeforeTouchSize = new Size(100, 23);
+            FilmesFranquiaText.BeforeTouchSize = new Size(612, 478);
             FilmesFranquiaText.Location = new Point(12, 306);
             FilmesFranquiaText.Name = "FilmesFranquiaText";
             FilmesFranquiaText.PlaceholderText = "Franquia";
@@ -243,7 +243,7 @@
             // 
             // FilmesGeneroText
             // 
-            FilmesGeneroText.BeforeTouchSize = new Size(100, 23);
+            FilmesGeneroText.BeforeTouchSize = new Size(612, 478);
             FilmesGeneroText.Location = new Point(12, 350);
             FilmesGeneroText.Name = "FilmesGeneroText";
             FilmesGeneroText.PlaceholderText = "Gênero do Filme";
@@ -253,7 +253,7 @@
             // 
             // FilmesTagsText
             // 
-            FilmesTagsText.BeforeTouchSize = new Size(100, 23);
+            FilmesTagsText.BeforeTouchSize = new Size(612, 478);
             FilmesTagsText.Location = new Point(471, 350);
             FilmesTagsText.Name = "FilmesTagsText";
             FilmesTagsText.PlaceholderText = "Tags";
@@ -263,7 +263,7 @@
             // 
             // FilmesEstrelasText
             // 
-            FilmesEstrelasText.BeforeTouchSize = new Size(100, 23);
+            FilmesEstrelasText.BeforeTouchSize = new Size(612, 478);
             FilmesEstrelasText.Location = new Point(12, 438);
             FilmesEstrelasText.Name = "FilmesEstrelasText";
             FilmesEstrelasText.PlaceholderText = "Estrelas";
@@ -273,7 +273,7 @@
             // 
             // FilmesDiretorText
             // 
-            FilmesDiretorText.BeforeTouchSize = new Size(100, 23);
+            FilmesDiretorText.BeforeTouchSize = new Size(612, 478);
             FilmesDiretorText.Location = new Point(12, 394);
             FilmesDiretorText.Name = "FilmesDiretorText";
             FilmesDiretorText.PlaceholderText = "Diretor";
@@ -283,7 +283,7 @@
             // 
             // FilmesEstudioText
             // 
-            FilmesEstudioText.BeforeTouchSize = new Size(100, 23);
+            FilmesEstudioText.BeforeTouchSize = new Size(612, 478);
             FilmesEstudioText.Location = new Point(12, 482);
             FilmesEstudioText.Name = "FilmesEstudioText";
             FilmesEstudioText.PlaceholderText = "Estúdio";
@@ -293,7 +293,7 @@
             // 
             // FilmesResumoText
             // 
-            FilmesResumoText.BeforeTouchSize = new Size(100, 23);
+            FilmesResumoText.BeforeTouchSize = new Size(612, 478);
             FilmesResumoText.Location = new Point(630, 27);
             FilmesResumoText.Multiline = true;
             FilmesResumoText.Name = "FilmesResumoText";
@@ -309,101 +309,126 @@
             autoLabel13.TabIndex = 33;
             autoLabel13.Text = "Resumo";
             // 
-            // sfButton1
+            // Copiar
             // 
-            sfButton1.Font = new Font("Segoe UI Semibold", 9F);
-            sfButton1.ImageSize = new Size(48, 48);
-            sfButton1.Location = new Point(87, 554);
-            sfButton1.Name = "sfButton1";
-            sfButton1.Size = new Size(146, 145);
-            sfButton1.Style.ForeColor = Color.White;
-            sfButton1.Style.ImageForeColor = Color.White;
-            sfButton1.TabIndex = 34;
-            sfButton1.Text = "sfButton1";
-            sfButton1.TextAlign = ContentAlignment.BottomLeft;
-            sfButton1.TextImageRelation = TextImageRelation.Overlay;
+            Copiar.BackColor = Color.FromArgb(0, 97, 149);
+            Copiar.Font = new Font("Segoe UI Semibold", 9F);
+            Copiar.ImageSize = new Size(48, 48);
+            Copiar.Location = new Point(141, 529);
+            Copiar.Name = "Copiar";
+            Copiar.Size = new Size(164, 97);
+            Copiar.Style.BackColor = Color.FromArgb(0, 97, 149);
+            Copiar.Style.ForeColor = Color.White;
+            Copiar.Style.Image = Properties.Resources.content_copy;
+            Copiar.Style.ImageForeColor = Color.White;
+            Copiar.TabIndex = 34;
+            Copiar.Text = "Copiar Dados";
+            Copiar.TextAlign = ContentAlignment.BottomLeft;
+            Copiar.TextImageRelation = TextImageRelation.Overlay;
+            Copiar.UseVisualStyleBackColor = false;
+            Copiar.Click += Copiar_Click;
             // 
-            // sfButton2
+            // Salvar
             // 
-            sfButton2.Font = new Font("Segoe UI Semibold", 9F);
-            sfButton2.ImageSize = new Size(48, 48);
-            sfButton2.Location = new Point(256, 554);
-            sfButton2.Name = "sfButton2";
-            sfButton2.Size = new Size(146, 145);
-            sfButton2.Style.ForeColor = Color.White;
-            sfButton2.Style.ImageForeColor = Color.White;
-            sfButton2.TabIndex = 35;
-            sfButton2.Text = "sfButton2";
-            sfButton2.TextAlign = ContentAlignment.BottomLeft;
-            sfButton2.TextImageRelation = TextImageRelation.Overlay;
+            Salvar.BackColor = Color.FromArgb(229, 92, 68);
+            Salvar.Font = new Font("Segoe UI Semibold", 9F);
+            Salvar.ImageSize = new Size(48, 48);
+            Salvar.Location = new Point(308, 529);
+            Salvar.Name = "Salvar";
+            Salvar.Size = new Size(164, 97);
+            Salvar.Style.BackColor = Color.FromArgb(229, 92, 68);
+            Salvar.Style.ForeColor = Color.White;
+            Salvar.Style.Image = Properties.Resources.content_save;
+            Salvar.Style.ImageForeColor = Color.White;
+            Salvar.TabIndex = 35;
+            Salvar.Text = "Salvar";
+            Salvar.TextAlign = ContentAlignment.BottomLeft;
+            Salvar.TextImageRelation = TextImageRelation.Overlay;
+            Salvar.UseVisualStyleBackColor = false;
             // 
-            // sfButton3
+            // Editar
             // 
-            sfButton3.Font = new Font("Segoe UI Semibold", 9F);
-            sfButton3.ImageSize = new Size(48, 48);
-            sfButton3.Location = new Point(427, 554);
-            sfButton3.Name = "sfButton3";
-            sfButton3.Size = new Size(146, 145);
-            sfButton3.Style.ForeColor = Color.White;
-            sfButton3.Style.ImageForeColor = Color.White;
-            sfButton3.TabIndex = 36;
-            sfButton3.Text = "sfButton3";
-            sfButton3.TextAlign = ContentAlignment.BottomLeft;
-            sfButton3.TextImageRelation = TextImageRelation.Overlay;
+            Editar.BackColor = Color.FromArgb(46, 34, 114);
+            Editar.Font = new Font("Segoe UI Semibold", 9F);
+            Editar.ImageSize = new Size(48, 48);
+            Editar.Location = new Point(475, 529);
+            Editar.Name = "Editar";
+            Editar.Size = new Size(164, 97);
+            Editar.Style.BackColor = Color.FromArgb(46, 34, 114);
+            Editar.Style.ForeColor = Color.White;
+            Editar.Style.Image = Properties.Resources.movie_edit;
+            Editar.Style.ImageForeColor = Color.White;
+            Editar.TabIndex = 36;
+            Editar.Text = "Editar";
+            Editar.TextAlign = ContentAlignment.BottomLeft;
+            Editar.TextImageRelation = TextImageRelation.Overlay;
+            Editar.UseVisualStyleBackColor = false;
             // 
-            // sfButton4
+            // Anterior
             // 
-            sfButton4.Font = new Font("Segoe UI Semibold", 9F);
-            sfButton4.ImageSize = new Size(48, 48);
-            sfButton4.Location = new Point(592, 554);
-            sfButton4.Name = "sfButton4";
-            sfButton4.Size = new Size(146, 145);
-            sfButton4.Style.ForeColor = Color.White;
-            sfButton4.Style.ImageForeColor = Color.White;
-            sfButton4.TabIndex = 37;
-            sfButton4.Text = "sfButton4";
-            sfButton4.TextAlign = ContentAlignment.BottomLeft;
-            sfButton4.TextImageRelation = TextImageRelation.Overlay;
+            Anterior.BackColor = Color.FromArgb(195, 55, 100);
+            Anterior.Font = new Font("Segoe UI Semibold", 9F);
+            Anterior.ImageSize = new Size(48, 48);
+            Anterior.Location = new Point(642, 529);
+            Anterior.Name = "Anterior";
+            Anterior.Size = new Size(164, 97);
+            Anterior.Style.BackColor = Color.FromArgb(195, 55, 100);
+            Anterior.Style.ForeColor = Color.White;
+            Anterior.Style.Image = Properties.Resources.skip_previous;
+            Anterior.Style.ImageForeColor = Color.White;
+            Anterior.TabIndex = 37;
+            Anterior.Text = "Anterior";
+            Anterior.TextAlign = ContentAlignment.BottomLeft;
+            Anterior.TextImageRelation = TextImageRelation.Overlay;
+            Anterior.UseVisualStyleBackColor = false;
             // 
-            // sfButton5
+            // Proximo
             // 
-            sfButton5.Font = new Font("Segoe UI Semibold", 9F);
-            sfButton5.ImageSize = new Size(48, 48);
-            sfButton5.Location = new Point(753, 554);
-            sfButton5.Name = "sfButton5";
-            sfButton5.Size = new Size(146, 145);
-            sfButton5.Style.ForeColor = Color.White;
-            sfButton5.Style.ImageForeColor = Color.White;
-            sfButton5.TabIndex = 38;
-            sfButton5.Text = "sfButton5";
-            sfButton5.TextAlign = ContentAlignment.BottomLeft;
-            sfButton5.TextImageRelation = TextImageRelation.Overlay;
+            Proximo.BackColor = Color.FromArgb(29, 38, 113);
+            Proximo.Font = new Font("Segoe UI Semibold", 9F);
+            Proximo.ImageSize = new Size(48, 48);
+            Proximo.Location = new Point(809, 529);
+            Proximo.Name = "Proximo";
+            Proximo.Size = new Size(164, 97);
+            Proximo.Style.BackColor = Color.FromArgb(29, 38, 113);
+            Proximo.Style.ForeColor = Color.White;
+            Proximo.Style.Image = Properties.Resources.skip_next;
+            Proximo.Style.ImageForeColor = Color.White;
+            Proximo.TabIndex = 38;
+            Proximo.Text = "Próximo";
+            Proximo.TextAlign = ContentAlignment.BottomLeft;
+            Proximo.TextImageRelation = TextImageRelation.Overlay;
+            Proximo.UseVisualStyleBackColor = false;
             // 
-            // sfButton6
+            // Voltar
             // 
-            sfButton6.Font = new Font("Segoe UI Semibold", 9F);
-            sfButton6.ImageSize = new Size(48, 48);
-            sfButton6.Location = new Point(924, 554);
-            sfButton6.Name = "sfButton6";
-            sfButton6.Size = new Size(146, 145);
-            sfButton6.Style.ForeColor = Color.White;
-            sfButton6.Style.ImageForeColor = Color.White;
-            sfButton6.TabIndex = 39;
-            sfButton6.Text = "sfButton6";
-            sfButton6.TextAlign = ContentAlignment.BottomLeft;
-            sfButton6.TextImageRelation = TextImageRelation.Overlay;
+            Voltar.BackColor = Color.FromArgb(9, 32, 63);
+            Voltar.Font = new Font("Segoe UI Semibold", 9F);
+            Voltar.ImageSize = new Size(48, 48);
+            Voltar.Location = new Point(976, 529);
+            Voltar.Name = "Voltar";
+            Voltar.Size = new Size(164, 97);
+            Voltar.Style.BackColor = Color.FromArgb(9, 32, 63);
+            Voltar.Style.ForeColor = Color.White;
+            Voltar.Style.Image = Properties.Resources.arrow_left;
+            Voltar.Style.ImageForeColor = Color.White;
+            Voltar.TabIndex = 39;
+            Voltar.Text = "Voltar";
+            Voltar.TextAlign = ContentAlignment.BottomLeft;
+            Voltar.TextImageRelation = TextImageRelation.Overlay;
+            Voltar.UseVisualStyleBackColor = false;
             // 
             // FilmesView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1273, 777);
-            Controls.Add(sfButton6);
-            Controls.Add(sfButton5);
-            Controls.Add(sfButton4);
-            Controls.Add(sfButton3);
-            Controls.Add(sfButton2);
-            Controls.Add(sfButton1);
+            ClientSize = new Size(1273, 652);
+            Controls.Add(Voltar);
+            Controls.Add(Proximo);
+            Controls.Add(Anterior);
+            Controls.Add(Editar);
+            Controls.Add(Salvar);
+            Controls.Add(Copiar);
             Controls.Add(autoLabel13);
             Controls.Add(FilmesResumoText);
             Controls.Add(FilmesEstudioText);
@@ -481,11 +506,11 @@
         private Syncfusion.Windows.Forms.Tools.TextBoxExt FilmesEstudioText;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt FilmesResumoText;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel13;
-        private Syncfusion.WinForms.Controls.SfButton sfButton1;
-        private Syncfusion.WinForms.Controls.SfButton sfButton2;
-        private Syncfusion.WinForms.Controls.SfButton sfButton3;
-        private Syncfusion.WinForms.Controls.SfButton sfButton4;
-        private Syncfusion.WinForms.Controls.SfButton sfButton5;
-        private Syncfusion.WinForms.Controls.SfButton sfButton6;
+        private Syncfusion.WinForms.Controls.SfButton Copiar;
+        private Syncfusion.WinForms.Controls.SfButton Salvar;
+        private Syncfusion.WinForms.Controls.SfButton Editar;
+        private Syncfusion.WinForms.Controls.SfButton Anterior;
+        private Syncfusion.WinForms.Controls.SfButton Proximo;
+        private Syncfusion.WinForms.Controls.SfButton Voltar;
     }
 }
