@@ -236,9 +236,9 @@ namespace Aniflix
 
         private void Salvar_Click(object sender, EventArgs e)
         {
-            var filmes = new FilmesModel
+            var filmes = new Filmes
             {
-                Codigo = int.Parse(FilmesCodigoText.Text),
+                Codigo = FilmesCodigoText.Text,
                 Titulo = FilmesTituloText.Text,
                 Audio = FilmesAudioBox.SelectedItem?.ToString() ?? string.Empty,
                 Sinopse = FilmesSinopseText.Text,
