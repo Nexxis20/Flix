@@ -1,4 +1,5 @@
 ﻿using Aniflix.Controllers;
+using Aniflix.Data;
 using Aniflix.Extensions;
 using Aniflix.Model;
 using Microsoft.Extensions.Configuration;
@@ -140,7 +141,7 @@ namespace Aniflix
 
         private void UpdateData()
         {
-            var model = new FilmesFactory(
+            var model = new FilmesData(
                 titulo: FilmesTituloText.Text,
                 audio: FilmesAudioBox.SelectedItem?.ToString() ?? string.Empty,
                 sinopse: FilmesSinopseText.Text,
@@ -250,12 +251,8 @@ namespace Aniflix
                 Estrelas = FilmesEstrelasText.Text,
                 Estudio = FilmesEstudioText.Text
             };
-            var insertFilmes = new FilmesController();
-            var query = insertFilmes.InsereFilmes(filmes);
-            if (query)
-            {
-                MessageBox.Show("Aniflix - Filmes", $"{filmes.Titulo} inserido com sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            var novoFilme = new FilmesController();
+            novoFilme.InsereFilmes(filmes);
         }
     }
 

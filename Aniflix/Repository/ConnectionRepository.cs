@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using Npgsql;
+using System.Data;
 
 namespace Aniflix.Repository
 {
@@ -9,11 +10,18 @@ namespace Aniflix.Repository
         static readonly string databaseName = "aniflix";
         static readonly string userName = "OverHung6393";
         static readonly string password = "Skyline-Freeware-Snugly-Barrier7-Expand-Monopoly";
-        private readonly string connString;
+        private readonly string? connString;
 
         public ConnectionRepository()
         {
-            connString = string.Format("Server={0};Port={1};Database={2};Username={3};Password={4};SSL Mode=Require;Trust Server Certificate=true", serverName, port, databaseName, userName, password);
+            try
+            {
+                connString = string.Format("Server={0};Port={1};Database={2};Username={3};Password={4};SSL Mode=Require;Trust Server Certificate=true", serverName, port, databaseName, userName, password);
+            }
+            catch (NpgsqlException ex)
+            {
+                MessageBox.Show("Erro", "Erro: " + ex.Message.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         public IDbConnection GetConnection()
         {
