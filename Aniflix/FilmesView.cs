@@ -154,7 +154,6 @@ namespace Aniflix
                 );
             FilmesResumoText.Text = model.GetFormattedText();
         }
-
         private void FilmesCodigoText_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(FilmesCodigoText.Text))
