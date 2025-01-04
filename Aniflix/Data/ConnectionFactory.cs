@@ -1,4 +1,5 @@
-﻿using Npgsql;
+﻿using Aniflix.Model;
+using Npgsql;
 using System.Data;
 
 namespace Aniflix.Data
@@ -37,5 +38,12 @@ namespace Aniflix.Data
             }
             return dt;
         }
+
+        public interface IFilmeRepository
+        {
+            void InsereFilme(Filmes filmes);
+            IList<Filmes> GetFilmes(); // <T>
+
+
+        }
     }
-}

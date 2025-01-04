@@ -10,10 +10,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Content Remove="C:\Users\tiago\.nuget\packages\authcenter_bitwarden_client\1.0.0\contentFiles\any\net6.0\bw.exe" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<None Remove="Resources\animation-play.png" />
 		<None Remove="Resources\arrow-left.png" />
 		<None Remove="Resources\babel.png" />
@@ -108,6 +104,10 @@
 			<Generator>ResXFileCodeGenerator</Generator>
 			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
 		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Interfaces\" />
 	</ItemGroup>
 
 </Project>
