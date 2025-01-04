@@ -71,16 +71,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Insight.Database.Providers.Postgresql" Version="8.0.2" />
+		<PackageReference Include="Insight.Database.Providers.MySQL" Version="8.0.2" />
 		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.JSON" Version="9.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="9.0.0" />
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0" />
+		<PackageReference Include="MySqlConnector" Version="2.4.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-		<PackageReference Include="Npgsql" Version="9.0.2" />
-		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.2" />
 		<PackageReference Include="Syncfusion.Core.WinForms" Version="28.1.37" />
 		<PackageReference Include="TMDbLib" Version="2.2.0" />
 	</ItemGroup>

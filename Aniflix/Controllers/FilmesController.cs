@@ -10,7 +10,7 @@ namespace Aniflix.Controllers
         public void InsereFilmes(FilmesModel filmes)
         {
             var factory = new ConnectionRepository().GetConnection();
-            factory.Execute("insert_filmes", new
+            factory.Execute("insert_filme", new
             {
                 filmes.Codigo,
                 filmes.Titulo,
