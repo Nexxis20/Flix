@@ -9,24 +9,31 @@ namespace Aniflix.Controllers
     {
         public void InsereFilmes(FilmesModel filmes)
         {
-            var factory = new ConnectionRepository().GetConnection();
-            factory.Execute("insert_filme", new
+            try
             {
-                filmes.Codigo,
-                filmes.Titulo,
-                filmes.Audio,
-                filmes.Sinopse,
-                filmes.TituloOriginal,
-                filmes.DataLancamento,
-                filmes.Franquia,
-                filmes.Genero,
-                filmes.Tags,
-                filmes.Diretor,
-                filmes.Estrelas,
-                filmes.Estudio
-            });
+                var connection = new ConnectionRepository().GetConnection();
+                connection.Execute("insert_filme", new
+                {
+                    filmes.Codigo,
+                    filmes.Titulo,
+                    filmes.Audio,
+                    filmes.Sinopse,
+                    filmes.TituloOriginal,
+                    filmes.DataLancamento,
+                    filmes.Franquia,
+                    filmes.Genero,
+                    filmes.Tags,
+                    filmes.Diretor,
+                    filmes.Estrelas,
+                    filmes.Estudio
+                });
 
-            MessageBox.Show("Aniflix - Filmes", filmes.Titulo + " inserido com sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Aniflix - Filmes", filmes.Titulo + " inserido com sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro", "Erro:" + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public List<FilmesModel> ListaFilmes()
