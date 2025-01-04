@@ -251,7 +251,11 @@ namespace Aniflix
                 Estudio = FilmesEstudioText.Text
             };
             var insertFilmes = new FilmesController();
-            insertFilmes.InsereFilmes(filmes);
+            var query = insertFilmes.InsereFilmes(filmes);
+            if (query)
+            {
+                MessageBox.Show("Aniflix - Filmes", $"{filmes.Titulo} inserido com sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 
