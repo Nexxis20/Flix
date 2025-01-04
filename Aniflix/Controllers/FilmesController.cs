@@ -7,10 +7,10 @@ namespace Aniflix.Controllers
 {
     public static class FilmesController
     {
-        public static void RegistrarNovoFilme(int codigo, string titulo, string audio, string sinopse, string titulo_original, string data_lancamento, string franquia,
+        public static void RegistrarNovoFilme(string codigo, string titulo, string audio, string sinopse, string titulo_original, string data_lancamento, string franquia,
             string genero, string tags, string diretor, string estrelas, string estudio)
         {
-            var filmes = new FilmesModel
+            var filmes = new Filmes
             {
                 Codigo = codigo,
                 Titulo = titulo,
