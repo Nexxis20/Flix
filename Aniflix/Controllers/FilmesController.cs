@@ -7,7 +7,7 @@ namespace Aniflix.Controllers
 {
     public class FilmesController : IFilmesRepository
     {
-        public void InsereFilmes(Filmes filmes)
+        public void InsereFilmes(FilmesModel filmes)
         {
             var factory = new ConnectionRepository().GetConnection();
             factory.Execute("insert_filmes", new
@@ -25,7 +25,7 @@ namespace Aniflix.Controllers
 
         }
 
-        public List<Filmes> ListaFilmes()
+        public List<FilmesModel> ListaFilmes()
         {
             throw new NotImplementedException();
         }

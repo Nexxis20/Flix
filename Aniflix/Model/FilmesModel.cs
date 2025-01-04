@@ -1,6 +1,6 @@
 ﻿namespace Aniflix.Model
 {
-    public class Filmes
+    public class FilmesModel
     {
         public string? Codigo { get; set; }
         public string? Titulo { get; set; }

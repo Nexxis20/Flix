@@ -4,7 +4,7 @@ namespace Aniflix.Interfaces
 {
     public interface IFilmesRepository
     {
-        void InsereFilmes(Filmes filmes);
-        List<Filmes> ListaFilmes();
+        void InsereFilmes(FilmesModel filmes);
+        List<FilmesModel> ListaFilmes();
     }
 }
