@@ -4,12 +4,13 @@ using Aniflix.Model;
 
 namespace Aniflix.Controllers
 {
-    private static string connection = new ConnectionFactory();
     public class FilmesController : IFilmesRepository
     {
         public void InsereFilmes(Filmes filmes)
         {
-            var repo = ConnectionFactory.
+            var factory = new ConnectionFactory().GetConnection();
+
+
         }
 
         public List<Filmes> ListaFilmes()
