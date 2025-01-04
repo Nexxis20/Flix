@@ -11,7 +11,7 @@ namespace Aniflix.Controllers
         {
             var connection = new ConnectionRepository().GetConnection();
             IFilmesRepository i = connection.As<IFilmesRepository>();
-            i.InsereFilmes("")
+            i.NovoFilme(filmes);
         }
 
     }
