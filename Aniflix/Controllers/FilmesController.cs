@@ -5,14 +5,13 @@ using Insight.Database;
 
 namespace Aniflix.Controllers
 {
-    public class FilmesController
+    public static class FilmesController
     {
-        public static void InsereFilmes(FilmesModel filmes)
+        public static void Insert(FilmesModel filmes)
         {
-
             var connection = new ConnectionRepository().GetConnection();
             IFilmesRepository i = connection.As<IFilmesRepository>();
-            i.InsereFilmes(filmes);
+            i.InsereFilmes("")
         }
 
     }
