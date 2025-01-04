@@ -7,7 +7,7 @@ namespace Aniflix.Controllers
 {
     public static class FilmesController
     {
-        public static void Insert(FilmesModel filmes, int codigo, string titulo, string audio, string sinopse, string titulo_original, string data_lancamento, string franquia,
+        public static void RegistrarNovoFilme(FilmesModel filmes, int codigo, string titulo, string audio, string sinopse, string titulo_original, string data_lancamento, string franquia,
             string genero, string tags, string diretor, string estrelas, string estudio)
         {
             filmes.Codigo = codigo;
