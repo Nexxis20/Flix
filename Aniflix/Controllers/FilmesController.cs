@@ -5,40 +5,15 @@ using Insight.Database;
 
 namespace Aniflix.Controllers
 {
-    public class FilmesController : IFilmesRepository
+    public class FilmesController
     {
-        public void InsereFilmes(FilmesModel filmes)
+        public static void InsereFilmes(FilmesModel filmes)
         {
-            try
-            {
-                var connection = new ConnectionRepository().GetConnection();
-                connection.Execute("insert_filme", new
-                {
-                    filmes.Codigo,
-                    filmes.Titulo,
-                    filmes.Audio,
-                    filmes.Sinopse,
-                    filmes.TituloOriginal,
-                    filmes.DataLancamento,
-                    filmes.Franquia,
-                    filmes.Genero,
-                    filmes.Tags,
-                    filmes.Diretor,
-                    filmes.Estrelas,
-                    filmes.Estudio
-                });
 
-                MessageBox.Show("Aniflix - Filmes", filmes.Titulo + " inserido com sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro", "Erro:" + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            var connection = new ConnectionRepository().GetConnection();
+            IFilmesRepository i = connection.As<IFilmesRepository>();
+            i.InsereFilmes(filmes);
         }
 
-        public List<FilmesModel> ListaFilmes()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
