@@ -1,8 +1,8 @@
 ﻿using System.Data;
 
-namespace Aniflix.Data
+namespace Aniflix.Repository
 {
-    public class ConnectionFactory
+    public class ConnectionRepository
     {
         static readonly string serverName = "127.0.0.1";
         static readonly string port = "5432";
@@ -11,9 +11,9 @@ namespace Aniflix.Data
         static readonly string password = "Skyline-Freeware-Snugly-Barrier7-Expand-Monopoly";
         private readonly string connString;
 
-        public ConnectionFactory()
+        public ConnectionRepository()
         {
-            connString = String.Format("Server={0};Port={1};Database={2};Username={3};Password={4};SSL Mode=Require;Trust Server Certificate=true", serverName, port, databaseName, userName, password);
+            connString = string.Format("Server={0};Port={1};Database={2};Username={3};Password={4};SSL Mode=Require;Trust Server Certificate=true", serverName, port, databaseName, userName, password);
         }
         public IDbConnection GetConnection()
         {

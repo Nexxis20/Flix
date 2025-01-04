@@ -1,5 +1,5 @@
 ﻿using Aniflix.Extensions;
-using Aniflix.Factory;
+using Aniflix.Data;
 using Microsoft.Extensions.Configuration;
 using Syncfusion.WinForms.Controls;
 using System.Globalization;
