@@ -238,7 +238,7 @@ namespace Aniflix
         {
             var filmes = new FilmesModel
             {
-                Codigo = FilmesCodigoText.Text,
+                Codigo = int.Parse(FilmesCodigoText.Text),
                 Titulo = FilmesTituloText.Text,
                 Audio = FilmesAudioBox.SelectedItem?.ToString() ?? string.Empty,
                 Sinopse = FilmesSinopseText.Text,
@@ -251,8 +251,10 @@ namespace Aniflix
                 Estrelas = FilmesEstrelasText.Text,
                 Estudio = FilmesEstudioText.Text
             };
-            var novoFilme = new FilmesController();
-            novoFilme.InsereFilmes(filmes);
+
+            FilmesController.RegistrarNovoFilme(filmes.Codigo, filmes.Titulo, filmes.Audio, filmes.Sinopse, filmes.TituloOriginal, filmes.DataLancamento, filmes.Franquia,
+                filmes.Genero, filmes.Tags, filmes.Diretor, filmes.Estrelas, filmes.Estudio);
+
         }
     }
 
