@@ -345,6 +345,7 @@
             Salvar.TextAlign = ContentAlignment.BottomLeft;
             Salvar.TextImageRelation = TextImageRelation.Overlay;
             Salvar.UseVisualStyleBackColor = false;
+            Salvar.Click += Salvar_Click;
             // 
             // Editar
             // 

@@ -1,5 +1,6 @@
-﻿using Aniflix.Extensions;
-using Aniflix.Data;
+﻿using Aniflix.Controllers;
+using Aniflix.Extensions;
+using Aniflix.Model;
 using Microsoft.Extensions.Configuration;
 using Syncfusion.WinForms.Controls;
 using System.Globalization;
@@ -230,6 +231,27 @@ namespace Aniflix
         {
             FilmesResumoText.SelectAll();
             FilmesResumoText.Copy();
+        }
+
+        private void Salvar_Click(object sender, EventArgs e)
+        {
+            var filmes = new FilmesModel
+            {
+                Codigo = FilmesCodigoText.Text,
+                Titulo = FilmesTituloText.Text,
+                Audio = FilmesAudioBox.SelectedItem?.ToString() ?? string.Empty,
+                Sinopse = FilmesSinopseText.Text,
+                TituloOriginal = FilmesTituloOriginalText.Text,
+                DataLancamento = FilmesDataLancamentoText.Text,
+                Franquia = FilmesFranquiaText.Text,
+                Genero = FilmesGeneroText.Text,
+                Tags = FilmesTagsText.Text,
+                Diretor = FilmesDiretorText.Text,
+                Estrelas = FilmesEstrelasText.Text,
+                Estudio = FilmesEstudioText.Text
+            };
+            var insertFilmes = new FilmesController();
+            insertFilmes.InsereFilmes(filmes);
         }
     }
 
