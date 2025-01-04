@@ -26,11 +26,9 @@ namespace Aniflix.Controllers
                 Estudio = estudio
             };
 
-            using (var connection = new ConnectionRepository().GetConnection())
-            {
-                IFilmesRepository i = connection.As<IFilmesRepository>();
-                i.GravarFilmes(filmes);
-            }
+            using var connection = new ConnectionRepository().GetConnection();
+            IFilmesRepository i = connection.As<IFilmesRepository>();
+            i.GravarFilmes(filmes);
         }
     }
 }
