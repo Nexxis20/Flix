@@ -2,7 +2,7 @@
 {
     public class FilmesModel
     {
-        public string? Codigo { get; set; }
+        public int Codigo { get; set; }
         public string? Titulo { get; set; }
         public string? Audio { get; set; }
         public string? Sinopse { get; set; }

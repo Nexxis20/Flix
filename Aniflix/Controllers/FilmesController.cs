@@ -7,11 +7,14 @@ namespace Aniflix.Controllers
 {
     public static class FilmesController
     {
-        public static void Insert(FilmesModel filmes)
+        public static void Insert(FilmesModel filmes, int codigo, string titulo)
         {
             var connection = new ConnectionRepository().GetConnection();
             IFilmesRepository i = connection.As<IFilmesRepository>();
-            i.NovoFilme(filmes);
+            codigo = filmes.Codigo;
+            titulo = filmes.Titulo;
+
+            i.GravarFilmes(filmes);
         }
 
     }
