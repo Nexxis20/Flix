@@ -1,6 +1,7 @@
 ﻿using Aniflix.Interfaces;
 using Aniflix.Model;
 using Aniflix.Repository;
+using Insight.Database;
 
 namespace Aniflix.Controllers
 {
@@ -8,9 +9,19 @@ namespace Aniflix.Controllers
     {
         public void InsereFilmes(Filmes filmes)
         {
-            var factory = new ConnectionRepository();
-            factory.GetConnection().Insert(filmes);
+            var factory = new ConnectionRepository().GetConnection();
+            factory.Execute("insert_filmes", new
+            {
+                filmes.
+                filmes.Titulo,
+                filmes.Descricao,
+                filmes.Ano,
+                filmes.Diretor,
+                filmes.Genero,
 
+                filmes.Avaliacao,
+                filmes.Imagem
+            });
 
         }
 
