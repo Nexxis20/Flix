@@ -12,17 +12,21 @@ namespace Aniflix.Controllers
             var factory = new ConnectionRepository().GetConnection();
             factory.Execute("insert_filmes", new
             {
-                filmes.
+                filmes.Codigo,
                 filmes.Titulo,
-                filmes.Descricao,
-                filmes.Ano,
-                filmes.Diretor,
+                filmes.Audio,
+                filmes.Sinopse,
+                filmes.TituloOriginal,
+                filmes.DataLancamento,
+                filmes.Franquia,
                 filmes.Genero,
-
-                filmes.Avaliacao,
-                filmes.Imagem
+                filmes.Tags,
+                filmes.Diretor,
+                filmes.Estrelas,
+                filmes.Estudio
             });
 
+            MessageBox.Show("Aniflix - Filmes", filmes.Titulo + " inserido com sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public List<FilmesModel> ListaFilmes()
