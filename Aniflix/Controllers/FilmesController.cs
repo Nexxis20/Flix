@@ -1,5 +1,6 @@
 ﻿using Aniflix.Interfaces;
 using Aniflix.Model;
+using Aniflix.Repository;
 
 namespace Aniflix.Controllers
 {
@@ -7,7 +8,7 @@ namespace Aniflix.Controllers
     {
         public void InsereFilmes(Filmes filmes)
         {
-            var factory = new ConnectionFactory();
+            var factory = new ConnectionRepository();
             factory.GetConnection().Insert(filmes);
 
 
