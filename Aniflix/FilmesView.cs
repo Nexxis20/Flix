@@ -1,7 +1,9 @@
-﻿using Aniflix.Controllers;
-using Aniflix.Data;
+﻿using Aniflix.Data;
 using Aniflix.Extensions;
+using Aniflix.Interfaces;
 using Aniflix.Model;
+using Aniflix.Repository;
+using Insight.Database;
 using Microsoft.Extensions.Configuration;
 using Syncfusion.WinForms.Controls;
 using System.Globalization;
@@ -252,8 +254,9 @@ namespace Aniflix
                 Estudio = FilmesEstudioText.Text
             };
 
-            var filmesController = new FilmesController();
-            filmesController.RegistrarNovoFilme(filmes.Codigo, filmes.Titulo, filmes.Audio, filmes.Sinopse, filmes.TituloOriginal, filmes.DataLancamento, filmes.Franquia,
+            var connection = new ConnectionRepository().GetConnection();
+            var repository = connection.As<IFilmesRepository>();
+            repository.GravarFilmes(filmes.Codigo, filmes.Titulo, filmes.Audio, filmes.Sinopse, filmes.TituloOriginal, filmes.DataLancamento, filmes.Franquia,
                 filmes.Genero, filmes.Tags, filmes.Diretor, filmes.Estrelas, filmes.Estudio);
         }
     }
