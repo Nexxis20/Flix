@@ -5,26 +5,41 @@ namespace Aniflix.Repository
 {
     public class ConnectionRepository
     {
-        static readonly string serverName = "127.0.0.1";
-        static readonly string databaseName = "aniflix";
-        static readonly string userName = "Covenant9687";
-        static readonly string password = "v*##GLBkB3r9tuUt";
-        private readonly string? connString;
+        private readonly string connString;
 
         public ConnectionRepository()
         {
             try
             {
-                connString = string.Format("Server={0};Uid={1};Pwd={2};Database={3};", serverName, userName, password, databaseName);
+                connString = string.Format("Server={0};Uid={1};Pwd={2};Database={3};",
+                                            ServerName, UserName, Password, DatabaseName);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao configurar a string de conexão: {ex.Message}");
+                throw;
+            }
+        }
+
+        private static readonly string ServerName = "127.0.0.1";
+        private static readonly string DatabaseName = "aniflix";
+        private static readonly string UserName = "Covenant9687";
+        private static readonly string Password = "v*##GLBkB3r9tuUt";
+
+        public IDbConnection GetConnection()
+        {
+            try
+            {
+                var connection = new MySqlConnection(connString);
+                connection.Open();
+                return connection;
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("Erro", "Erro: " + ex.Message.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"Erro ao abrir conexão com o banco de dados: {ex.Message}");
+                throw;
             }
         }
-        public IDbConnection GetConnection()
-        {
-            return new MySqlConnection(connString);
-        }
     }
+
 }
