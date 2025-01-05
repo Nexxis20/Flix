@@ -67,7 +67,7 @@ namespace Aniflix
                 FilmesSinopseText.Text = movie.Overview;
                 FilmesTituloOriginalText.Text = movie.OriginalTitle;
                 FilmesDataLancamentoText.Text = movie.ReleaseDate?.ToString("dd/MM/yyyy");
-                FilmesFranquiaText.Text = FormatString(FilmesTituloText.Text);
+                FilmesFranquiaText.Text = FormatString(StringExtensions.RemoveDiacritics(FilmesTituloText.Text));
             }
             else
             {
