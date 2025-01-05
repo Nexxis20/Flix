@@ -1,4 +1,5 @@
 ﻿using Aniflix.Interfaces;
+using Aniflix.Model;
 using Insight.Database;
 using System.Data;
 
@@ -31,6 +32,12 @@ namespace Aniflix.Controllers
 
             _connection.Execute("GravarFilmes", parameters, commandType: CommandType.StoredProcedure);
         }
+
+        public List<Filmes> ListarFilmes()
+        {
+            throw new NotImplementedException();
+        }
+
         public void VerificarCodigo(string p_codigo, TextBox textBox)
         {
             var codigoExistente = _connection.ExecuteScalarSql<long>("SELECT COUNT(1) FROM filmes WHERE codigo = @Codigo", new { Codigo = p_codigo });
