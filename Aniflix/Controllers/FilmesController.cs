@@ -5,9 +5,9 @@ using Insight.Database;
 
 namespace Aniflix.Controllers
 {
-    public static class FilmesController
+    public class FilmesController
     {
-        public static void RegistrarNovoFilme(string codigo, string titulo, string audio, string sinopse, string titulo_original, string data_lancamento, string franquia,
+        public void RegistrarNovoFilme(string codigo, string titulo, string audio, string sinopse, string tituloOriginal, string data_lancamento, string franquia,
             string genero, string tags, string diretor, string estrelas, string estudio)
         {
             var filmes = new Filmes
@@ -16,7 +16,7 @@ namespace Aniflix.Controllers
                 Titulo = titulo,
                 Audio = audio,
                 Sinopse = sinopse,
-                TituloOriginal = titulo_original,
+                TituloOriginal = tituloOriginal,
                 DataLancamento = data_lancamento,
                 Franquia = franquia,
                 Genero = genero,
