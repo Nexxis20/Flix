@@ -31,14 +31,9 @@ namespace Aniflix.Controllers
 
             _connection.Execute("GravarFilmes", parameters, commandType: CommandType.StoredProcedure);
         }
-        public void VerificarCodigoFilmes(string p_codigo, TextBox textBox)
+        public void VerificarCodigo(string p_codigo, TextBox textBox)
         {
-            var parameters = new
-            {
-                p_codigo
-            };
-
-            var codigoExistente = _connection.Execute("VerificarCodigoFilmes", parameters, commandType: CommandType.StoredProcedure);
+            var codigoExistente = _connection.ExecuteScalarSql<long>("SELECT COUNT(1) FROM filmes WHERE codigo = @Codigo", new { Codigo = p_codigo });
 
             if (codigoExistente > 0)
             {
