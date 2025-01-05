@@ -35,7 +35,7 @@ namespace Aniflix.Controllers
 
         public IList<Filmes> ListarFilmes()
         {
-
+            return _connection.Query<Filmes>("ListarFilmes", commandType: CommandType.StoredProcedure);
         }
     }
 }
