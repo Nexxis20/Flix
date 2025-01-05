@@ -56,6 +56,7 @@
             Filmes.TextAlign = ContentAlignment.BottomLeft;
             Filmes.TextImageRelation = TextImageRelation.Overlay;
             Filmes.UseVisualStyleBackColor = false;
+            Filmes.Click += Filmes_Click;
             // 
             // Sair
             // 

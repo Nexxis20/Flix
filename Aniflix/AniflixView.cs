@@ -8,5 +8,11 @@ namespace Aniflix
         {
             InitializeComponent();
         }
+
+        private void Filmes_Click(object sender, EventArgs e)
+        {
+            var filmesView = new FilmesView();
+            filmesView.Show();
+        }
     }
 }
