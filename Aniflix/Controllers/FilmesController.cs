@@ -7,23 +7,23 @@ namespace Aniflix.Controllers
 {
     public class FilmesController
     {
-        public void RegistrarNovoFilme(string codigo, string titulo, string audio, string sinopse, string tituloOriginal, string data_lancamento, string franquia,
-            string genero, string tags, string diretor, string estrelas, string estudio)
+        public void RegistrarNovoFilme(string p_codigo, string p_titulo, string p_audio, string p_sinopse, string p_titulo_original, string p_data_lancamento, string p_franquia,
+            string p_genero, string p_tags, string p_diretor, string p_estrelas, string p_estudio)
         {
             var filmes = new Filmes
             {
-                Codigo = codigo,
-                Titulo = titulo,
-                Audio = audio,
-                Sinopse = sinopse,
-                TituloOriginal = tituloOriginal,
-                DataLancamento = data_lancamento,
-                Franquia = franquia,
-                Genero = genero,
-                Tags = tags,
-                Diretor = diretor,
-                Estrelas = estrelas,
-                Estudio = estudio
+                Codigo = p_codigo,
+                Titulo = p_titulo,
+                Audio = p_audio,
+                Sinopse = p_sinopse,
+                TituloOriginal = p_titulo_original,
+                DataLancamento = p_data_lancamento,
+                Franquia = p_franquia,
+                Genero = p_genero,
+                Tags = p_tags,
+                Diretor = p_diretor,
+                Estrelas = p_estrelas,
+                Estudio = p_estudio
             };
 
             using var connection = new ConnectionRepository().GetConnection();
