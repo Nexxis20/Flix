@@ -62,7 +62,7 @@ namespace Aniflix
             }
             else
             {
-                MessageBox.Show("Nenhum filme encontrado.");
+                MessageBox.Show("Nenhum filme encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 FilmesCodigoText.Focus();
             }
 
@@ -265,8 +265,7 @@ namespace Aniflix
                 filmes.DataLancamento!, filmes.Franquia!, filmes.Genero!, filmes.Tags!, filmes.Diretor!,
                 filmes.Estrelas!, filmes.Estudio!
             );
-
-            MessageBox.Show("Filme salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Filme " + filmes.Titulo + " inserido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 
