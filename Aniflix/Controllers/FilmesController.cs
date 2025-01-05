@@ -33,7 +33,7 @@ namespace Aniflix.Controllers
             _connection.Execute("GravarFilmes", parameters, commandType: CommandType.StoredProcedure);
         }
 
-        public List<Filmes> ListarFilmes()
+        public IList<Filmes> ListarFilmes()
         {
 
         }
