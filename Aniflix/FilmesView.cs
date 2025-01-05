@@ -44,9 +44,10 @@ namespace Aniflix
 
         private void GetFilmes()
         {
+            var filmes = MapFormToFilmes();
             using var connection = new ConnectionRepository().GetConnection();
             var filmesController = new FilmesController(connection);
-            filmesController.VerificarCodigo(FilmesCodigoText.Text, FilmesCodigoText);
+            filmesController.VerificarCodigoFilmes(filmes.Codigo!, FilmesCodigoText);
 
             var tmdbSettings = configuration!.GetSection("TMDB");
 
