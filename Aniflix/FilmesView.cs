@@ -1,6 +1,6 @@
-﻿using Aniflix.Data;
+﻿using Aniflix.Controllers;
+using Aniflix.Data;
 using Aniflix.Extensions;
-using Aniflix.Interfaces;
 using Aniflix.Model;
 using Aniflix.Repository;
 using Insight.Database;
@@ -265,14 +265,14 @@ namespace Aniflix
         private void Salvar_Click(object sender, EventArgs e)
         {
             var filmes = MapFormToFilmes();
-
             using var connection = new ConnectionRepository().GetConnection();
-            var repository = connection.As<IFilmesRepository>();
-            repository.GravarFilmes(
+            var filmesController = new FilmesController(connection);
+            filmesController.GravarFilmes(
                 filmes.Codigo!, filmes.Titulo!, filmes.Audio!, filmes.Sinopse!, filmes.TituloOriginal!,
                 filmes.DataLancamento!, filmes.Franquia!, filmes.Genero!, filmes.Tags!, filmes.Diretor!,
                 filmes.Estrelas!, filmes.Estudio!
             );
+
             MessageBox.Show("Filme " + filmes.Titulo + " inserido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
