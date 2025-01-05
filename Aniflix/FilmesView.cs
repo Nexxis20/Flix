@@ -48,7 +48,7 @@ namespace Aniflix
             if (codigoExistente > 0)
             {
                 MessageBox.Show("O código informado já está registrado na base de dados.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                FilmesCodigoText.Focus();
             }
 
             var tmdbSettings = configuration!.GetSection("TMDB");
@@ -89,7 +89,7 @@ namespace Aniflix
                 FilmesTagsText.Text = "#Filme #Filme" + ano;
             }
 
-            if (movie!.Genres.Count > 2)
+            if (movie!.Genres != null && movie!.Genres.Count > 2)
             {
                 HashSet<string> hashtags = [];
 
