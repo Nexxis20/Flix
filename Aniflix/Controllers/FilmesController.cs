@@ -33,7 +33,12 @@ namespace Aniflix.Controllers
         }
         public void VerificarCodigo(string p_codigo, TextBox textBox)
         {
-            var codigoExistente = _connection.Execute("VerificarCodigoFilmes", new { Codigo = p_codigo });
+            var parameters = new
+            {
+                p_codigo
+            };
+
+            var codigoExistente = _connection.Execute("VerificarCodigoFilmes", parameters, commandType: CommandType.StoredProcedure);
 
             if (codigoExistente > 0)
             {

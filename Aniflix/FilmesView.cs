@@ -6,6 +6,7 @@ using Aniflix.Repository;
 using Insight.Database;
 using Microsoft.Extensions.Configuration;
 using Syncfusion.WinForms.Controls;
+using System.Data;
 using System.Globalization;
 
 namespace Aniflix
@@ -14,6 +15,7 @@ namespace Aniflix
     {
         DateTime dataLancamento;
         private IConfiguration? configuration;
+
         public FilmesView()
         {
             InitializeComponent();
@@ -42,7 +44,9 @@ namespace Aniflix
 
         private void GetFilmes()
         {
-
+            using var connection = new ConnectionRepository().GetConnection();
+            var filmesController = new FilmesController(connection);
+            filmesController.VerificarCodigo(FilmesCodigoText.Text, FilmesCodigoText);
 
             var tmdbSettings = configuration!.GetSection("TMDB");
 
