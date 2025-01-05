@@ -262,7 +262,6 @@ namespace Aniflix
                 Estudio = FilmesEstudioText.Text
             };
         }
-
         private void Salvar_Click(object sender, EventArgs e)
         {
             var filmes = MapFormToFilmes();
