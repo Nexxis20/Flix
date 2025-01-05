@@ -33,7 +33,7 @@ namespace Aniflix.Controllers
         }
         public void VerificarCodigo(string p_codigo, TextBox textBox)
         {
-            var codigoExistente = _connection.ExecuteScalarSql<long>("SELECT COUNT(1) FROM filmes WHERE codigo = @Codigo", new { Codigo = p_codigo });
+            var codigoExistente = _connection.Execute("VerificarCodigoFilmes", new { Codigo = p_codigo });
 
             if (codigoExistente > 0)
             {

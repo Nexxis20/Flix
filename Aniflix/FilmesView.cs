@@ -42,14 +42,7 @@ namespace Aniflix
 
         private void GetFilmes()
         {
-            using var connection = new ConnectionRepository().GetConnection();
-            var codigoExistente = connection.ExecuteScalarSql<long>("SELECT COUNT(1) FROM filmes WHERE codigo = @Codigo", new { Codigo = FilmesCodigoText.Text });
 
-            if (codigoExistente > 0)
-            {
-                MessageBox.Show("O código informado já está registrado na base de dados.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                FilmesCodigoText.Focus();
-            }
 
             var tmdbSettings = configuration!.GetSection("TMDB");
 
