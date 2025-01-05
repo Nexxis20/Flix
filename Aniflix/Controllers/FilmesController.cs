@@ -31,7 +31,7 @@ namespace Aniflix.Controllers
 
             _connection.Execute("GravarFilmes", parameters, commandType: CommandType.StoredProcedure);
         }
-        public void VerificarCodigo(string p_codigo, TextBox textBox)
+        public void VerificarCodigoFilmes(string p_codigo, TextBox textBox)
         {
             var parameters = new
             {
