@@ -252,9 +252,9 @@ namespace Aniflix
                 Estudio = FilmesEstudioText.Text
             };
 
-            FilmesController.RegistrarNovoFilme(filmes.Codigo, filmes.Titulo, filmes.Audio, filmes.Sinopse, filmes.TituloOriginal, filmes.DataLancamento, filmes.Franquia,
+            var filmesController = new FilmesController();
+            filmesController.RegistrarNovoFilme(filmes.Codigo, filmes.Titulo, filmes.Audio, filmes.Sinopse, filmes.TituloOriginal, filmes.DataLancamento, filmes.Franquia,
                 filmes.Genero, filmes.Tags, filmes.Diretor, filmes.Estrelas, filmes.Estudio);
-
         }
     }
 
