@@ -1,34 +1,40 @@
 ﻿using Aniflix.Interfaces;
-using Aniflix.Model;
-using Aniflix.Repository;
 using Insight.Database;
+using System.Data;
 
 namespace Aniflix.Controllers
 {
-    public class FilmesController
+    public class FilmesController : IFilmesRepository
     {
-        public void RegistrarNovoFilme(string p_codigo, string p_titulo, string p_audio, string p_sinopse, string p_titulo_original, string p_data_lancamento, string p_franquia,
+        private readonly IDbConnection _connection;
+
+        public FilmesController(IDbConnection connection)
+        {
+            _connection = connection;
+        }
+
+        public void GravarFilmes(
+            string p_codigo, string p_titulo, string p_audio, string p_sinopse,
+            string p_titulo_original, string p_data_lancamento, string p_franquia,
             string p_genero, string p_tags, string p_diretor, string p_estrelas, string p_estudio)
         {
-            var filmes = new Filmes
+            var parameters = new
             {
-                Codigo = p_codigo,
-                Titulo = p_titulo,
-                Audio = p_audio,
-                Sinopse = p_sinopse,
-                TituloOriginal = p_titulo_original,
-                DataLancamento = p_data_lancamento,
-                Franquia = p_franquia,
-                Genero = p_genero,
-                Tags = p_tags,
-                Diretor = p_diretor,
-                Estrelas = p_estrelas,
-                Estudio = p_estudio
+                p_codigo,
+                p_titulo,
+                p_audio,
+                p_sinopse,
+                p_titulo_original,
+                p_data_lancamento,
+                p_franquia,
+                p_genero,
+                p_tags,
+                p_diretor,
+                p_estrelas,
+                p_estudio
             };
 
-            using var connection = new ConnectionRepository().GetConnection();
-            IFilmesRepository i = connection.As<IFilmesRepository>();
-            i.GravarFilmes(filmes);
+            _connection.Execute("GravarFilmes", parameters, commandType: CommandType.StoredProcedure);
         }
     }
 }
