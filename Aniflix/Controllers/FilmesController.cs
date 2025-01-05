@@ -1,5 +1,4 @@
 ﻿using Aniflix.Interfaces;
-using Aniflix.Repository;
 using Insight.Database;
 using System.Data;
 
@@ -31,23 +30,6 @@ namespace Aniflix.Controllers
             };
 
             _connection.Execute("GravarFilmes", parameters, commandType: CommandType.StoredProcedure);
-        }
-
-        public static void VerificaCodigo(string p_codigo)
-        {
-            using var connection = new ConnectionRepository().GetConnection();
-
-            var parameters = new
-            {
-                p_codigo
-            };
-
-            var codigoExistente = connection.ExecuteScalar<int>("SELECT COUNT(1) FROM filmes WHERE codigo = @Codigo", new { Codigo = parameters });
-
-            if (codigoExistente > 0)
-            {
-                MessageBox.Show("O código informado já está registrado na base de dados.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
     }
 }
