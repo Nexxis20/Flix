@@ -4,14 +4,9 @@ using System.Data;
 
 namespace Aniflix.Controllers
 {
-    public class FilmesController : IFilmesRepository
+    public class FilmesController(IDbConnection connection) : IFilmesRepository
     {
-        private readonly IDbConnection _connection;
-
-        public FilmesController(IDbConnection connection)
-        {
-            _connection = connection;
-        }
+        private readonly IDbConnection _connection = connection;
 
         public void GravarFilmes(
             string p_codigo, string p_titulo, string p_audio, string p_sinopse,
