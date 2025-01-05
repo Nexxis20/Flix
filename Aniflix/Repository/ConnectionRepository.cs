@@ -36,7 +36,7 @@ namespace Aniflix.Repository
             }
             catch (MySqlException ex)
             {
-                Console.WriteLine($"Erro ao abrir conexão com o banco de dados: {ex.Message}");
+                MessageBox.Show($"Erro ao abrir conexão com o banco de dados: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw;
             }
         }

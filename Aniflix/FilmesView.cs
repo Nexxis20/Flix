@@ -235,10 +235,9 @@ namespace Aniflix
             FilmesResumoText.SelectAll();
             FilmesResumoText.Copy();
         }
-
-        private void Salvar_Click(object sender, EventArgs e)
+        private Filmes MapFormToFilmes()
         {
-            var filmes = new Filmes
+            return new Filmes
             {
                 Codigo = FilmesCodigoText.Text,
                 Titulo = FilmesTituloText.Text,
@@ -253,11 +252,22 @@ namespace Aniflix
                 Estrelas = FilmesEstrelasText.Text,
                 Estudio = FilmesEstudioText.Text
             };
+        }
 
-            var connection = new ConnectionRepository().GetConnection();
+
+        private void Salvar_Click(object sender, EventArgs e)
+        {
+            var filmes = MapFormToFilmes();
+
+            using var connection = new ConnectionRepository().GetConnection();
             var repository = connection.As<IFilmesRepository>();
-            repository.GravarFilmes(filmes.Codigo, filmes.Titulo, filmes.Audio, filmes.Sinopse, filmes.TituloOriginal, filmes.DataLancamento, filmes.Franquia,
-                filmes.Genero, filmes.Tags, filmes.Diretor, filmes.Estrelas, filmes.Estudio);
+            repository.GravarFilmes(
+                filmes.Codigo!, filmes.Titulo!, filmes.Audio!, filmes.Sinopse!, filmes.TituloOriginal!,
+                filmes.DataLancamento!, filmes.Franquia!, filmes.Genero!, filmes.Tags!, filmes.Diretor!,
+                filmes.Estrelas!, filmes.Estudio!
+            );
+
+            MessageBox.Show("Filme salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 
