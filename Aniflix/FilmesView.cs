@@ -13,7 +13,6 @@ namespace Aniflix
 {
     public partial class FilmesView : SfForm
     {
-        DateTime dataLancamento;
         private IConfiguration? configuration;
 
         public FilmesView()
@@ -42,110 +41,171 @@ namespace Aniflix
             return "#" + input.Replace(" ", string.Empty);
         }
 
-        private void GetFilmes()
+        private async Task GetFilmesAsync()
         {
-            var filmes = MapFormToFilmes();
-            using var connection = new ConnectionRepository().GetConnection();
-            var filmesController = new FilmesController(connection);
-            filmesController.VerificarCodigoFilmes(filmes.Codigo!, FilmesCodigoText);
-
-            var tmdbSettings = configuration!.GetSection("TMDB");
-
-            var client = new TMDbLib.Client.TMDbClient(tmdbSettings["key"])
+            try
             {
-                DefaultLanguage = "pt-BR",
-                DefaultCountry = "BR",
-            };
+                using var connection = new ConnectionRepository().GetConnection();
+                var filmesController = new FilmesController(connection);
+                filmesController.VerificarCodigo(FilmesCodigoText.Text, FilmesCodigoText);
 
-            var movie = client.GetMovieAsync(FilmesCodigoText.Text).Result;
+                var tmdbSettings = configuration!.GetSection("TMDB");
 
-            if (movie != null)
-            {
-                FilmesTituloText.Text = movie.Title;
-                FilmesSinopseText.Text = movie.Overview;
-                FilmesTituloOriginalText.Text = movie.OriginalTitle;
-                FilmesDataLancamentoText.Text = movie.ReleaseDate?.ToString("dd/MM/yyyy");
-                FilmesFranquiaText.Text = FormatString(FilmesTituloText.Text.Replace("-", string.Empty));
-            }
-            else
-            {
-                MessageBox.Show("Nenhum filme encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                FilmesCodigoText.Focus();
-            }
-
-            if (
-           DateTime.TryParseExact(
-               FilmesDataLancamentoText.Text,
-               "dd/MM/yyyy",
-               CultureInfo.InvariantCulture,
-               DateTimeStyles.None,
-               out dataLancamento
-           )
-       )
-            {
-                string ano = dataLancamento.Year.ToString();
-                FilmesTagsText.Text = "#Filme #Filme" + ano;
-            }
-
-            if (movie!.Genres != null && movie!.Genres.Count > 2)
-            {
-                HashSet<string> hashtags = [];
-
-                static void FormatGenre(string genre, HashSet<string> hashtags)
+                var client = new TMDbLib.Client.TMDbClient(tmdbSettings["key"])
                 {
-                    Dictionary<string, string> specialWords = new()
-                {
-                    { "ficção científica", "ficçãocientífica ficcaocientifica" },
-                    { "romântico", "romântico romantico" },
-                    { "romântica", "romântica romantica" },
-                    { "comédia", "comédia comedia" },
-                    { "mistério", "mistério misterio" },
+                    DefaultLanguage = "pt-BR",
+                    DefaultCountry = "BR",
                 };
 
-                    string lowerGenre = genre.ToLower();
+                var movieTask = client.GetMovieAsync(FilmesCodigoText.Text);
+                var creditsTask = client.GetMovieCreditsAsync(Convert.ToInt32(FilmesCodigoText.Text));
 
-                    if (specialWords.TryGetValue(lowerGenre, out string? value))
+                await Task.WhenAll(movieTask, creditsTask);
+
+                var movie = movieTask.Result;
+                var credits = creditsTask.Result;
+
+                if (movie != null)
+                {
+                    Invoke((Action)(() =>
                     {
-                        foreach (var tag in value.Split(' '))
-                        {
-                            hashtags.Add($"#{tag}");
-                        }
+                        FilmesTituloText.Text = movie.Title;
+                        FilmesSinopseText.Text = movie.Overview;
+                        FilmesTituloOriginalText.Text = movie.OriginalTitle;
+                        FilmesDataLancamentoText.Text = movie.ReleaseDate?.ToString("dd/MM/yyyy");
+                        FilmesFranquiaText.Text = FormatString(FilmesTituloText.Text.Replace("-", string.Empty));
+                    }));
+
+                    if (
+                        DateTime.TryParseExact(
+                            FilmesDataLancamentoText.Text,
+                            "dd/MM/yyyy",
+                            CultureInfo.InvariantCulture,
+                            DateTimeStyles.None,
+                            out var releaseData
+                        )
+                    )
+                    {
+                        string ano = releaseData.Year.ToString();
+                        FilmesTagsText.Text = $"#Filme #Filme{ano}";
                     }
-                    else
+
+                    if (movie.Genres != null && movie.Genres.Count > 2)
                     {
-                        string clean = new(genre.RemoveDiacritics().Where(char.IsAscii).ToArray());
-                        hashtags.Add($"#{genre.ToLower().Replace(" ", "")}");
-                        hashtags.Add($"#{clean.ToLower().Replace(" ", "")}");
+                        var hashtags = new HashSet<string>();
+
+                        static void FormatGenre(string genre, HashSet<string> hashtags)
+                        {
+                            Dictionary<string, string> specialWords = new()
+                    {
+                        { "ficção científica", "ficçãocientífica ficcaocientifica" },
+                        { "romântico", "romântico romantico" },
+                        { "romântica", "romântica romantica" },
+                        { "comédia", "comédia comedia" },
+                        { "mistério", "mistério misterio" },
+                    };
+
+                            string lowerGenre = genre.ToLower();
+
+                            if (specialWords.TryGetValue(lowerGenre, out string? value))
+                            {
+                                foreach (var tag in value.Split(' '))
+                                {
+                                    hashtags.Add($"#{tag}");
+                                }
+                            }
+                            else
+                            {
+                                string clean = new(genre.RemoveDiacritics().Where(char.IsAscii).ToArray());
+                                hashtags.Add($"#{genre.ToLower().Replace(" ", "")}");
+                                hashtags.Add($"#{clean.ToLower().Replace(" ", "")}");
+                            }
+                        }
+
+                        FormatGenre(movie.Genres[0].Name, hashtags);
+                        FormatGenre(movie.Genres[1].Name, hashtags);
+                        FormatGenre(movie.Genres[2].Name, hashtags);
+
+                        FilmesGeneroText.Text = string.Join(" ", hashtags);
                     }
                 }
+                else
+                {
+                    Invoke((Action)(() =>
+                    {
+                        MessageBox.Show("Nenhum filme encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        FilmesCodigoText.Focus();
+                    }));
+                }
 
-                FormatGenre(movie.Genres[0].Name, hashtags);
-                FormatGenre(movie.Genres[1].Name, hashtags);
-                FormatGenre(movie.Genres[2].Name, hashtags);
-                FilmesGeneroText.Text = string.Join(" ", hashtags);
+                if (credits != null && credits.Crew != null)
+                {
+                    var directors = credits
+                    .Crew.Where(person => person.Job == "Director")
+                    .Take(4)
+                    .Select(person => $"#{person.Name.Replace(" ", "")}")
+                    .ToList();
+
+                    Invoke((Action)(() =>
+                    {
+                        FilmesDiretorText.Text = string.Join(" ", StringExtensions.ClearLists(directors));
+                    }));
+                }
+                else
+                {
+                    Invoke((Action)(() =>
+                    {
+                        FilmesDiretorText.Text = string.Empty;
+                    }));
+                }
+
+                if (credits != null && credits.Cast != null)
+                {
+
+                    var stars = credits
+                    .Cast.Take(5)
+                    .Select(person => $"#{person.Name.Replace(" ", "")}")
+                    .ToList();
+                    Invoke((Action)(() =>
+                    {
+                        FilmesEstrelasText.Text = string.Join(" ", StringExtensions.ClearLists(stars));
+                    }));
+                }
+                else
+                {
+                    Invoke((Action)(() =>
+                    {
+                        FilmesEstrelasText.Text = string.Empty;
+                    }));
+                }
+
+                if (movie != null && movie.ProductionCompanies != null)
+                {
+
+                    var studios = movie!
+                    .ProductionCompanies.Take(5)
+                    .Select(company => $"#{company.Name.Replace(" ", "")}")
+                    .ToList();
+                    Invoke((Action)(() =>
+                    {
+                        FilmesEstudioText.Text = string.Join(" ", StringExtensions.ClearLists(studios));
+                    }));
+                }
+                else
+                {
+                    Invoke((Action)(() =>
+                    {
+                        FilmesEstudioText.Text = string.Empty;
+                    }));
+                }
             }
-
-            var credits = client.GetMovieCreditsAsync(Convert.ToInt32(FilmesCodigoText.Text)).Result;
-
-            var directors = credits
-                .Crew.Where(person => person.Job == "Director")
-                .Take(4)
-                .Select(person => $"#{person.Name.Replace(" ", "")}")
-                .ToList();
-
-            var stars = credits
-                .Cast.Take(5)
-                .Select(person => $"#{person.Name.Replace(" ", "")}")
-                .ToList();
-
-            var studios = movie
-                .ProductionCompanies.Take(5)
-                .Select(company => $"#{company.Name.Replace(" ", "")}")
-                .ToList();
-
-            FilmesDiretorText.Text = string.Join(" ", StringExtensions.ClearLists(directors));
-            FilmesEstrelasText.Text = string.Join(" ", StringExtensions.ClearLists(stars));
-            FilmesEstudioText.Text = string.Join(" ", StringExtensions.ClearLists(studios));
+            catch (Exception ex)
+            {
+                Invoke((Action)(() =>
+                {
+                    MessageBox.Show($"Erro ao buscar o filme: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }));
+            }
         }
 
         private void UpdateData()
@@ -165,7 +225,7 @@ namespace Aniflix
                 );
             FilmesResumoText.Text = model.GetFormattedText();
         }
-        private void FilmesCodigoText_Leave(object sender, EventArgs e)
+        private async void FilmesCodigoText_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(FilmesCodigoText.Text))
             {
@@ -174,7 +234,7 @@ namespace Aniflix
             }
             else
             {
-                GetFilmes();
+                await GetFilmesAsync();
             }
         }
         private void FilmesTituloText_TextChanged(object sender, EventArgs e)
@@ -231,7 +291,6 @@ namespace Aniflix
         {
             UpdateData();
         }
-
         private void FilmesView_Load(object sender, EventArgs e)
         {
             FilmesAudioBox.SelectedIndex = 0;
@@ -270,11 +329,9 @@ namespace Aniflix
                 filmes.DataLancamento!, filmes.Franquia!, filmes.Genero!, filmes.Tags!, filmes.Diretor!,
                 filmes.Estrelas!, filmes.Estudio!
             );
-
             MessageBox.Show("Filme " + filmes.Titulo + " inserido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
-
     public class Settings
     {
         public string? TMDBKey { get; set; }
