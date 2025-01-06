@@ -29,12 +29,14 @@ namespace Aniflix
             configuration = builder.Build();
         }
 
-        private void FilmesCodigoText_KeyPress(object sender, KeyPressEventArgs e)
+        private async void FilmesCodigoText_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
+            HabilitarButtons(true);
+            await GetFilmesAsync();
         }
         private static string FormatString(string input)
         {
@@ -234,6 +236,7 @@ namespace Aniflix
             }
             else
             {
+                HabilitarButtons(true);
                 await GetFilmesAsync();
             }
         }
