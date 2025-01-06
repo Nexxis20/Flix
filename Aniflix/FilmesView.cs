@@ -234,6 +234,7 @@ namespace Aniflix
             }
             else
             {
+
                 await GetFilmesAsync();
             }
         }
