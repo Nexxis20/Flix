@@ -294,6 +294,11 @@ namespace Aniflix
         private void FilmesView_Load(object sender, EventArgs e)
         {
             FilmesAudioBox.SelectedIndex = 0;
+            Copiar.Enabled = false;
+            Salvar.Enabled = false;
+            Editar.Enabled = false;
+            Anterior.Enabled = false;
+            Proximo.Enabled = false;
         }
 
         private void Copiar_Click(object sender, EventArgs e)
