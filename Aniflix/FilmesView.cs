@@ -14,7 +14,6 @@ namespace Aniflix
     public partial class FilmesView : SfForm
     {
         private IConfiguration? configuration;
-
         public FilmesView()
         {
             InitializeComponent();
