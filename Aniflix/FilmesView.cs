@@ -298,6 +298,7 @@ namespace Aniflix
 
             using var connection = new ConnectionRepository().GetConnection();
             var filmeController = new FilmesController(connection);
+            var filme = filmeController.GetFirstFilme();
 
 
         }
