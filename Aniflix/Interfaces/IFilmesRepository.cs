@@ -1,4 +1,5 @@
 ﻿using Aniflix.Model;
+using Insight.Database;
 
 namespace Aniflix.Interfaces
 {
@@ -9,7 +10,10 @@ namespace Aniflix.Interfaces
          string p_titulo_original, string p_data_lancamento, string p_franquia,
          string p_genero, string p_tags, string p_diretor, string p_estrelas, string p_estudio);
         public void VerificarCodigo(string p_codigo, TextBox textBox);
-        public Filmes GetFilmeByCodigo(string codigo);
-        public IEnumerable<Filmes> GetTodosFilmes();
+        [Sql("SELECT * FROM filmes WHERE codigo = @Codigo")]
+        Filmes GetFilmeByCodigo(string codigo);
+
+        [Sql("SELECT * FROM filmes")]
+        IEnumerable<Filmes> GetAllFilmes();
     }
 }
