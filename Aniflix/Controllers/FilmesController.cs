@@ -11,12 +11,16 @@ namespace Aniflix.Controllers
 
         public Filmes GetFilmeByCodigo(string codigo)
         {
-            throw new NotImplementedException();
+            var repository = _connection.As<IFilmesRepository>();
+            return repository.GetFilmeByCodigo(codigo);
+
         }
 
         public IEnumerable<Filmes> GetTodosFilmes()
         {
-            throw new NotImplementedException();
+            var repository = _connection.As<IFilmesRepository>();
+
+            return repository.GetAllFilmes();
         }
 
         public void GravarFilmes(
