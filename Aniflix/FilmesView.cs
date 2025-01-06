@@ -295,7 +295,10 @@ namespace Aniflix
         {
             FilmesAudioBox.SelectedIndex = 0;
             HabilitarButtons(false);
-
+            LoadFirstRecord();
+        }
+        private void LoadFirstRecord()
+        {
             using var connection = new ConnectionRepository().GetConnection();
             var filmeController = new FilmesController(connection);
             var filme = filmeController.GetFirstFilme();
