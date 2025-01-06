@@ -295,6 +295,8 @@ namespace Aniflix
         {
             FilmesAudioBox.SelectedIndex = 0;
             HabilitarButtons(false);
+
+
         }
 
         private void HabilitarButtons(bool enabled)
