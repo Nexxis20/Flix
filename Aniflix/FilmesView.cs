@@ -35,7 +35,6 @@ namespace Aniflix
             {
                 e.Handled = true;
             }
-            HabilitarButtons(true);
             await GetFilmesAsync();
         }
         private static string FormatString(string input)
