@@ -23,7 +23,8 @@ namespace Aniflix.Controllers
 
         public Filmes GetFirstFilme()
         {
-            throw new NotImplementedException();
+            var repository = _connection.As<IFilmesRepository>();
+            return repository
         }
 
         public void GravarFilmes(
