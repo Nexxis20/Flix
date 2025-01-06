@@ -1,4 +1,5 @@
 ﻿using Aniflix.Interfaces;
+using Aniflix.Model;
 using Insight.Database;
 using System.Data;
 
@@ -30,6 +31,11 @@ namespace Aniflix.Controllers
             };
 
             _connection.Execute("GravarFilmes", parameters, commandType: CommandType.StoredProcedure);
+        }
+
+        public IList<Filmes> ListarFilmes()
+        {
+            throw new NotImplementedException();
         }
 
         public void VerificarCodigo(string p_codigo, TextBox textBox)
