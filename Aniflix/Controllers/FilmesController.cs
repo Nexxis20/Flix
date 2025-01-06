@@ -9,6 +9,11 @@ namespace Aniflix.Controllers
     {
         private readonly IDbConnection _connection = connection;
 
+        public IEnumerable<Filmes> GetAllFilmes()
+        {
+            throw new NotImplementedException();
+        }
+
         public Filmes GetFilmeByCodigo(string codigo)
         {
             var repository = _connection.As<IFilmesRepository>();
