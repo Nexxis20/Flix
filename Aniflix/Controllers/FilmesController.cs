@@ -21,6 +21,11 @@ namespace Aniflix.Controllers
             return repository.GetFilmeByCodigo(codigo);
         }
 
+        public Filmes GetFirstFilme()
+        {
+            throw new NotImplementedException();
+        }
+
         public void GravarFilmes(
             string p_codigo, string p_titulo, string p_audio, string p_sinopse,
             string p_titulo_original, string p_data_lancamento, string p_franquia,

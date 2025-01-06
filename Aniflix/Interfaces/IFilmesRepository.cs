@@ -16,8 +16,9 @@ namespace Aniflix.Interfaces
         [Sql("SELECT * FROM filmes")]
         IEnumerable<Filmes> GetAllFilmes();
 
-        // load first record
-        [Sql("SELECT * FROM aniflix_movies GROUP BY movies_code ORDER BY COUNT(id) DESC")]
+        // load first record mysql
+        [Sql("SELECT * FROM filmes LIMIT 1")]
         Filmes GetFirstFilme();
+
     }
 }
