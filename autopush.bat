@@ -4,6 +4,6 @@
 git add .
 git commit -m "Update all files"
 git push
-timeout 30
+timeout 5
 
 goto loop
