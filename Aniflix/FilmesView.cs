@@ -318,6 +318,10 @@ namespace Aniflix
                 FilmesEstrelasText.Text = filme.Estrelas;
                 FilmesEstudioText.Text = filme.Estudio;
             }
+            else
+            {
+                MessageBox.Show("Nenhum filme encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void HabilitarButtons(bool enabled)
