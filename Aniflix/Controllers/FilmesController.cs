@@ -24,7 +24,7 @@ namespace Aniflix.Controllers
         public Filmes GetFirstFilme()
         {
             var repository = _connection.As<IFilmesRepository>();
-            return repository
+            return repository.GetFirstFilme();
         }
 
         public void GravarFilmes(
