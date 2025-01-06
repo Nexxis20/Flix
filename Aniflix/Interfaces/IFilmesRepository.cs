@@ -16,7 +16,7 @@ namespace Aniflix.Interfaces
         [Sql("SELECT * FROM filmes")]
         IEnumerable<Filmes> GetAllFilmes();
 
-        [Sql("SELECT * FROM filmes WHERE codigo = @Codigo LIMIT 1")]
+        [Sql("SELECT * FROM filmes ORDER BY codigo ASC LIMIT 1")]
         Filmes GetFirstFilme();
 
     }
