@@ -1,4 +1,5 @@
 ﻿using Aniflix.Interfaces;
+using Aniflix.Model;
 using Insight.Database;
 using System.Data;
 
@@ -7,6 +8,16 @@ namespace Aniflix.Controllers
     public class FilmesController(IDbConnection connection) : IFilmesRepository
     {
         private readonly IDbConnection _connection = connection;
+
+        public Filmes GetFilmeByCodigo(string codigo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Filmes> GetTodosFilmes()
+        {
+            throw new NotImplementedException();
+        }
 
         public void GravarFilmes(
             string p_codigo, string p_titulo, string p_audio, string p_sinopse,
