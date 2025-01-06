@@ -13,7 +13,6 @@ namespace Aniflix.Controllers
         {
             var repository = _connection.As<IFilmesRepository>();
             return repository.GetFilmeByCodigo(codigo);
-
         }
 
         public IEnumerable<Filmes> GetTodosFilmes()
