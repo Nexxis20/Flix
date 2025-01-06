@@ -29,13 +29,12 @@ namespace Aniflix
             configuration = builder.Build();
         }
 
-        private async void FilmesCodigoText_KeyPress(object sender, KeyPressEventArgs e)
+        private void FilmesCodigoText_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
-            await GetFilmesAsync();
         }
         private static string FormatString(string input)
         {
