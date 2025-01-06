@@ -300,7 +300,21 @@ namespace Aniflix
             var filmeController = new FilmesController(connection);
             var filme = filmeController.GetFirstFilme();
 
-
+            if (filme != null)
+            {
+                FilmesCodigoText.Text = filme.Codigo;
+                FilmesTituloText.Text = filme.Titulo;
+                FilmesAudioBox.SelectedItem = filme.Audio;
+                FilmesSinopseText.Text = filme.Sinopse;
+                FilmesTituloOriginalText.Text = filme.TituloOriginal;
+                FilmesDataLancamentoText.Text = filme.DataLancamento;
+                FilmesFranquiaText.Text = filme.Franquia;
+                FilmesGeneroText.Text = filme.Genero;
+                FilmesTagsText.Text = filme.Tags;
+                FilmesDiretorText.Text = filme.Diretor;
+                FilmesEstrelasText.Text = filme.Estrelas;
+                FilmesEstudioText.Text = filme.Estudio;
+            }
         }
 
         private void HabilitarButtons(bool enabled)
