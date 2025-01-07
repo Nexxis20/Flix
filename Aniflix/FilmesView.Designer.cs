@@ -418,6 +418,7 @@
             Voltar.TextAlign = ContentAlignment.BottomLeft;
             Voltar.TextImageRelation = TextImageRelation.Overlay;
             Voltar.UseVisualStyleBackColor = false;
+            Voltar.Click += Voltar_Click;
             // 
             // FilmesView
             // 

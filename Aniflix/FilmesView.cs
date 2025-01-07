@@ -368,6 +368,11 @@ namespace Aniflix
             );
             MessageBox.Show("Filme " + filmes.Titulo + " inserido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void Voltar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     public class Settings
     {
