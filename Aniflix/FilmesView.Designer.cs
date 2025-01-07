@@ -60,6 +60,8 @@
             Anterior = new Syncfusion.WinForms.Controls.SfButton();
             Proximo = new Syncfusion.WinForms.Controls.SfButton();
             Voltar = new Syncfusion.WinForms.Controls.SfButton();
+            textBoxExt1 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            autoLabel14 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             ((System.ComponentModel.ISupportInitialize)FilmesCodigoText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilmesTituloText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilmesSinopseText).BeginInit();
@@ -71,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)FilmesDiretorText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilmesEstudioText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilmesResumoText).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)textBoxExt1).BeginInit();
             SuspendLayout();
             // 
             // FilmesCodigoText
@@ -283,11 +286,11 @@
             // 
             // FilmesEstudioText
             // 
-            FilmesEstudioText.BeforeTouchSize = new Size(612, 478);
+            FilmesEstudioText.BeforeTouchSize = new Size(153, 23);
             FilmesEstudioText.Location = new Point(12, 482);
             FilmesEstudioText.Name = "FilmesEstudioText";
             FilmesEstudioText.PlaceholderText = "Estúdio";
-            FilmesEstudioText.Size = new Size(612, 23);
+            FilmesEstudioText.Size = new Size(453, 23);
             FilmesEstudioText.TabIndex = 31;
             FilmesEstudioText.TextChanged += FilmesEstudioText_TextChanged;
             // 
@@ -420,11 +423,30 @@
             Voltar.UseVisualStyleBackColor = false;
             Voltar.Click += Voltar_Click;
             // 
+            // textBoxExt1
+            // 
+            textBoxExt1.BeforeTouchSize = new Size(153, 23);
+            textBoxExt1.Location = new Point(539, 582);
+            textBoxExt1.Name = "textBoxExt1";
+            textBoxExt1.PlaceholderText = "Tags";
+            textBoxExt1.Size = new Size(153, 23);
+            textBoxExt1.TabIndex = 41;
+            // 
+            // autoLabel14
+            // 
+            autoLabel14.Location = new Point(539, 564);
+            autoLabel14.Name = "autoLabel14";
+            autoLabel14.Size = new Size(31, 15);
+            autoLabel14.TabIndex = 40;
+            autoLabel14.Text = "Tags";
+            // 
             // FilmesView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1273, 845);
+            Controls.Add(textBoxExt1);
+            Controls.Add(autoLabel14);
             Controls.Add(Voltar);
             Controls.Add(Proximo);
             Controls.Add(Anterior);
@@ -476,6 +498,7 @@
             ((System.ComponentModel.ISupportInitialize)FilmesDiretorText).EndInit();
             ((System.ComponentModel.ISupportInitialize)FilmesEstudioText).EndInit();
             ((System.ComponentModel.ISupportInitialize)FilmesResumoText).EndInit();
+            ((System.ComponentModel.ISupportInitialize)textBoxExt1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -514,5 +537,7 @@
         private Syncfusion.WinForms.Controls.SfButton Anterior;
         private Syncfusion.WinForms.Controls.SfButton Proximo;
         private Syncfusion.WinForms.Controls.SfButton Voltar;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt textBoxExt1;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel14;
     }
 }
