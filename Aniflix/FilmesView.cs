@@ -371,7 +371,8 @@ namespace Aniflix
 
         private void Voltar_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            new AniflixView().Show();
         }
     }
     public class Settings
