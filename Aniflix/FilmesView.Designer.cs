@@ -60,7 +60,7 @@
             Anterior = new Syncfusion.WinForms.Controls.SfButton();
             Proximo = new Syncfusion.WinForms.Controls.SfButton();
             Voltar = new Syncfusion.WinForms.Controls.SfButton();
-            FaseMCUTex = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            FilmesFaseMCUText = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             autoLabel14 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             ((System.ComponentModel.ISupportInitialize)FilmesCodigoText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilmesTituloText).BeginInit();
@@ -73,7 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)FilmesDiretorText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilmesEstudioText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilmesResumoText).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)FaseMCUTex).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)FilmesFaseMCUText).BeginInit();
             SuspendLayout();
             // 
             // FilmesCodigoText
@@ -423,14 +423,14 @@
             Voltar.UseVisualStyleBackColor = false;
             Voltar.Click += Voltar_Click;
             // 
-            // FaseMCUTex
+            // FilmesFaseMCUText
             // 
-            FaseMCUTex.BeforeTouchSize = new Size(74, 23);
-            FaseMCUTex.Location = new Point(550, 482);
-            FaseMCUTex.Name = "FaseMCUTex";
-            FaseMCUTex.PlaceholderText = "Tags";
-            FaseMCUTex.Size = new Size(74, 23);
-            FaseMCUTex.TabIndex = 41;
+            FilmesFaseMCUText.BeforeTouchSize = new Size(74, 23);
+            FilmesFaseMCUText.Location = new Point(550, 482);
+            FilmesFaseMCUText.Name = "FilmesFaseMCUText";
+            FilmesFaseMCUText.PlaceholderText = "Fase MCU";
+            FilmesFaseMCUText.Size = new Size(74, 23);
+            FilmesFaseMCUText.TabIndex = 41;
             // 
             // autoLabel14
             // 
@@ -445,7 +445,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1273, 678);
-            Controls.Add(FaseMCUTex);
+            Controls.Add(FilmesFaseMCUText);
             Controls.Add(autoLabel14);
             Controls.Add(Voltar);
             Controls.Add(Proximo);
@@ -498,7 +498,7 @@
             ((System.ComponentModel.ISupportInitialize)FilmesDiretorText).EndInit();
             ((System.ComponentModel.ISupportInitialize)FilmesEstudioText).EndInit();
             ((System.ComponentModel.ISupportInitialize)FilmesResumoText).EndInit();
-            ((System.ComponentModel.ISupportInitialize)FaseMCUTex).EndInit();
+            ((System.ComponentModel.ISupportInitialize)FilmesFaseMCUText).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -537,7 +537,7 @@
         private Syncfusion.WinForms.Controls.SfButton Anterior;
         private Syncfusion.WinForms.Controls.SfButton Proximo;
         private Syncfusion.WinForms.Controls.SfButton Voltar;
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt FaseMCUTex;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt FilmesFaseMCUText;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel14;
     }
 }
