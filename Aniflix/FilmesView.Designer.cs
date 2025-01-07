@@ -286,8 +286,8 @@
             // 
             // FilmesEstudioText
             // 
-            FilmesEstudioText.BeforeTouchSize = new Size(539, 23);
-            FilmesEstudioText.Location = new Point(12, 482);
+            FilmesEstudioText.BeforeTouchSize = new Size(74, 23);
+            FilmesEstudioText.Location = new Point(5, 482);
             FilmesEstudioText.Name = "FilmesEstudioText";
             FilmesEstudioText.PlaceholderText = "Estúdio";
             FilmesEstudioText.Size = new Size(539, 23);
@@ -317,7 +317,7 @@
             Copiar.BackColor = Color.FromArgb(0, 97, 149);
             Copiar.Font = new Font("Segoe UI Semibold", 9F);
             Copiar.ImageSize = new Size(48, 48);
-            Copiar.Location = new Point(131, 677);
+            Copiar.Location = new Point(137, 541);
             Copiar.Name = "Copiar";
             Copiar.Size = new Size(164, 97);
             Copiar.Style.BackColor = Color.FromArgb(0, 97, 149);
@@ -336,7 +336,7 @@
             Salvar.BackColor = Color.FromArgb(229, 92, 68);
             Salvar.Font = new Font("Segoe UI Semibold", 9F);
             Salvar.ImageSize = new Size(48, 48);
-            Salvar.Location = new Point(298, 677);
+            Salvar.Location = new Point(304, 541);
             Salvar.Name = "Salvar";
             Salvar.Size = new Size(164, 97);
             Salvar.Style.BackColor = Color.FromArgb(229, 92, 68);
@@ -355,7 +355,7 @@
             Editar.BackColor = Color.FromArgb(46, 34, 114);
             Editar.Font = new Font("Segoe UI Semibold", 9F);
             Editar.ImageSize = new Size(48, 48);
-            Editar.Location = new Point(465, 677);
+            Editar.Location = new Point(471, 541);
             Editar.Name = "Editar";
             Editar.Size = new Size(164, 97);
             Editar.Style.BackColor = Color.FromArgb(46, 34, 114);
@@ -373,7 +373,7 @@
             Anterior.BackColor = Color.FromArgb(195, 55, 100);
             Anterior.Font = new Font("Segoe UI Semibold", 9F);
             Anterior.ImageSize = new Size(48, 48);
-            Anterior.Location = new Point(632, 677);
+            Anterior.Location = new Point(638, 541);
             Anterior.Name = "Anterior";
             Anterior.Size = new Size(164, 97);
             Anterior.Style.BackColor = Color.FromArgb(195, 55, 100);
@@ -391,7 +391,7 @@
             Proximo.BackColor = Color.FromArgb(29, 38, 113);
             Proximo.Font = new Font("Segoe UI Semibold", 9F);
             Proximo.ImageSize = new Size(48, 48);
-            Proximo.Location = new Point(799, 677);
+            Proximo.Location = new Point(805, 541);
             Proximo.Name = "Proximo";
             Proximo.Size = new Size(164, 97);
             Proximo.Style.BackColor = Color.FromArgb(29, 38, 113);
@@ -409,7 +409,7 @@
             Voltar.BackColor = Color.FromArgb(9, 32, 63);
             Voltar.Font = new Font("Segoe UI Semibold", 9F);
             Voltar.ImageSize = new Size(48, 48);
-            Voltar.Location = new Point(966, 677);
+            Voltar.Location = new Point(972, 541);
             Voltar.Name = "Voltar";
             Voltar.Size = new Size(164, 97);
             Voltar.Style.BackColor = Color.FromArgb(9, 32, 63);
@@ -425,17 +425,16 @@
             // 
             // textBoxExt1
             // 
-            textBoxExt1.BeforeTouchSize = new Size(539, 23);
-            textBoxExt1.Location = new Point(557, 482);
+            textBoxExt1.BeforeTouchSize = new Size(74, 23);
+            textBoxExt1.Location = new Point(550, 482);
             textBoxExt1.Name = "textBoxExt1";
             textBoxExt1.PlaceholderText = "Tags";
-            textBoxExt1.Size = new Size(67, 23);
+            textBoxExt1.Size = new Size(74, 23);
             textBoxExt1.TabIndex = 41;
-            textBoxExt1.Text = "#Fase2";
             // 
             // autoLabel14
             // 
-            autoLabel14.Location = new Point(557, 464);
+            autoLabel14.Location = new Point(550, 464);
             autoLabel14.Name = "autoLabel14";
             autoLabel14.Size = new Size(60, 15);
             autoLabel14.TabIndex = 40;
@@ -445,7 +444,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1273, 845);
+            ClientSize = new Size(1273, 678);
             Controls.Add(textBoxExt1);
             Controls.Add(autoLabel14);
             Controls.Add(Voltar);
