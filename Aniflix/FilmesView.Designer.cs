@@ -286,11 +286,11 @@
             // 
             // FilmesEstudioText
             // 
-            FilmesEstudioText.BeforeTouchSize = new Size(153, 23);
+            FilmesEstudioText.BeforeTouchSize = new Size(539, 23);
             FilmesEstudioText.Location = new Point(12, 482);
             FilmesEstudioText.Name = "FilmesEstudioText";
             FilmesEstudioText.PlaceholderText = "Estúdio";
-            FilmesEstudioText.Size = new Size(453, 23);
+            FilmesEstudioText.Size = new Size(539, 23);
             FilmesEstudioText.TabIndex = 31;
             FilmesEstudioText.TextChanged += FilmesEstudioText_TextChanged;
             // 
@@ -425,16 +425,17 @@
             // 
             // textBoxExt1
             // 
-            textBoxExt1.BeforeTouchSize = new Size(108, 23);
-            textBoxExt1.Location = new Point(516, 482);
+            textBoxExt1.BeforeTouchSize = new Size(539, 23);
+            textBoxExt1.Location = new Point(557, 482);
             textBoxExt1.Name = "textBoxExt1";
             textBoxExt1.PlaceholderText = "Tags";
-            textBoxExt1.Size = new Size(108, 23);
+            textBoxExt1.Size = new Size(67, 23);
             textBoxExt1.TabIndex = 41;
+            textBoxExt1.Text = "#Fase2";
             // 
             // autoLabel14
             // 
-            autoLabel14.Location = new Point(489, 464);
+            autoLabel14.Location = new Point(557, 464);
             autoLabel14.Name = "autoLabel14";
             autoLabel14.Size = new Size(60, 15);
             autoLabel14.TabIndex = 40;
