@@ -425,20 +425,20 @@
             // 
             // textBoxExt1
             // 
-            textBoxExt1.BeforeTouchSize = new Size(153, 23);
-            textBoxExt1.Location = new Point(539, 582);
+            textBoxExt1.BeforeTouchSize = new Size(108, 23);
+            textBoxExt1.Location = new Point(516, 482);
             textBoxExt1.Name = "textBoxExt1";
             textBoxExt1.PlaceholderText = "Tags";
-            textBoxExt1.Size = new Size(153, 23);
+            textBoxExt1.Size = new Size(108, 23);
             textBoxExt1.TabIndex = 41;
             // 
             // autoLabel14
             // 
-            autoLabel14.Location = new Point(539, 564);
+            autoLabel14.Location = new Point(489, 464);
             autoLabel14.Name = "autoLabel14";
-            autoLabel14.Size = new Size(31, 15);
+            autoLabel14.Size = new Size(60, 15);
             autoLabel14.TabIndex = 40;
-            autoLabel14.Text = "Tags";
+            autoLabel14.Text = "Fase MCU";
             // 
             // FilmesView
             // 
