@@ -14,7 +14,6 @@ namespace Aniflix.Controllers
             var repository = _connection.As<IFilmesRepository>();
             return repository.GetAllFilmes();
         }
-
         public Filmes GetFilmeByCodigo(string codigo)
         {
             var repository = _connection.As<IFilmesRepository>();
