@@ -314,7 +314,7 @@
             Copiar.BackColor = Color.FromArgb(0, 97, 149);
             Copiar.Font = new Font("Segoe UI Semibold", 9F);
             Copiar.ImageSize = new Size(48, 48);
-            Copiar.Location = new Point(141, 529);
+            Copiar.Location = new Point(131, 677);
             Copiar.Name = "Copiar";
             Copiar.Size = new Size(164, 97);
             Copiar.Style.BackColor = Color.FromArgb(0, 97, 149);
@@ -333,7 +333,7 @@
             Salvar.BackColor = Color.FromArgb(229, 92, 68);
             Salvar.Font = new Font("Segoe UI Semibold", 9F);
             Salvar.ImageSize = new Size(48, 48);
-            Salvar.Location = new Point(308, 529);
+            Salvar.Location = new Point(298, 677);
             Salvar.Name = "Salvar";
             Salvar.Size = new Size(164, 97);
             Salvar.Style.BackColor = Color.FromArgb(229, 92, 68);
@@ -352,7 +352,7 @@
             Editar.BackColor = Color.FromArgb(46, 34, 114);
             Editar.Font = new Font("Segoe UI Semibold", 9F);
             Editar.ImageSize = new Size(48, 48);
-            Editar.Location = new Point(475, 529);
+            Editar.Location = new Point(465, 677);
             Editar.Name = "Editar";
             Editar.Size = new Size(164, 97);
             Editar.Style.BackColor = Color.FromArgb(46, 34, 114);
@@ -370,7 +370,7 @@
             Anterior.BackColor = Color.FromArgb(195, 55, 100);
             Anterior.Font = new Font("Segoe UI Semibold", 9F);
             Anterior.ImageSize = new Size(48, 48);
-            Anterior.Location = new Point(642, 529);
+            Anterior.Location = new Point(632, 677);
             Anterior.Name = "Anterior";
             Anterior.Size = new Size(164, 97);
             Anterior.Style.BackColor = Color.FromArgb(195, 55, 100);
@@ -388,7 +388,7 @@
             Proximo.BackColor = Color.FromArgb(29, 38, 113);
             Proximo.Font = new Font("Segoe UI Semibold", 9F);
             Proximo.ImageSize = new Size(48, 48);
-            Proximo.Location = new Point(809, 529);
+            Proximo.Location = new Point(799, 677);
             Proximo.Name = "Proximo";
             Proximo.Size = new Size(164, 97);
             Proximo.Style.BackColor = Color.FromArgb(29, 38, 113);
@@ -406,7 +406,7 @@
             Voltar.BackColor = Color.FromArgb(9, 32, 63);
             Voltar.Font = new Font("Segoe UI Semibold", 9F);
             Voltar.ImageSize = new Size(48, 48);
-            Voltar.Location = new Point(976, 529);
+            Voltar.Location = new Point(966, 677);
             Voltar.Name = "Voltar";
             Voltar.Size = new Size(164, 97);
             Voltar.Style.BackColor = Color.FromArgb(9, 32, 63);
@@ -424,7 +424,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1273, 652);
+            ClientSize = new Size(1273, 845);
             Controls.Add(Voltar);
             Controls.Add(Proximo);
             Controls.Add(Anterior);
