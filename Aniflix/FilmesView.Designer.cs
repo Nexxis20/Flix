@@ -60,7 +60,7 @@
             Anterior = new Syncfusion.WinForms.Controls.SfButton();
             Proximo = new Syncfusion.WinForms.Controls.SfButton();
             Voltar = new Syncfusion.WinForms.Controls.SfButton();
-            textBoxExt1 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            FaseMCUTex = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             autoLabel14 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             ((System.ComponentModel.ISupportInitialize)FilmesCodigoText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilmesTituloText).BeginInit();
@@ -73,12 +73,12 @@
             ((System.ComponentModel.ISupportInitialize)FilmesDiretorText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilmesEstudioText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FilmesResumoText).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)textBoxExt1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)FaseMCUTex).BeginInit();
             SuspendLayout();
             // 
             // FilmesCodigoText
             // 
-            FilmesCodigoText.BeforeTouchSize = new Size(532, 23);
+            FilmesCodigoText.BeforeTouchSize = new Size(74, 23);
             FilmesCodigoText.Location = new Point(12, 27);
             FilmesCodigoText.Name = "FilmesCodigoText";
             FilmesCodigoText.PlaceholderText = "Código do Filme";
@@ -169,7 +169,7 @@
             // 
             // FilmesTituloText
             // 
-            FilmesTituloText.BeforeTouchSize = new Size(532, 23);
+            FilmesTituloText.BeforeTouchSize = new Size(74, 23);
             FilmesTituloText.Location = new Point(141, 27);
             FilmesTituloText.Name = "FilmesTituloText";
             FilmesTituloText.PlaceholderText = "Título ";
@@ -197,7 +197,7 @@
             // 
             // FilmesSinopseText
             // 
-            FilmesSinopseText.BeforeTouchSize = new Size(532, 23);
+            FilmesSinopseText.BeforeTouchSize = new Size(74, 23);
             FilmesSinopseText.Location = new Point(12, 71);
             FilmesSinopseText.Multiline = true;
             FilmesSinopseText.Name = "FilmesSinopseText";
@@ -208,7 +208,7 @@
             // 
             // FilmesTituloOriginalText
             // 
-            FilmesTituloOriginalText.BeforeTouchSize = new Size(532, 23);
+            FilmesTituloOriginalText.BeforeTouchSize = new Size(74, 23);
             FilmesTituloOriginalText.Location = new Point(12, 262);
             FilmesTituloOriginalText.Name = "FilmesTituloOriginalText";
             FilmesTituloOriginalText.PlaceholderText = "Título Original";
@@ -236,7 +236,7 @@
             // 
             // FilmesFranquiaText
             // 
-            FilmesFranquiaText.BeforeTouchSize = new Size(532, 23);
+            FilmesFranquiaText.BeforeTouchSize = new Size(74, 23);
             FilmesFranquiaText.Location = new Point(12, 306);
             FilmesFranquiaText.Name = "FilmesFranquiaText";
             FilmesFranquiaText.PlaceholderText = "Franquia";
@@ -246,7 +246,7 @@
             // 
             // FilmesGeneroText
             // 
-            FilmesGeneroText.BeforeTouchSize = new Size(532, 23);
+            FilmesGeneroText.BeforeTouchSize = new Size(74, 23);
             FilmesGeneroText.Location = new Point(12, 350);
             FilmesGeneroText.Name = "FilmesGeneroText";
             FilmesGeneroText.PlaceholderText = "Gênero do Filme";
@@ -256,7 +256,7 @@
             // 
             // FilmesTagsText
             // 
-            FilmesTagsText.BeforeTouchSize = new Size(532, 23);
+            FilmesTagsText.BeforeTouchSize = new Size(74, 23);
             FilmesTagsText.Location = new Point(471, 350);
             FilmesTagsText.Name = "FilmesTagsText";
             FilmesTagsText.PlaceholderText = "Tags";
@@ -266,7 +266,7 @@
             // 
             // FilmesEstrelasText
             // 
-            FilmesEstrelasText.BeforeTouchSize = new Size(532, 23);
+            FilmesEstrelasText.BeforeTouchSize = new Size(74, 23);
             FilmesEstrelasText.Location = new Point(12, 438);
             FilmesEstrelasText.Name = "FilmesEstrelasText";
             FilmesEstrelasText.PlaceholderText = "Estrelas";
@@ -276,7 +276,7 @@
             // 
             // FilmesDiretorText
             // 
-            FilmesDiretorText.BeforeTouchSize = new Size(532, 23);
+            FilmesDiretorText.BeforeTouchSize = new Size(74, 23);
             FilmesDiretorText.Location = new Point(12, 394);
             FilmesDiretorText.Name = "FilmesDiretorText";
             FilmesDiretorText.PlaceholderText = "Diretor";
@@ -286,7 +286,7 @@
             // 
             // FilmesEstudioText
             // 
-            FilmesEstudioText.BeforeTouchSize = new Size(532, 23);
+            FilmesEstudioText.BeforeTouchSize = new Size(74, 23);
             FilmesEstudioText.Location = new Point(12, 482);
             FilmesEstudioText.Name = "FilmesEstudioText";
             FilmesEstudioText.PlaceholderText = "Estúdio";
@@ -296,7 +296,7 @@
             // 
             // FilmesResumoText
             // 
-            FilmesResumoText.BeforeTouchSize = new Size(532, 23);
+            FilmesResumoText.BeforeTouchSize = new Size(74, 23);
             FilmesResumoText.Location = new Point(630, 27);
             FilmesResumoText.Multiline = true;
             FilmesResumoText.Name = "FilmesResumoText";
@@ -423,14 +423,14 @@
             Voltar.UseVisualStyleBackColor = false;
             Voltar.Click += Voltar_Click;
             // 
-            // textBoxExt1
+            // FaseMCUTex
             // 
-            textBoxExt1.BeforeTouchSize = new Size(532, 23);
-            textBoxExt1.Location = new Point(550, 482);
-            textBoxExt1.Name = "textBoxExt1";
-            textBoxExt1.PlaceholderText = "Tags";
-            textBoxExt1.Size = new Size(74, 23);
-            textBoxExt1.TabIndex = 41;
+            FaseMCUTex.BeforeTouchSize = new Size(74, 23);
+            FaseMCUTex.Location = new Point(550, 482);
+            FaseMCUTex.Name = "FaseMCUTex";
+            FaseMCUTex.PlaceholderText = "Tags";
+            FaseMCUTex.Size = new Size(74, 23);
+            FaseMCUTex.TabIndex = 41;
             // 
             // autoLabel14
             // 
@@ -445,7 +445,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1273, 678);
-            Controls.Add(textBoxExt1);
+            Controls.Add(FaseMCUTex);
             Controls.Add(autoLabel14);
             Controls.Add(Voltar);
             Controls.Add(Proximo);
@@ -498,7 +498,7 @@
             ((System.ComponentModel.ISupportInitialize)FilmesDiretorText).EndInit();
             ((System.ComponentModel.ISupportInitialize)FilmesEstudioText).EndInit();
             ((System.ComponentModel.ISupportInitialize)FilmesResumoText).EndInit();
-            ((System.ComponentModel.ISupportInitialize)textBoxExt1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)FaseMCUTex).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -537,7 +537,7 @@
         private Syncfusion.WinForms.Controls.SfButton Anterior;
         private Syncfusion.WinForms.Controls.SfButton Proximo;
         private Syncfusion.WinForms.Controls.SfButton Voltar;
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt textBoxExt1;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt FaseMCUTex;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel14;
     }
 }
