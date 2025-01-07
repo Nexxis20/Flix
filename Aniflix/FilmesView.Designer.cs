@@ -78,7 +78,7 @@
             // 
             // FilmesCodigoText
             // 
-            FilmesCodigoText.BeforeTouchSize = new Size(612, 478);
+            FilmesCodigoText.BeforeTouchSize = new Size(532, 23);
             FilmesCodigoText.Location = new Point(12, 27);
             FilmesCodigoText.Name = "FilmesCodigoText";
             FilmesCodigoText.PlaceholderText = "Código do Filme";
@@ -169,7 +169,7 @@
             // 
             // FilmesTituloText
             // 
-            FilmesTituloText.BeforeTouchSize = new Size(612, 478);
+            FilmesTituloText.BeforeTouchSize = new Size(532, 23);
             FilmesTituloText.Location = new Point(141, 27);
             FilmesTituloText.Name = "FilmesTituloText";
             FilmesTituloText.PlaceholderText = "Título ";
@@ -197,7 +197,7 @@
             // 
             // FilmesSinopseText
             // 
-            FilmesSinopseText.BeforeTouchSize = new Size(612, 478);
+            FilmesSinopseText.BeforeTouchSize = new Size(532, 23);
             FilmesSinopseText.Location = new Point(12, 71);
             FilmesSinopseText.Multiline = true;
             FilmesSinopseText.Name = "FilmesSinopseText";
@@ -208,7 +208,7 @@
             // 
             // FilmesTituloOriginalText
             // 
-            FilmesTituloOriginalText.BeforeTouchSize = new Size(612, 478);
+            FilmesTituloOriginalText.BeforeTouchSize = new Size(532, 23);
             FilmesTituloOriginalText.Location = new Point(12, 262);
             FilmesTituloOriginalText.Name = "FilmesTituloOriginalText";
             FilmesTituloOriginalText.PlaceholderText = "Título Original";
@@ -236,7 +236,7 @@
             // 
             // FilmesFranquiaText
             // 
-            FilmesFranquiaText.BeforeTouchSize = new Size(612, 478);
+            FilmesFranquiaText.BeforeTouchSize = new Size(532, 23);
             FilmesFranquiaText.Location = new Point(12, 306);
             FilmesFranquiaText.Name = "FilmesFranquiaText";
             FilmesFranquiaText.PlaceholderText = "Franquia";
@@ -246,7 +246,7 @@
             // 
             // FilmesGeneroText
             // 
-            FilmesGeneroText.BeforeTouchSize = new Size(612, 478);
+            FilmesGeneroText.BeforeTouchSize = new Size(532, 23);
             FilmesGeneroText.Location = new Point(12, 350);
             FilmesGeneroText.Name = "FilmesGeneroText";
             FilmesGeneroText.PlaceholderText = "Gênero do Filme";
@@ -256,7 +256,7 @@
             // 
             // FilmesTagsText
             // 
-            FilmesTagsText.BeforeTouchSize = new Size(612, 478);
+            FilmesTagsText.BeforeTouchSize = new Size(532, 23);
             FilmesTagsText.Location = new Point(471, 350);
             FilmesTagsText.Name = "FilmesTagsText";
             FilmesTagsText.PlaceholderText = "Tags";
@@ -266,7 +266,7 @@
             // 
             // FilmesEstrelasText
             // 
-            FilmesEstrelasText.BeforeTouchSize = new Size(612, 478);
+            FilmesEstrelasText.BeforeTouchSize = new Size(532, 23);
             FilmesEstrelasText.Location = new Point(12, 438);
             FilmesEstrelasText.Name = "FilmesEstrelasText";
             FilmesEstrelasText.PlaceholderText = "Estrelas";
@@ -276,7 +276,7 @@
             // 
             // FilmesDiretorText
             // 
-            FilmesDiretorText.BeforeTouchSize = new Size(612, 478);
+            FilmesDiretorText.BeforeTouchSize = new Size(532, 23);
             FilmesDiretorText.Location = new Point(12, 394);
             FilmesDiretorText.Name = "FilmesDiretorText";
             FilmesDiretorText.PlaceholderText = "Diretor";
@@ -286,17 +286,17 @@
             // 
             // FilmesEstudioText
             // 
-            FilmesEstudioText.BeforeTouchSize = new Size(74, 23);
-            FilmesEstudioText.Location = new Point(5, 482);
+            FilmesEstudioText.BeforeTouchSize = new Size(532, 23);
+            FilmesEstudioText.Location = new Point(12, 482);
             FilmesEstudioText.Name = "FilmesEstudioText";
             FilmesEstudioText.PlaceholderText = "Estúdio";
-            FilmesEstudioText.Size = new Size(539, 23);
+            FilmesEstudioText.Size = new Size(532, 23);
             FilmesEstudioText.TabIndex = 31;
             FilmesEstudioText.TextChanged += FilmesEstudioText_TextChanged;
             // 
             // FilmesResumoText
             // 
-            FilmesResumoText.BeforeTouchSize = new Size(612, 478);
+            FilmesResumoText.BeforeTouchSize = new Size(532, 23);
             FilmesResumoText.Location = new Point(630, 27);
             FilmesResumoText.Multiline = true;
             FilmesResumoText.Name = "FilmesResumoText";
@@ -425,7 +425,7 @@
             // 
             // textBoxExt1
             // 
-            textBoxExt1.BeforeTouchSize = new Size(74, 23);
+            textBoxExt1.BeforeTouchSize = new Size(532, 23);
             textBoxExt1.Location = new Point(550, 482);
             textBoxExt1.Name = "textBoxExt1";
             textBoxExt1.PlaceholderText = "Tags";
