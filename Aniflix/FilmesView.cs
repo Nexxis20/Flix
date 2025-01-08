@@ -72,7 +72,6 @@ namespace Aniflix
                         FilmesSinopseText.Text = movie.Overview;
                         FilmesTituloOriginalText.Text = movie.OriginalTitle;
                         FilmesDataLancamentoText.Text = movie.ReleaseDate?.ToString("dd/MM/yyyy");
-                        FilmesFranquiaText.Text = FormatString(FilmesTituloText.Text.Replace("-", string.Empty));
                     }));
 
                     if (
@@ -305,6 +304,7 @@ namespace Aniflix
             autoLabel14.Enabled = false;
             autoLabel14.Visible = false;
             FilmesFaseMCUText.Text = "--";
+            FilmesFranquiaText.Text = "--";
         }
         private void LoadFirstRecord()
         {
