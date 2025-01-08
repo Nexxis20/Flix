@@ -29,7 +29,8 @@ namespace Aniflix.Controllers
         public void GravarFilmes(
             string p_codigo, string p_titulo, string p_audio, string p_sinopse,
             string p_titulo_original, string p_data_lancamento, string p_franquia,
-            string p_genero, string p_tags, string p_diretor, string p_estrelas, string p_estudio)
+            string p_genero, string p_tags, string p_diretor, string p_estrelas,
+            string p_estudio, string p_mcu)
         {
             var parameters = new
             {
@@ -44,7 +45,8 @@ namespace Aniflix.Controllers
                 p_tags,
                 p_diretor,
                 p_estrelas,
-                p_estudio
+                p_estudio,
+                p_mcu
             };
 
             _connection.Execute("GravarFilmes", parameters, commandType: CommandType.StoredProcedure);
