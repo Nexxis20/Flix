@@ -322,6 +322,7 @@ namespace Aniflix
                 FilmesDiretorText.Text = filme.Diretor;
                 FilmesEstrelasText.Text = filme.Estrelas;
                 FilmesEstudioText.Text = filme.Estudio;
+                FilmesFaseMCUText.Text = filme.MCU;
             }
             else
             {
@@ -358,7 +359,8 @@ namespace Aniflix
                 Tags = FilmesTagsText.Text,
                 Diretor = FilmesDiretorText.Text,
                 Estrelas = FilmesEstrelasText.Text,
-                Estudio = FilmesEstudioText.Text
+                Estudio = FilmesEstudioText.Text,
+                MCU = FilmesFaseMCUText.Text
             };
         }
         private void Salvar_Click(object sender, EventArgs e)
