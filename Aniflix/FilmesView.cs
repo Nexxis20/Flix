@@ -299,9 +299,7 @@ namespace Aniflix
             LoadFirstRecord();
             autoLabel14.Enabled = false;
             autoLabel14.Visible = false;
-            FilmesFaseMCUText.Enabled = false;
-            FilmesFaseMCUText.Visible = false;
-
+            FilmesFaseMCUText.Text = "--";
         }
         private void LoadFirstRecord()
         {
