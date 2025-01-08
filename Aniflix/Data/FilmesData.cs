@@ -37,6 +37,7 @@ __[Os vídeos estão em ordem crescente, ou seja, de cima para baixo, tal como n
 **Diretor:** {Diretor}
 **Estrelas:** {Estrelas}
 **Estúdio:** {Estudio}
+*FaseMCU:** {MCU}
 ";
             return formattedText;
         }
