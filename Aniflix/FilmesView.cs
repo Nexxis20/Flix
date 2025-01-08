@@ -220,7 +220,8 @@ namespace Aniflix
                 tags: FilmesTagsText.Text,
                 diretor: FilmesDiretorText.Text,
                 estrelas: FilmesEstrelasText.Text,
-                estudio: FilmesEstudioText.Text
+                estudio: FilmesEstudioText.Text,
+                mcu: FilmesFaseMCUText.Text
                 );
             FilmesResumoText.Text = model.GetFormattedText();
         }
