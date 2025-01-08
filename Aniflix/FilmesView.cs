@@ -330,7 +330,7 @@ namespace Aniflix
             }
             else
             {
-                MessageBox.Show("Nenhum filme registrado encontrado. Para começar, registre algum filme.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Nenhum registro de filme encontrado. Para começar, registre algum filme.", "Filmes - Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
