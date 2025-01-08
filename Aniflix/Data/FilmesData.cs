@@ -2,7 +2,7 @@
 {
     public class FilmesData(string titulo, string franquia, string? sinopse = null, string? tituloOriginal = null,
                string? dataLancamento = null, string? genero = null, string? tags = null,
-               string? diretor = null, string? estrelas = null, string? estudio = null, string? audio = null)
+               string? diretor = null, string? estrelas = null, string? estudio = null, string? audio = null, string? mcu = null)
     {
         public string Titulo { get; private set; } = titulo;
         public string? Audio { get; private set; } = audio;
@@ -15,6 +15,7 @@
         public string? Diretor { get; private set; } = diretor;
         public string? Estrelas { get; private set; } = estrelas;
         public string? Estudio { get; private set; } = estudio;
+        public string? MCU { get; private set; } = mcu;
 
         public string GetFormattedText()
         {
