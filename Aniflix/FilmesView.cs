@@ -131,7 +131,7 @@ namespace Aniflix
                 {
                     Invoke((Action)(() =>
                     {
-                        MessageBox.Show("Nenhum filme encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Nenhum filme encontrado.", "Filmes - Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         FilmesCodigoText.Focus();
                     }));
                 }
@@ -201,7 +201,7 @@ namespace Aniflix
             {
                 Invoke((Action)(() =>
                 {
-                    MessageBox.Show($"Erro ao buscar o filme: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Erro ao buscar o filme: {ex.Message}", "Filmes - Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }));
             }
         }
