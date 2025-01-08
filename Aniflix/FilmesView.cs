@@ -301,8 +301,6 @@ namespace Aniflix
             FilmesAudioBox.SelectedIndex = 0;
             HabilitarButtons(false);
             LoadFirstRecord();
-            autoLabel14.Enabled = false;
-            autoLabel14.Visible = false;
             FilmesFaseMCUText.Text = "--";
             FilmesFranquiaText.Text = "--";
         }
