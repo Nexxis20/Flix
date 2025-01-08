@@ -371,7 +371,7 @@ namespace Aniflix
             filmesController.GravarFilmes(
                 filmes.Codigo!, filmes.Titulo!, filmes.Audio!, filmes.Sinopse!, filmes.TituloOriginal!,
                 filmes.DataLancamento!, filmes.Franquia!, filmes.Genero!, filmes.Tags!, filmes.Diretor!,
-                filmes.Estrelas!, filmes.Estudio!
+                filmes.Estrelas!, filmes.Estudio!, filmes.MCU!
             );
             MessageBox.Show("Filme " + filmes.Titulo + " inserido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
