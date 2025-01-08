@@ -431,6 +431,7 @@
             FilmesFaseMCUText.PlaceholderText = "Fase MCU";
             FilmesFaseMCUText.Size = new Size(74, 23);
             FilmesFaseMCUText.TabIndex = 41;
+            FilmesFaseMCUText.TextChanged += FilmesFaseMCUText_TextChanged;
             // 
             // autoLabel14
             // 

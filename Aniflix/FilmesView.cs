@@ -292,6 +292,11 @@ namespace Aniflix
         {
             UpdateData();
         }
+        private void FilmesFaseMCUText_TextChanged(object sender, EventArgs e)
+        {
+            UpdateData();
+        }
+
         private void FilmesView_Load(object sender, EventArgs e)
         {
             FilmesAudioBox.SelectedIndex = 0;
@@ -380,6 +385,8 @@ namespace Aniflix
             Hide();
             new AniflixView().Show();
         }
+
+
     }
     public class Settings
     {
