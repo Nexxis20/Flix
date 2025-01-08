@@ -82,7 +82,7 @@
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0" />
 		<PackageReference Include="MySqlConnector" Version="2.4.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-		<PackageReference Include="Syncfusion.Core.WinForms" Version="28.1.37" />
+		<PackageReference Include="Syncfusion.Core.WinForms" Version="28.1.38" />
 		<PackageReference Include="TMDbLib" Version="2.2.0" />
 	</ItemGroup>
 
