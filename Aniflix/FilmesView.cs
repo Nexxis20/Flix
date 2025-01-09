@@ -331,7 +331,6 @@ namespace Aniflix
                 MessageBox.Show("Nenhum registro de filme encontrado. Para começar, registre algum filme.", "Filmes - Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void HabilitarButtons(bool enabled)
         {
             Copiar.Enabled = enabled;
@@ -340,7 +339,6 @@ namespace Aniflix
             Anterior.Enabled = enabled;
             Proximo.Enabled = enabled;
         }
-
         private void Copiar_Click(object sender, EventArgs e)
         {
             FilmesResumoText.SelectAll();
@@ -378,14 +376,11 @@ namespace Aniflix
             MessageBox.Show("Filme " + filmes.Titulo + " inserido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Salvar.Enabled = false;
         }
-
         private void Voltar_Click(object sender, EventArgs e)
         {
             Hide();
             new AniflixView().Show();
         }
-
-
     }
     public class Settings
     {
