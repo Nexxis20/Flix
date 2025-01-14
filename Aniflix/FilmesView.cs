@@ -301,7 +301,7 @@ namespace Aniflix
         {
             FilmesAudioBox.SelectedIndex = 0;
             LoadFirstRecord();
-            //LoadFilmes();
+            LoadFilmes();
             FilmesFaseMCUText.Text = "--";
             FilmesFranquiaText.Text = "--";
             if (_navigator != null)
@@ -349,7 +349,7 @@ namespace Aniflix
         {
             using var connection = new ConnectionRepository().GetConnection();
             var repository = connection.As<IFilmesRepository>();
-            var filmes = repository.GetAllFilmes();
+            var filmes = repository.GetListaFilmes();
             _navigator = new FilmesNavigator([.. filmes]);
         }
 
