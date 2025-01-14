@@ -1,4 +1,6 @@
-﻿using Aniflix.Controllers;
+﻿using System.Data;
+using System.Globalization;
+using Aniflix.Controllers;
 using Aniflix.Data;
 using Aniflix.Extensions;
 using Aniflix.Model;
@@ -6,8 +8,6 @@ using Aniflix.Repository;
 using Insight.Database;
 using Microsoft.Extensions.Configuration;
 using Syncfusion.WinForms.Controls;
-using System.Data;
-using System.Globalization;
 
 namespace Aniflix
 {
