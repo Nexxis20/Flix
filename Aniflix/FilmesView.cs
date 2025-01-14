@@ -412,7 +412,7 @@ namespace Aniflix
             }
             else
             {
-                MessageBox.Show("Não há mais registros anteriores.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Não há mais registros anteriores.", "Filmes - Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
