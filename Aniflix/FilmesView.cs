@@ -15,6 +15,7 @@ namespace Aniflix
     public partial class FilmesView : SfForm
     {
         private IConfiguration? configuration;
+        private FilmesNavigator? _navigator;
         public FilmesView()
         {
             InitializeComponent();
@@ -338,8 +339,6 @@ namespace Aniflix
                 MessageBox.Show("Nenhum registro de filme encontrado. Para começar, registre algum filme.", "Filmes - Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private FilmesNavigator? _navigator;
 
         private void LoadFilmes()
         {
