@@ -1,7 +1,7 @@
-﻿using Aniflix.Interfaces;
+﻿using System.Data;
+using Aniflix.Interfaces;
 using Aniflix.Model;
 using Insight.Database;
-using System.Data;
 
 namespace Aniflix.Controllers
 {
