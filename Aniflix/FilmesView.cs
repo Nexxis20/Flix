@@ -331,14 +331,14 @@ namespace Aniflix
             }
         }
 
-        private FilmesNavigator? _navigator;
+        private readonly FilmesNavigator? _navigator;
 
         private void LoadFilmes()
         {
             using (var connection = new ConnectionRepository().GetConnection())
             {
                 var repository = connection.As<IFilmesRepository>();
-                var filmes = repository.GetAllFilmes(); // Deve retornar todos os filmes
+                var filmes = repository.GetAllFilmes();
                 _navigator = new FilmesNavigator(filmes);
             }
         }
