@@ -302,6 +302,14 @@ namespace Aniflix
             LoadFirstRecord();
             FilmesFaseMCUText.Text = "--";
             FilmesFranquiaText.Text = "--";
+            if (_navigator != null)
+            {
+                var filme = _navigator.GetCurrent();
+                if (filme != null)
+                {
+                    MostrarFilme(filme);
+                }
+            }
         }
         private void LoadFirstRecord()
         {
