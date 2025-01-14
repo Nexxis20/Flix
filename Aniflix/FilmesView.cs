@@ -3,6 +3,7 @@ using System.Globalization;
 using Aniflix.Controllers;
 using Aniflix.Data;
 using Aniflix.Extensions;
+using Aniflix.Interfaces;
 using Aniflix.Model;
 using Aniflix.Repository;
 using Insight.Database;
@@ -329,6 +330,19 @@ namespace Aniflix
                 MessageBox.Show("Nenhum registro de filme encontrado. Para começar, registre algum filme.", "Filmes - Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private FilmesNavigator? _navigator;
+
+        private void LoadFilmes()
+        {
+            using (var connection = new ConnectionRepository().GetConnection())
+            {
+                var repository = connection.As<IFilmesRepository>();
+                var filmes = repository.GetAllFilmes(); // Deve retornar todos os filmes
+                _navigator = new FilmesNavigator(filmes);
+            }
+        }
+
         private void Copiar_Click(object sender, EventArgs e)
         {
             FilmesResumoText.SelectAll();
