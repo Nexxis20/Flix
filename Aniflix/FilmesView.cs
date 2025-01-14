@@ -386,7 +386,17 @@ namespace Aniflix
 
         private void Anterior_Click(object sender, EventArgs e)
         {
+            if (_navigator == null) return;
 
+            var filme = _navigator.GetPrevious();
+            if (filme != null)
+            {
+                MostrarFilme(filme);
+            }
+            else
+            {
+                MessageBox.Show("Não há mais registros anteriores.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
     public class Settings
