@@ -333,14 +333,12 @@ namespace Aniflix
 
         private FilmesNavigator? _navigator;
 
-        private static void LoadFilmes()
+        private void LoadFilmes()
         {
-            using (var connection = new ConnectionRepository().GetConnection())
-            {
-                var repository = connection.As<IFilmesRepository>();
-                var filmes = repository.GetAllFilmes();
-                _navigator = new FilmesNavigator(filmes);
-            }
+            using var connection = new ConnectionRepository().GetConnection();
+            var repository = connection.As<IFilmesRepository>();
+            var filmes = repository.GetAllFilmes();
+            _navigator = new FilmesNavigator(filmes);
         }
 
         private void Copiar_Click(object sender, EventArgs e)
