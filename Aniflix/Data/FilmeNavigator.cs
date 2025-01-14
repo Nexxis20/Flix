@@ -4,7 +4,7 @@ namespace Aniflix.Data
 {
     public class FilmesNavigator
     {
-        private List<Filmes> _filmes;
+        private readonly List<Filmes> _filmes;
         private int _currentIndex;
 
         public FilmesNavigator(List<Filmes> filmes)
