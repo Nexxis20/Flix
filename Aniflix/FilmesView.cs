@@ -345,8 +345,8 @@ namespace Aniflix
         {
             using var connection = new ConnectionRepository().GetConnection();
             var repository = connection.As<IFilmesRepository>();
-            var filmes = repository.GetAllFilmes();
-            _navigator = new FilmesNavigator(filmes.ToList());
+            var filmes = repository.GetPreviousFilmes();
+            _navigator = new FilmesNavigator([.. filmes]);
         }
 
         private void Copiar_Click(object sender, EventArgs e)
