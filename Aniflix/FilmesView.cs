@@ -363,7 +363,7 @@ namespace Aniflix
                 filmes.DataLancamento!, filmes.Franquia!, filmes.Genero!, filmes.Tags!, filmes.Diretor!,
                 filmes.Estrelas!, filmes.Estudio!, filmes.MCU!
             );
-            MessageBox.Show("Filme " + filmes.Titulo + " inserido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Filme " + filmes.Titulo + " inserido com sucesso!", "Filmes - Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Salvar.Enabled = false;
         }
         private void Voltar_Click(object sender, EventArgs e)
