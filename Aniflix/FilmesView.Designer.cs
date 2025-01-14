@@ -404,6 +404,7 @@
             Proximo.TextAlign = ContentAlignment.BottomLeft;
             Proximo.TextImageRelation = TextImageRelation.Overlay;
             Proximo.UseVisualStyleBackColor = false;
+            Proximo.Click += Proximo_Click;
             // 
             // Voltar
             // 

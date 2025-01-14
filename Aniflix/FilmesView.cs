@@ -422,6 +422,20 @@ namespace Aniflix
                 MessageBox.Show("Não há mais registros anteriores.", "Filmes - Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        private void Proximo_Click(object sender, EventArgs e)
+        {
+            if (_navigator == null) return;
+
+            var filme = _navigator.GetNext();
+            if (filme != null)
+            {
+                MostrarFilme(filme);
+            }
+            else
+            {
+                MessageBox.Show("Não há mais registros posteriores.", "Filmes - Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
     public class Settings
     {
