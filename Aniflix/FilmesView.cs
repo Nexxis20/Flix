@@ -46,9 +46,9 @@ namespace Aniflix
         {
             try
             {
-                using var connection = new ConnectionRepository().GetConnection();
-                var filmesController = new FilmesController(connection);
-                filmesController.VerificarCodigo(FilmesCodigoText.Text, FilmesCodigoText);
+                //using var connection = new ConnectionRepository().GetConnection();
+                //var filmesController = new FilmesController(connection);
+                //filmesController.VerificarCodigo(FilmesCodigoText.Text, FilmesCodigoText);
 
                 var tmdbSettings = configuration!.GetSection("TMDB");
 
