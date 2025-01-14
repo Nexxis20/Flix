@@ -26,10 +26,10 @@ namespace Aniflix.Controllers
             return repository.GetFirstFilme();
         }
 
-        public List<Filmes> GetPreviousFilmes()
+        public List<Filmes> GetListFilmes()
         {
             var repository = _connection.As<IFilmesRepository>();
-            return repository.GetPreviousFilmes();
+            return repository.GetListFilmes();
         }
 
         public void GravarFilmes(
