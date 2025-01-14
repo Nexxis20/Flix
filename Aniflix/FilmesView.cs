@@ -299,7 +299,6 @@ namespace Aniflix
         private void FilmesView_Load(object sender, EventArgs e)
         {
             FilmesAudioBox.SelectedIndex = 0;
-            HabilitarButtons(false);
             LoadFirstRecord();
             FilmesFaseMCUText.Text = "--";
             FilmesFranquiaText.Text = "--";
@@ -330,14 +329,6 @@ namespace Aniflix
             {
                 MessageBox.Show("Nenhum registro de filme encontrado. Para começar, registre algum filme.", "Filmes - Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-        private void HabilitarButtons(bool enabled)
-        {
-            Copiar.Enabled = enabled;
-            Salvar.Enabled = enabled;
-            Editar.Enabled = enabled;
-            Anterior.Enabled = enabled;
-            Proximo.Enabled = enabled;
         }
         private void Copiar_Click(object sender, EventArgs e)
         {
