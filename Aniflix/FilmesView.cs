@@ -410,7 +410,10 @@ namespace Aniflix
 
         private void Anterior_Click(object sender, EventArgs e)
         {
-            if (_navigator == null) return;
+            if (_navigator == null)
+            {
+                return;
+            }
 
             var filme = _navigator.GetPrevious();
             if (filme != null)
@@ -424,7 +427,10 @@ namespace Aniflix
         }
         private void Proximo_Click(object sender, EventArgs e)
         {
-            if (_navigator == null) return;
+            if (_navigator == null)
+            {
+                return;
+            }
 
             var filme = _navigator.GetNext();
             if (filme != null)
