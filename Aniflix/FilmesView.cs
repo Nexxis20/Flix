@@ -233,7 +233,6 @@ namespace Aniflix
             }
             else
             {
-                HabilitarButtons(true);
                 await GetFilmesAsync();
             }
         }
