@@ -331,9 +331,9 @@ namespace Aniflix
             }
         }
 
-        private readonly FilmesNavigator? _navigator;
+        private FilmesNavigator? _navigator;
 
-        private void LoadFilmes()
+        private static void LoadFilmes()
         {
             using (var connection = new ConnectionRepository().GetConnection())
             {
