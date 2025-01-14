@@ -385,6 +385,7 @@
             Anterior.TextAlign = ContentAlignment.BottomLeft;
             Anterior.TextImageRelation = TextImageRelation.Overlay;
             Anterior.UseVisualStyleBackColor = false;
+            Anterior.Click += Anterior_Click;
             // 
             // Proximo
             // 

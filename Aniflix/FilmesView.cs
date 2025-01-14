@@ -383,6 +383,11 @@ namespace Aniflix
             Hide();
             new AniflixView().Show();
         }
+
+        private void Anterior_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     public class Settings
     {
