@@ -349,7 +349,7 @@ namespace Aniflix
         {
             using var connection = new ConnectionRepository().GetConnection();
             var repository = connection.As<IFilmesRepository>();
-            var filmes = repository.GetPreviousFilmes();
+            var filmes = repository.GetAllFilmes();
             _navigator = new FilmesNavigator([.. filmes]);
         }
 
