@@ -311,6 +311,10 @@ namespace Aniflix
                 {
                     MostrarFilme(filme);
                 }
+                else
+                {
+                    MessageBox.Show("Nenhum registro encontrado na navegação.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
         private void LoadFirstRecord()
