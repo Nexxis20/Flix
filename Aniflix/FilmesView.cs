@@ -380,19 +380,19 @@ namespace Aniflix
 
         private void MostrarFilme(Filmes filme)
         {
-            FilmesCodigoText.Text = filme.Codigo;
-            FilmesTituloText.Text = filme.Titulo;
-            FilmesAudioBox.SelectedItem = filme.Audio;
-            FilmesSinopseText.Text = filme.Sinopse;
-            FilmesTituloOriginalText.Text = filme.TituloOriginal;
-            FilmesDataLancamentoText.Text = filme.DataLancamento;
-            FilmesFranquiaText.Text = filme.Franquia;
-            FilmesGeneroText.Text = filme.Genero;
-            FilmesTagsText.Text = filme.Tags;
-            FilmesDiretorText.Text = filme.Diretor;
-            FilmesEstrelasText.Text = filme.Estrelas;
-            FilmesEstudioText.Text = filme.Estudio;
-            FilmesFaseMCUText.Text = filme.MCU;
+            FilmesCodigoText.Text = filme.Codigo ?? string.Empty;
+            FilmesTituloText.Text = filme.Titulo ?? string.Empty;
+            FilmesAudioBox.SelectedItem = filme.Audio ?? string.Empty;
+            FilmesSinopseText.Text = filme.Sinopse ?? string.Empty;
+            FilmesTituloOriginalText.Text = filme.TituloOriginal ?? string.Empty;
+            FilmesDataLancamentoText.Text = filme.DataLancamento ?? string.Empty;
+            FilmesFranquiaText.Text = filme.Franquia ?? string.Empty;
+            FilmesGeneroText.Text = filme.Genero ?? string.Empty;
+            FilmesTagsText.Text = filme.Tags ?? string.Empty;
+            FilmesDiretorText.Text = filme.Diretor ?? string.Empty;
+            FilmesEstrelasText.Text = filme.Estrelas ?? string.Empty;
+            FilmesEstudioText.Text = filme.Estudio ?? string.Empty;
+            FilmesFaseMCUText.Text = filme.MCU ?? string.Empty;
         }
         private void Salvar_Click(object sender, EventArgs e)
         {
