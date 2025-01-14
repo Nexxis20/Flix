@@ -20,5 +20,7 @@ namespace Aniflix.Interfaces
         [Sql("SELECT * FROM filmes ORDER BY codigo DESC LIMIT 1")]
         Filmes GetFirstFilme();
 
+        [Sql("SELECT * FROM filmes ORDER BY codigo ASC")]
+        List<Filmes> GetAllFilmes();
     }
 }
