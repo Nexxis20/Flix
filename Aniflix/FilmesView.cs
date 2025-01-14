@@ -365,6 +365,23 @@ namespace Aniflix
                 MCU = FilmesFaseMCUText.Text
             };
         }
+
+        private void MostrarFilme(Filmes filme)
+        {
+            FilmesCodigoText.Text = filme.Codigo;
+            FilmesTituloText.Text = filme.Titulo;
+            FilmesAudioBox.SelectedItem = filme.Audio;
+            FilmesSinopseText.Text = filme.Sinopse;
+            FilmesTituloOriginalText.Text = filme.TituloOriginal;
+            FilmesDataLancamentoText.Text = filme.DataLancamento;
+            FilmesFranquiaText.Text = filme.Franquia;
+            FilmesGeneroText.Text = filme.Genero;
+            FilmesTagsText.Text = filme.Tags;
+            FilmesDiretorText.Text = filme.Diretor;
+            FilmesEstrelasText.Text = filme.Estrelas;
+            FilmesEstudioText.Text = filme.Estudio;
+            FilmesFaseMCUText.Text = filme.MCU;
+        }
         private void Salvar_Click(object sender, EventArgs e)
         {
             var filmes = MapFormToFilmes();
