@@ -2,7 +2,7 @@
 
 namespace Aniflix.Data
 {
-    internal class FilmeNavigator
+    public class FilmesNavigator
     {
         private List<Filmes> _filmes;
         private int _currentIndex;
@@ -26,9 +26,8 @@ namespace Aniflix.Data
                 _currentIndex++;
                 return _filmes[_currentIndex];
             }
-            return null; // Não há próximo registro
+            return null;
         }
-
         public Filmes? GetPrevious()
         {
             if (_currentIndex > 0)
@@ -36,7 +35,7 @@ namespace Aniflix.Data
                 _currentIndex--;
                 return _filmes[_currentIndex];
             }
-            return null; // Não há registro anterior
+            return null;
         }
     }
 }
