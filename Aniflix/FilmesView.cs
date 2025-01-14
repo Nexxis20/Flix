@@ -300,7 +300,8 @@ namespace Aniflix
         private void FilmesView_Load(object sender, EventArgs e)
         {
             FilmesAudioBox.SelectedIndex = 0;
-            LoadFirstRecord();
+            //LoadFirstRecord();
+            LoadFilmes();
             FilmesFaseMCUText.Text = "--";
             FilmesFranquiaText.Text = "--";
             if (_navigator != null)
@@ -345,7 +346,7 @@ namespace Aniflix
             using var connection = new ConnectionRepository().GetConnection();
             var repository = connection.As<IFilmesRepository>();
             var filmes = repository.GetAllFilmes();
-            _navigator = new FilmesNavigator(filmes);
+            _navigator = new FilmesNavigator(filmes.ToList());
         }
 
         private void Copiar_Click(object sender, EventArgs e)
