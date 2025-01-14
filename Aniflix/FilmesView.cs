@@ -401,7 +401,6 @@ namespace Aniflix
                 filmes.Estrelas!, filmes.Estudio!, filmes.MCU!
             );
             MessageBox.Show("Filme " + filmes.Titulo + " inserido com sucesso!", "Filmes - Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Salvar.Enabled = false;
         }
         private void Voltar_Click(object sender, EventArgs e)
         {
