@@ -300,6 +300,7 @@ namespace Aniflix
         private void FilmesView_Load(object sender, EventArgs e)
         {
             FilmesAudioBox.SelectedIndex = 0;
+            LoadFirstRecord();
             LoadFilmes();
             FilmesFaseMCUText.Text = "--";
             FilmesFranquiaText.Text = "--";
