@@ -301,7 +301,6 @@ namespace Aniflix
         {
             FilmesAudioBox.SelectedIndex = 0;
             LoadFirstRecord();
-            LoadFilmes();
             FilmesFaseMCUText.Text = "--";
             FilmesFranquiaText.Text = "--";
             if (_navigator != null)
